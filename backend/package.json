@@ -47,7 +47,7 @@
     "elysia": "latest",
     "nanoid": "^5.0.4",
     "nodemailer": "^6.9.8",
-    "redis": "^4.6.12",
+    "redis": "^5.8.2",
     "winston": "^3.11.0",
     "zod": "^3.22.4"
   },
@@ -58,7 +58,8 @@
     "bun-types": "latest",
     "prisma": "^6.16.2",
     "prisma-dbml-generator": "^0.12.0",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "engines": {
     "node": ">=18.0.0",
