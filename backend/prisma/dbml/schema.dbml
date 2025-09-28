@@ -1,0 +1,632 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table status_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  category String [not null]
+  sortOrder Int [not null, default: 0]
+  isActive Int [not null, default: 1]
+  SystemAdmin system_admins [not null]
+  SubscriptionPlan subscription_plans [not null]
+  Subscription subscriptions [not null]
+  Industry industries [not null]
+  User users [not null]
+  Machine machines [not null]
+  OptimizationRun optimization_runs [not null]
+  Notification notifications [not null]
+  UserNotification user_notifications [not null]
+  SystemSetting system_settings [not null]
+  MachineWorkerAssignment machine_worker_assignments [not null]
+  ComponentOperationStep component_operation_steps [not null]
+  ComponentRawMaterial component_raw_materials [not null]
+  Order orders [not null]
+  OrderItem order_items [not null]
+  Schedule schedules [not null]
+  WorkerTask worker_tasks [not null]
+  TaskApproval task_approvals [not null]
+}
+
+Table role_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  permissions String
+  level Int [not null]
+  isActive Int [not null, default: 1]
+  User users [not null]
+}
+
+Table priority_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  color String
+  sortOrder Int [not null]
+  isActive Int [not null, default: 1]
+  Notification notifications [not null]
+  WorkerTask worker_tasks [not null]
+  Order orders [not null]
+  Schedule schedules [not null]
+}
+
+Table task_action_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  nextActions String
+  isActive Int [not null, default: 1]
+  TaskApproval task_approvals [not null]
+}
+
+Table notification_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  template String
+  isActive Int [not null, default: 1]
+  Notification notifications [not null]
+}
+
+Table machine_role_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  permissions String
+  isActive Int [not null, default: 1]
+  MachineWorkerAssignment machine_worker_assignments [not null]
+}
+
+Table proficiency_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  level Int [not null]
+  isActive Int [not null, default: 1]
+  MachineWorkerAssignment machine_worker_assignments [not null]
+}
+
+Table category_types {
+  id String [pk]
+  code String [unique, not null]
+  name String [not null]
+  description String
+  isActive Int [not null, default: 1]
+  Category categories [not null]
+}
+
+Table system_admins {
+  id String [pk]
+  email String [unique, not null]
+  password String [not null]
+  name String [not null]
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  status status_types [not null]
+}
+
+Table subscription_plans {
+  id String [pk]
+  name String [not null]
+  code String [unique, not null]
+  description String
+  price Int [not null]
+  features String [not null]
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  subscriptions subscriptions [not null]
+  status status_types [not null]
+}
+
+Table subscriptions {
+  id String [pk]
+  planId String [not null]
+  statusId String [not null]
+  billingInfo String [not null]
+  paymentInfo String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  plan subscription_plans [not null]
+  status status_types [not null]
+  industries industries [not null]
+}
+
+Table industries {
+  id String [pk]
+  name String [not null]
+  code String [unique, not null]
+  contactInfo String [not null]
+  subscriptionId String
+  statusId String [not null]
+  settings String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  users users [not null]
+  categories categories [not null]
+  machines machines [not null]
+  components components [not null]
+  rawMaterials raw_materials [not null]
+  orders orders [not null]
+  schedules schedules [not null]
+  notifications notifications [not null]
+  AuditLog audit_logs [not null]
+  OptimizationRun optimization_runs [not null]
+  SystemSetting system_settings [not null]
+  subscription subscriptions
+  status status_types [not null]
+}
+
+Table categories {
+  id String [pk]
+  industryId String [not null]
+  typeId String [not null]
+  name String [not null]
+  code String [not null]
+  description String
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  category category_types [not null]
+  machines machines [not null]
+  components components [not null]
+  rawMaterials raw_materials [not null]
+
+  indexes {
+    (industryId, typeId, code) [unique]
+  }
+}
+
+Table users {
+  id String [pk]
+  industryId String [not null]
+  email String [not null]
+  password String [not null]
+  name String [not null]
+  roleId String [not null]
+  statusId String [not null]
+  profile String
+  preferences String
+  performance String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  status status_types [not null]
+  role role_types [not null]
+  machineAssignments machine_worker_assignments [not null]
+  assignedTasks worker_tasks [not null]
+  supervisorApprovals task_approvals [not null]
+  notifications user_notifications [not null]
+  auditLogs audit_logs [not null]
+
+  indexes {
+    (industryId, email) [unique]
+  }
+}
+
+Table machines {
+  id String [pk]
+  industryId String [not null]
+  categoryId String [not null]
+  name String [not null]
+  shortName String [not null]
+  specs String
+  statusId String [not null]
+  maintenance String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  category categories [not null]
+  status status_types [not null]
+  operationSteps component_operation_steps [not null]
+  schedules schedules [not null]
+  workerAssignments machine_worker_assignments [not null]
+
+  indexes {
+    (industryId, shortName) [unique]
+  }
+}
+
+Table machine_worker_assignments {
+  id String [pk]
+  machineId String [not null]
+  workerId String [not null]
+  assignedBy String [not null]
+  roleId String [not null]
+  proficiencyId String [not null]
+  statusId String [not null]
+  permissions String [not null]
+  training String
+  performance String
+  timeframe String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  machine machines [not null]
+  worker users [not null]
+  role machine_role_types [not null]
+  proficiency proficiency_types [not null]
+  status status_types [not null]
+
+  indexes {
+    (machineId, workerId) [unique]
+  }
+}
+
+Table components {
+  id String [pk]
+  industryId String [not null]
+  categoryId String [not null]
+  name String [not null]
+  code String [not null]
+  specifications String
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  category categories [not null]
+  operationSteps component_operation_steps [not null]
+  rawMaterials component_raw_materials [not null]
+  orderItems order_items [not null]
+
+  indexes {
+    (industryId, code) [unique]
+  }
+}
+
+Table component_operation_steps {
+  id String [pk]
+  componentId String [not null]
+  stepNumber Int [not null]
+  operationType String [not null]
+  machineId String
+  timeConfig String [not null]
+  externalInfo String
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  component components [not null]
+  machine machines
+  status status_types [not null]
+
+  indexes {
+    (componentId, stepNumber) [unique]
+  }
+}
+
+Table raw_materials {
+  id String [pk]
+  industryId String [not null]
+  categoryId String [not null]
+  name String [not null]
+  specs String
+  inventory String [not null]
+  transactions String
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  category categories [not null]
+  components component_raw_materials [not null]
+}
+
+Table component_raw_materials {
+  id String [pk]
+  componentId String [not null]
+  rawMaterialId String [not null]
+  quantityInfo String [not null]
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  component components [not null]
+  rawMaterial raw_materials [not null]
+  status status_types [not null]
+
+  indexes {
+    (componentId, rawMaterialId) [unique]
+  }
+}
+
+Table orders {
+  id String [pk]
+  industryId String [not null]
+  orderNumber String [not null]
+  customerInfo String
+  priorityId String [not null]
+  statusId String [not null]
+  timeline String [not null]
+  pricing String
+  metadata String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  priority priority_types [not null]
+  status status_types [not null]
+  items order_items [not null]
+  schedules schedules [not null]
+
+  indexes {
+    (industryId, orderNumber) [unique]
+  }
+}
+
+Table order_items {
+  id String [pk]
+  orderId String [not null]
+  componentId String [not null]
+  quantities String [not null]
+  pricing String
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  order orders [not null]
+  component components [not null]
+  status status_types [not null]
+
+  indexes {
+    (orderId, componentId) [unique]
+  }
+}
+
+Table schedules {
+  id String [pk]
+  industryId String [not null]
+  orderId String [not null]
+  machineId String [not null]
+  taskInfo String [not null]
+  priorityId String [not null]
+  statusId String [not null]
+  timeframe String [not null]
+  optimization String
+  metadata String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  order orders [not null]
+  machine machines [not null]
+  workerTasks worker_tasks [not null]
+  priority priority_types [not null]
+  status status_types [not null]
+}
+
+Table worker_tasks {
+  id String [pk]
+  scheduleId String [not null]
+  workerId String [not null]
+  assignedBy String [not null]
+  taskDetails String [not null]
+  statusId String [not null]
+  priorityId String [not null]
+  timeTracking String
+  workerSubmission String
+  qualityMetrics String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  schedule schedules [not null]
+  worker users [not null]
+  approvals task_approvals [not null]
+  status status_types [not null]
+  priority priority_types [not null]
+}
+
+Table task_approvals {
+  id String [pk]
+  workerTaskId String [not null]
+  supervisorId String [not null]
+  actionId String [not null]
+  statusId String [not null]
+  feedback String
+  timestamps String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  workerTask worker_tasks [not null]
+  supervisor users [not null]
+  action task_action_types [not null]
+  status status_types [not null]
+}
+
+Table optimization_runs {
+  id String [pk]
+  industryId String [not null]
+  typeCode String [not null]
+  statusId String [not null]
+  parameters String
+  results String
+  timestamps String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  status status_types [not null]
+}
+
+Table notifications {
+  id String [pk]
+  industryId String [not null]
+  typeId String [not null]
+  priorityId String [not null]
+  content String [not null]
+  targeting String
+  statusId String [not null]
+  expiresAt DateTime
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries [not null]
+  type notification_types [not null]
+  priority priority_types [not null]
+  status status_types [not null]
+  users user_notifications [not null]
+}
+
+Table user_notifications {
+  id String [pk]
+  userId String [not null]
+  notificationId String [not null]
+  statusId String [not null]
+  readAt DateTime
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  user users [not null]
+  notification notifications [not null]
+  status status_types [not null]
+
+  indexes {
+    (userId, notificationId) [unique]
+  }
+}
+
+Table system_settings {
+  id String [pk]
+  industryId String
+  key String [not null]
+  value String [not null]
+  statusId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  industry industries
+  status status_types [not null]
+}
+
+Table audit_logs {
+  id String [pk]
+  userId String
+  industryId String
+  entity String [not null]
+  entityId String [not null]
+  action String [not null]
+  details String
+  createdAt DateTime [default: `now()`, not null]
+  user users
+  industry industries
+}
+
+Ref: system_admins.statusId > status_types.id
+
+Ref: subscription_plans.statusId > status_types.id
+
+Ref: subscriptions.planId > subscription_plans.id
+
+Ref: subscriptions.statusId > status_types.id
+
+Ref: industries.subscriptionId > subscriptions.id
+
+Ref: industries.statusId > status_types.id
+
+Ref: categories.industryId > industries.id [delete: Cascade]
+
+Ref: categories.typeId > category_types.id [delete: Cascade]
+
+Ref: users.industryId > industries.id [delete: Cascade]
+
+Ref: users.statusId > status_types.id
+
+Ref: users.roleId > role_types.id
+
+Ref: machines.industryId > industries.id [delete: Cascade]
+
+Ref: machines.categoryId > categories.id [delete: Cascade]
+
+Ref: machines.statusId > status_types.id [delete: Cascade]
+
+Ref: machine_worker_assignments.machineId > machines.id [delete: Cascade]
+
+Ref: machine_worker_assignments.workerId > users.id [delete: Cascade]
+
+Ref: machine_worker_assignments.roleId > machine_role_types.id [delete: Cascade]
+
+Ref: machine_worker_assignments.proficiencyId > proficiency_types.id [delete: Cascade]
+
+Ref: machine_worker_assignments.statusId > status_types.id
+
+Ref: components.industryId > industries.id [delete: Cascade]
+
+Ref: components.categoryId > categories.id
+
+Ref: component_operation_steps.componentId > components.id [delete: Cascade]
+
+Ref: component_operation_steps.machineId > machines.id
+
+Ref: component_operation_steps.statusId > status_types.id
+
+Ref: raw_materials.industryId > industries.id [delete: Cascade]
+
+Ref: raw_materials.categoryId > categories.id
+
+Ref: component_raw_materials.componentId > components.id [delete: Cascade]
+
+Ref: component_raw_materials.rawMaterialId > raw_materials.id [delete: Cascade]
+
+Ref: component_raw_materials.statusId > status_types.id
+
+Ref: orders.industryId > industries.id [delete: Cascade]
+
+Ref: orders.priorityId > priority_types.id
+
+Ref: orders.statusId > status_types.id
+
+Ref: order_items.orderId > orders.id [delete: Cascade]
+
+Ref: order_items.componentId > components.id
+
+Ref: order_items.statusId > status_types.id
+
+Ref: schedules.industryId > industries.id [delete: Cascade]
+
+Ref: schedules.orderId > orders.id [delete: Cascade]
+
+Ref: schedules.machineId > machines.id
+
+Ref: schedules.priorityId > priority_types.id
+
+Ref: schedules.statusId > status_types.id
+
+Ref: worker_tasks.scheduleId > schedules.id [delete: Cascade]
+
+Ref: worker_tasks.workerId > users.id
+
+Ref: worker_tasks.statusId > status_types.id
+
+Ref: worker_tasks.priorityId > priority_types.id
+
+Ref: task_approvals.workerTaskId > worker_tasks.id [delete: Cascade]
+
+Ref: task_approvals.supervisorId > users.id
+
+Ref: task_approvals.actionId > task_action_types.id
+
+Ref: task_approvals.statusId > status_types.id
+
+Ref: optimization_runs.industryId > industries.id [delete: Cascade]
+
+Ref: optimization_runs.statusId > status_types.id
+
+Ref: notifications.industryId > industries.id [delete: Cascade]
+
+Ref: notifications.typeId > notification_types.id
+
+Ref: notifications.priorityId > priority_types.id
+
+Ref: notifications.statusId > status_types.id
+
+Ref: user_notifications.userId > users.id [delete: Cascade]
+
+Ref: user_notifications.notificationId > notifications.id
+
+Ref: user_notifications.statusId > status_types.id
+
+Ref: system_settings.industryId > industries.id
+
+Ref: system_settings.statusId > status_types.id
+
+Ref: audit_logs.userId > users.id
+
+Ref: audit_logs.industryId > industries.id
