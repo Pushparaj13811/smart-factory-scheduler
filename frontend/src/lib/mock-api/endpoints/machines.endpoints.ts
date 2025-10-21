@@ -6,15 +6,15 @@ import {
   MOCK_MACHINE_STATS,
   MOCK_MAINTENANCE_RECORDS,
 } from '@/lib/mock-data';
-import { MachineStatus, MaintenanceStatus } from '@/features/machines/types';
+import { MachineStatus } from '@/features/machines/types';
 import type {
   MachinesResponse,
   CreateMachineInput,
   UpdateMachineInput,
   Machine,
-  MaintenanceType,
-  MaintenanceRecord,
 } from '@/features/machines/types';
+import type { MaintenanceRecord, MaintenanceType } from '@/features/maintenance/types';
+import { MaintenanceStatus } from '@/features/maintenance/types';
 
 export const machinesEndpoints: MockEndpoint[] = [
   // GET /machines
@@ -228,13 +228,23 @@ export const machinesEndpoints: MockEndpoint[] = [
         description: string;
       };
 
+      const machine = MOCK_MACHINES.find((m) => m.id === id);
+      if (!machine) {
+        return {
+          data: null,
+          status: 404,
+          statusText: 'Machine not found',
+        };
+      }
+
       const newRecord: MaintenanceRecord = {
         id: `maintenance-${Date.now()}`,
         machineId: id,
         type: data.type as MaintenanceType,
-        status: MaintenanceStatus.PENDING,
+        status: MaintenanceStatus.SCHEDULED,
         scheduledDate: data.scheduledDate,
         description: data.description,
+        industryId: machine.industryId,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };

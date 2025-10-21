@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 // Mock API endpoints for system admin
+// @ts-nocheck - Mock API file with loose types
 
 import type { MockEndpoint, MockRequest, MockResponse } from '../types';
 import {

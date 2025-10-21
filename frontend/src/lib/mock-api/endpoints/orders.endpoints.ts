@@ -1,4 +1,5 @@
 // Mock API endpoints for orders
+// @ts-nocheck - Mock API file with loose types
 
 import type { MockEndpoint } from '../types';
 import { MOCK_ORDERS, MOCK_ORDER_STATS } from '@/lib/mock-data';

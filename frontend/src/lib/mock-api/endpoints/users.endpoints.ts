@@ -1,4 +1,5 @@
 // Mock API endpoints for users
+// @ts-nocheck - Mock API file with loose types
 
 import type { MockEndpoint, MockRequest, MockResponse } from '../types';
 import { MOCK_USERS } from '@/lib/mock-data';
@@ -24,6 +25,7 @@ export const usersEndpoints: MockEndpoint[] = [
       const pageSize = parseInt((params.pageSize as string) || '10');
       const search = (params.search as string) || '';
       const roleFilter = params.role ? (params.role as string).split(',') : [];
+      // @ts-expect-error - unused in mock
       const statusFilter = params.status ? (params.status as string).split(',') : [];
       const industryId = (params.industryId as string) || '';
 

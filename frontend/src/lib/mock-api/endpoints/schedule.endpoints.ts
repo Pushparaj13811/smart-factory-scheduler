@@ -104,12 +104,6 @@ export const scheduleEndpoints: MockEndpoint[] = [
         completed: MOCK_SCHEDULE_TASKS.filter((t) => t.status === TaskStatus.COMPLETED).length,
         delayed: MOCK_SCHEDULE_TASKS.filter((t) => t.status === TaskStatus.DELAYED).length,
         cancelled: MOCK_SCHEDULE_TASKS.filter((t) => t.status === TaskStatus.CANCELLED).length,
-        completionRate: Math.round(
-          (MOCK_SCHEDULE_TASKS.filter((t) => t.status === TaskStatus.COMPLETED).length /
-            MOCK_SCHEDULE_TASKS.length) *
-            100
-        ),
-        averageDelay: 15, // Mock value
       };
 
       return {
@@ -238,9 +232,7 @@ export const scheduleEndpoints: MockEndpoint[] = [
         conflicts: [
           {
             taskId: 'task-1',
-            conflictingTaskId: 'task-5',
             reason: 'Both tasks assigned to same machine with overlapping time',
-            severity: 'warning',
           },
         ],
         suggestions: [
@@ -248,7 +240,6 @@ export const scheduleEndpoints: MockEndpoint[] = [
           'Adjust task-1 start time to reduce overlap',
           'Balance workload across multiple machines',
         ],
-        estimatedImprovement: 15,
       };
 
       return {
@@ -277,10 +268,10 @@ export const scheduleEndpoints: MockEndpoint[] = [
 
       const updatedTask = {
         ...MOCK_SCHEDULE_TASKS[index],
-        machineId: data.newMachineId || MOCK_SCHEDULE_TASKS[index].machineId,
-        assignedTo: data.newAssignedTo || MOCK_SCHEDULE_TASKS[index].assignedTo,
-        startTime: data.newStartTime || MOCK_SCHEDULE_TASKS[index].startTime,
-        endTime: data.newEndTime || MOCK_SCHEDULE_TASKS[index].endTime,
+        machineId: data.machineId || MOCK_SCHEDULE_TASKS[index].machineId,
+        assignedTo: data.assignedTo || MOCK_SCHEDULE_TASKS[index].assignedTo,
+        startTime: data.startTime || MOCK_SCHEDULE_TASKS[index].startTime,
+        endTime: data.endTime || MOCK_SCHEDULE_TASKS[index].endTime,
         updatedAt: new Date().toISOString(),
       };
 
