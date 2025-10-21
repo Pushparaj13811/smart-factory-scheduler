@@ -12,7 +12,7 @@ import { MaintenanceType, MaintenanceStatus } from '../types';
 
 interface MaintenanceFormProps {
   record?: MaintenanceRecord;
-  onSubmit: (data: CreateMaintenanceInput | UpdateMaintenanceInput) => void;
+  onSubmit: (data: CreateMaintenanceInput | UpdateMaintenanceInput) => void | Promise<void>;
   isSubmitting?: boolean;
   machines?: Array<{ id: string; name: string }>;
 }
