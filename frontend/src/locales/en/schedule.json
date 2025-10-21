@@ -1,0 +1,125 @@
+{
+  "title": "Production Schedule",
+  "subtitle": "View and manage production tasks and schedules",
+  "addTask": "Add Task",
+  "editTask": "Edit Task",
+  "taskDetails": "Task Details",
+  "createTask": "Create New Task",
+  "updateTask": "Update Task",
+  "deleteTask": "Delete Task",
+  "noTasks": "No tasks found",
+  "searchPlaceholder": "Search tasks by title, machine, or assignee...",
+
+  "form": {
+    "title": "Task Title",
+    "titlePlaceholder": "Enter task title",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter task description",
+    "machine": "Machine",
+    "machinePlaceholder": "Select machine",
+    "component": "Component",
+    "componentPlaceholder": "Select component (optional)",
+    "order": "Order",
+    "orderPlaceholder": "Select order (optional)",
+    "startTime": "Start Time",
+    "startTimePlaceholder": "Select start time",
+    "endTime": "End Time",
+    "endTimePlaceholder": "Select end time",
+    "status": "Status",
+    "statusPlaceholder": "Select status",
+    "priority": "Priority",
+    "priorityPlaceholder": "Select priority",
+    "assignedTo": "Assigned To",
+    "assignedToPlaceholder": "Select worker",
+    "estimatedDuration": "Estimated Duration",
+    "estimatedDurationPlaceholder": "Enter duration in minutes",
+    "actualDuration": "Actual Duration",
+    "notes": "Notes",
+    "notesPlaceholder": "Enter task notes or instructions",
+    "duration": "Duration"
+  },
+
+  "status": {
+    "scheduled": "Scheduled",
+    "in_progress": "In Progress",
+    "completed": "Completed",
+    "delayed": "Delayed",
+    "cancelled": "Cancelled"
+  },
+
+  "priority": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "urgent": "Urgent"
+  },
+
+  "details": {
+    "overview": "Overview",
+    "schedule": "Schedule Information",
+    "assignments": "Assignments",
+    "timeline": "Timeline",
+    "history": "Task History"
+  },
+
+  "timeline": {
+    "taskCreated": "Task Created",
+    "taskStarted": "Task Started",
+    "taskCompleted": "Task Completed",
+    "taskCancelled": "Task Cancelled",
+    "statusChanged": "Status Changed",
+    "reassigned": "Task Reassigned"
+  },
+
+  "filters": {
+    "all": "All Tasks",
+    "byStatus": "Filter by Status",
+    "byPriority": "Filter by Priority",
+    "byMachine": "Filter by Machine",
+    "byAssignee": "Filter by Assignee",
+    "byDateRange": "Filter by Date Range",
+    "clearFilters": "Clear Filters",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters"
+  },
+
+  "actions": {
+    "updateStatus": "Update Status",
+    "reassignTask": "Reassign Task",
+    "viewDetails": "View Details",
+    "optimizeSchedule": "Optimize Schedule",
+    "exportSchedule": "Export Schedule"
+  },
+
+  "confirmations": {
+    "deleteTitle": "Delete Task?",
+    "deleteMessage": "Are you sure you want to delete this task? This action cannot be undone.",
+    "deleteSuccess": "Task deleted successfully",
+    "cancelTitle": "Cancel Task?",
+    "cancelMessage": "Are you sure you want to cancel this task?"
+  },
+
+  "messages": {
+    "createSuccess": "Task created successfully",
+    "updateSuccess": "Task updated successfully",
+    "deleteSuccess": "Task deleted successfully",
+    "statusUpdated": "Task status updated successfully",
+    "taskReassigned": "Task reassigned successfully",
+    "scheduleOptimized": "Schedule optimized successfully",
+    "createError": "Failed to create task",
+    "updateError": "Failed to update task",
+    "deleteError": "Failed to delete task",
+    "loadError": "Failed to load tasks"
+  },
+
+  "stats": {
+    "totalTasks": "Total Tasks",
+    "scheduled": "Scheduled",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "delayed": "Delayed",
+    "cancelled": "Cancelled",
+    "completionRate": "Completion Rate",
+    "averageDuration": "Average Duration"
+  }
+}

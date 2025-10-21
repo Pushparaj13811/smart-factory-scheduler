@@ -1,0 +1,125 @@
+{
+  "title": "उत्पादन अनुसूची",
+  "subtitle": "उत्पादन कार्य और अनुसूची देखें और प्रबंधित करें",
+  "addTask": "कार्य जोड़ें",
+  "editTask": "कार्य संपादित करें",
+  "taskDetails": "कार्य विवरण",
+  "createTask": "नया कार्य बनाएं",
+  "updateTask": "कार्य अपडेट करें",
+  "deleteTask": "कार्य हटाएं",
+  "noTasks": "कोई कार्य नहीं मिला",
+  "searchPlaceholder": "शीर्षक, मशीन, या असाइनी द्वारा कार्य खोजें...",
+
+  "form": {
+    "title": "कार्य शीर्षक",
+    "titlePlaceholder": "कार्य शीर्षक दर्ज करें",
+    "description": "विवरण",
+    "descriptionPlaceholder": "कार्य विवरण दर्ज करें",
+    "machine": "मशीन",
+    "machinePlaceholder": "मशीन चुनें",
+    "component": "घटक",
+    "componentPlaceholder": "घटक चुनें (वैकल्पिक)",
+    "order": "ऑर्डर",
+    "orderPlaceholder": "ऑर्डर चुनें (वैकल्पिक)",
+    "startTime": "प्रारंभ समय",
+    "startTimePlaceholder": "प्रारंभ समय चुनें",
+    "endTime": "समाप्ति समय",
+    "endTimePlaceholder": "समाप्ति समय चुनें",
+    "status": "स्थिति",
+    "statusPlaceholder": "स्थिति चुनें",
+    "priority": "प्राथमिकता",
+    "priorityPlaceholder": "प्राथमिकता चुनें",
+    "assignedTo": "को सौंपा गया",
+    "assignedToPlaceholder": "कार्यकर्ता चुनें",
+    "estimatedDuration": "अनुमानित अवधि",
+    "estimatedDurationPlaceholder": "मिनटों में अवधि दर्ज करें",
+    "actualDuration": "वास्तविक अवधि",
+    "notes": "टिप्पणियाँ",
+    "notesPlaceholder": "कार्य टिप्पणियाँ या निर्देश दर्ज करें",
+    "duration": "अवधि"
+  },
+
+  "status": {
+    "scheduled": "अनुसूचित",
+    "in_progress": "प्रगति में",
+    "completed": "पूर्ण",
+    "delayed": "विलंबित",
+    "cancelled": "रद्द"
+  },
+
+  "priority": {
+    "low": "निम्न",
+    "medium": "मध्यम",
+    "high": "उच्च",
+    "urgent": "अत्यावश्यक"
+  },
+
+  "details": {
+    "overview": "अवलोकन",
+    "schedule": "अनुसूची जानकारी",
+    "assignments": "कार्य सौंपना",
+    "timeline": "समयरेखा",
+    "history": "कार्य इतिहास"
+  },
+
+  "timeline": {
+    "taskCreated": "कार्य बनाया गया",
+    "taskStarted": "कार्य शुरू",
+    "taskCompleted": "कार्य पूर्ण",
+    "taskCancelled": "कार्य रद्द",
+    "statusChanged": "स्थिति बदली",
+    "reassigned": "कार्य पुनः सौंपा गया"
+  },
+
+  "filters": {
+    "all": "सभी कार्य",
+    "byStatus": "स्थिति से फ़िल्टर करें",
+    "byPriority": "प्राथमिकता से फ़िल्टर करें",
+    "byMachine": "मशीन से फ़िल्टर करें",
+    "byAssignee": "असाइनी से फ़िल्टर करें",
+    "byDateRange": "तिथि सीमा से फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छुपाएं"
+  },
+
+  "actions": {
+    "updateStatus": "स्थिति अपडेट करें",
+    "reassignTask": "कार्य पुनः सौंपें",
+    "viewDetails": "विवरण देखें",
+    "optimizeSchedule": "अनुसूची अनुकूलित करें",
+    "exportSchedule": "अनुसूची निर्यात करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "कार्य हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस कार्य को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteSuccess": "कार्य सफलतापूर्वक हटाया गया",
+    "cancelTitle": "कार्य रद्द करें?",
+    "cancelMessage": "क्या आप वाकई इस कार्य को रद्द करना चाहते हैं?"
+  },
+
+  "messages": {
+    "createSuccess": "कार्य सफलतापूर्वक बनाया गया",
+    "updateSuccess": "कार्य सफलतापूर्वक अपडेट किया गया",
+    "deleteSuccess": "कार्य सफलतापूर्वक हटाया गया",
+    "statusUpdated": "कार्य स्थिति सफलतापूर्वक अपडेट की गई",
+    "taskReassigned": "कार्य सफलतापूर्वक पुनः सौंपा गया",
+    "scheduleOptimized": "अनुसूची सफलतापूर्वक अनुकूलित",
+    "createError": "कार्य बनाने में विफल",
+    "updateError": "कार्य अपडेट करने में विफल",
+    "deleteError": "कार्य हटाने में विफल",
+    "loadError": "कार्य लोड करने में विफल"
+  },
+
+  "stats": {
+    "totalTasks": "कुल कार्य",
+    "scheduled": "अनुसूचित",
+    "inProgress": "प्रगति में",
+    "completed": "पूर्ण",
+    "delayed": "विलंबित",
+    "cancelled": "रद्द",
+    "completionRate": "पूर्णता दर",
+    "averageDuration": "औसत अवधि"
+  }
+}

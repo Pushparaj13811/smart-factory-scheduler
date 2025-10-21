@@ -42,7 +42,7 @@ export interface ScheduleTask {
   updatedAt: string;
 }
 
-export interface ScheduleFilters {
+export interface TaskFilters {
   search?: string;
   status?: TaskStatus;
   priority?: TaskPriority;
@@ -52,14 +52,14 @@ export interface ScheduleFilters {
   endDate?: string;
 }
 
-export interface ScheduleResponse {
+export interface TasksResponse {
   tasks: ScheduleTask[];
   total: number;
   page: number;
   pageSize: number;
 }
 
-export interface TaskFormData {
+export interface CreateTaskInput {
   title: string;
   description?: string;
   machineId?: string;
@@ -71,4 +71,40 @@ export interface TaskFormData {
   priority: TaskPriority;
   assignedTo?: string;
   notes?: string;
+}
+
+export interface UpdateTaskInput {
+  title?: string;
+  description?: string;
+  machineId?: string;
+  componentId?: string;
+  orderId?: string;
+  startTime?: string;
+  endTime?: string;
+  status?: TaskStatus;
+  priority?: TaskPriority;
+  assignedTo?: string;
+  notes?: string;
+}
+
+export interface ReassignTaskInput {
+  machineId?: string;
+  assignedTo?: string;
+  startTime?: string;
+  endTime?: string;
+}
+
+export interface TaskStats {
+  total: number;
+  scheduled: number;
+  inProgress: number;
+  completed: number;
+  delayed: number;
+  cancelled: number;
+}
+
+export interface OptimizeScheduleResult {
+  optimizedTasks: ScheduleTask[];
+  conflicts: Array<{ taskId: string; reason: string }>;
+  suggestions: string[];
 }

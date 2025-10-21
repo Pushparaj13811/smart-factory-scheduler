@@ -7,6 +7,7 @@ import { machinesEndpoints } from './machines.endpoints';
 import { componentsEndpoints } from './components.endpoints';
 import { rawMaterialsEndpoints } from './raw-materials.endpoints';
 import { ordersEndpoints } from './orders.endpoints';
+import { scheduleEndpoints } from './schedule.endpoints';
 import { maintenanceEndpoints } from './maintenance.endpoints';
 import { systemEndpoints } from './system.endpoints';
 import { usersEndpoints } from './users.endpoints';
@@ -19,6 +20,7 @@ export const mockEndpoints: MockEndpoint[] = [
   ...componentsEndpoints,
   ...rawMaterialsEndpoints,
   ...ordersEndpoints,
+  ...scheduleEndpoints,
   ...maintenanceEndpoints,
   ...systemEndpoints,
   ...usersEndpoints,
