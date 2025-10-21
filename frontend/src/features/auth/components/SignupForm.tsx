@@ -65,8 +65,10 @@ export function SignupForm() {
   };
 
   const nextStep = async () => {
-    const fields = step === 1 ? ['name', 'email'] : ['password', 'confirmPassword'];
-    const isValid = await form.trigger(fields as any);
+    const fields: Array<keyof SignupFormValues> = step === 1
+      ? ['name', 'email']
+      : ['password', 'confirmPassword'];
+    const isValid = await form.trigger(fields);
     if (isValid) {
       setStep(step + 1);
     }
