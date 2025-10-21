@@ -1,0 +1,183 @@
+{
+  "appName": "Smart Factory Scheduler",
+  "hero": {
+    "badge": "Trusted by 50+ Manufacturing Industries",
+    "title": "Intelligent Production Scheduling for Modern Factories",
+    "subtitle": "AI-powered scheduling platform that optimizes production planning in minutes, not hours. Reduce downtime by 40% and boost efficiency by 30%.",
+    "cta": {
+      "trial": "Start Free Trial",
+      "demo": "Watch Demo"
+    },
+    "trust": {
+      "freeTrial": "Free Trial",
+      "freeTrialValue": "30 Days",
+      "implementation": "Implementation",
+      "implementationValue": "2-4 Weeks",
+      "support": "Support",
+      "supportValue": "24/7"
+    },
+    "metrics": {
+      "efficiency": "Efficiency",
+      "efficiencyValue": "+34%",
+      "efficiencyChange": "↑ vs last month",
+      "planning": "Planning Time",
+      "planningValue": "15min",
+      "planningChange": "Down from 6hrs"
+    }
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Specialized solutions for diverse manufacturing sectors",
+    "automotive": "Automotive",
+    "electronics": "Electronics",
+    "textile": "Textile",
+    "pharmaceutical": "Pharmaceutical",
+    "foodBeverage": "Food & Beverage",
+    "chemical": "Chemical",
+    "metalMining": "Metal & Mining",
+    "logistics": "Logistics"
+  },
+  "features": {
+    "title": "Built for Manufacturing Excellence",
+    "subtitle": "Everything you need to optimize production scheduling, from AI-powered optimization to real-time analytics.",
+    "ai": {
+      "title": "Genetic Algorithm Optimization",
+      "description": "Advanced AI that handles complex multi-machine constraints and generates optimal schedules in minutes. Our genetic algorithm considers hundreds of variables simultaneously to find the best solution.",
+      "benefit1Title": "Multi-objective optimization",
+      "benefit1Description": "Balance delivery times, costs, and resource utilization",
+      "benefit2Title": "Constraint satisfaction",
+      "benefit2Description": "Handle machine capabilities, shift patterns, and deadlines",
+      "benefit3Title": "Real-time re-optimization",
+      "benefit3Description": "Instantly adjust schedules when priorities change"
+    },
+    "analytics": {
+      "title": "Real-Time Analytics",
+      "description": "Monitor every aspect of your production floor with live dashboards. Identify bottlenecks before they become problems and make data-driven decisions to improve efficiency.",
+      "benefit1Title": "Live production dashboards",
+      "benefit1Description": "Track machine status and production progress in real-time",
+      "benefit2Title": "Performance metrics tracking",
+      "benefit2Description": "Monitor OEE, utilization rates, and throughput",
+      "benefit3Title": "Predictive maintenance alerts",
+      "benefit3Description": "Get notified before equipment failures occur"
+    },
+    "scheduling": {
+      "title": "Visual Schedule Management",
+      "description": "Intuitive drag-and-drop interface for manual adjustments. See the impact of changes instantly with automatic conflict detection and resolution suggestions.",
+      "benefit1Title": "Interactive Gantt charts",
+      "benefit1Description": "Visualize your entire production schedule at a glance",
+      "benefit2Title": "Automatic conflict resolution",
+      "benefit2Description": "Smart suggestions to resolve scheduling conflicts",
+      "benefit3Title": "Multi-user collaboration",
+      "benefit3Description": "Work together with your team in real-time"
+    }
+  },
+  "results": {
+    "badge": "Proven ROI",
+    "title": "Results That Matter",
+    "subtitle": "Average improvements in the first 90 days",
+    "planning": {
+      "value": "94%",
+      "label": "Faster Planning",
+      "description": "From 6 hours to 15 minutes"
+    },
+    "downtime": {
+      "value": "40%",
+      "label": "Less Downtime",
+      "description": "Reduced machine idle time"
+    },
+    "efficiency": {
+      "value": "34%",
+      "label": "Higher Efficiency",
+      "description": "Increased utilization rates"
+    },
+    "accuracy": {
+      "value": "98%",
+      "label": "Schedule Accuracy",
+      "description": "On-time delivery rate"
+    }
+  },
+  "testimonials": {
+    "badge": "Customer Stories",
+    "title": "Trusted by Manufacturing Leaders",
+    "subtitle": "See how teams are transforming their operations",
+    "testimonial1": {
+      "name": "Rajesh Kumar",
+      "role": "Manufacturing Director",
+      "company": "AutoTech Industries",
+      "content": "We reduced our planning time from 6 hours to 20 minutes. The genetic algorithm handles our complex constraints better than anything we have tried before."
+    },
+    "testimonial2": {
+      "name": "Priya Sharma",
+      "role": "Operations Manager",
+      "company": "TechnoFab Solutions",
+      "content": "The real-time analytics dashboard gives us insights we never had before. We can spot bottlenecks immediately and adjust schedules on the fly."
+    },
+    "testimonial3": {
+      "name": "Amit Patel",
+      "role": "Production Head",
+      "company": "MegaManufacturing Ltd",
+      "content": "Our machine utilization went from 68% to 91% in the first 90 days. The ROI was clear within the first month."
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Production?",
+    "subtitle": "Join 50+ manufacturing industries using Smart Factory Scheduler. Start your free 30-day trial today.",
+    "trial": "Start Free Trial",
+    "sales": "Talk to Sales",
+    "features": {
+      "noCard": "No credit card required",
+      "implementation": "2-4 week implementation",
+      "support": "Dedicated support team"
+    }
+  },
+  "registration": {
+    "title": "Register Your Industry",
+    "subtitle": "Join the future of manufacturing scheduling",
+    "formTitle": "Industry Registration",
+    "formDescription": "Fill in the details below to get started with Smart Factory Scheduler",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "accountSecurity": "Account Security",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Your Company Ltd.",
+    "industryType": "Industry Type",
+    "selectIndustry": "Select industry type",
+    "employeeCount": "Number of Employees",
+    "selectEmployeeCount": "Select employee count",
+    "employees": "employees",
+    "address": "Company Address",
+    "addressPlaceholder": "Enter your company address",
+    "description": "Company Description",
+    "descriptionPlaceholder": "Tell us about your company (optional)",
+    "contactPerson": "Contact Person Name",
+    "contactPersonPlaceholder": "John Doe",
+    "email": "Email Address",
+    "emailPlaceholder": "john@company.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+1 234 567 8900",
+    "password": "Password",
+    "passwordPlaceholder": "Min. 8 characters",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter password",
+    "benefit1": "30-day free trial, no credit card required",
+    "benefit2": "Full access to all premium features",
+    "benefit3": "24/7 customer support and onboarding assistance",
+    "submit": "Register Industry",
+    "submitting": "Registering...",
+    "haveAccount": "Already have an account?",
+    "success": "Registration successful! Please check your email to verify your account.",
+    "error": "Registration failed. Please try again."
+  },
+  "footer": {
+    "description": "AI-powered production scheduling platform for modern manufacturing industries.",
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "getStarted": "Get Started",
+    "company": "Company",
+    "about": "About",
+    "contact": "Contact",
+    "support": "Support",
+    "rights": "All rights reserved."
+  }
+}
