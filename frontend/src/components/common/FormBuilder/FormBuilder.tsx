@@ -1,7 +1,7 @@
 // Dynamic form builder component
 
 import type { ReactNode } from 'react';
-import type { UseFormReturn } from 'react-hook-form';
+import type { UseFormReturn, ControllerRenderProps, FieldValues, Path } from 'react-hook-form';
 import {
   Form,
   FormControl,
@@ -43,8 +43,8 @@ export type FieldType =
   | 'quantity'
   | 'custom';
 
-export interface FieldConfig {
-  name: string;
+export interface FieldConfig<TFieldValues extends FieldValues = FieldValues> {
+  name: Path<TFieldValues>;
   label: string;
   type: FieldType;
   placeholder?: string;
@@ -56,23 +56,27 @@ export interface FieldConfig {
   max?: number;
   step?: number;
   unit?: string;
-  customRender?: (field: any) => ReactNode;
+  customRender?: (field: ControllerRenderProps<TFieldValues>) => ReactNode;
 }
 
-interface FormBuilderProps {
-  form: UseFormReturn<any>;
-  fields: FieldConfig[];
+interface FormBuilderProps<TFieldValues extends FieldValues = FieldValues> {
+  form: UseFormReturn<TFieldValues>;
+  fields: FieldConfig<TFieldValues>[];
   columns?: 1 | 2 | 3;
 }
 
-export function FormBuilder({ form, fields, columns = 1 }: FormBuilderProps) {
+export function FormBuilder<TFieldValues extends FieldValues = FieldValues>({
+  form,
+  fields,
+  columns = 1
+}: FormBuilderProps<TFieldValues>) {
   const gridCols = {
     1: 'grid-cols-1',
     2: 'grid-cols-1 md:grid-cols-2',
     3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
   };
 
-  const renderField = (fieldConfig: FieldConfig) => {
+  const renderField = (fieldConfig: FieldConfig<TFieldValues>) => {
     return (
       <FormField
         key={fieldConfig.name}
