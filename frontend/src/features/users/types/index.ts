@@ -20,6 +20,7 @@ export interface UserFilters {
   role?: UserRole[];
   status?: UserStatus[];
   industryId?: string;
+  supervisorId?: string; // For filtering users by their supervisor
 }
 
 // Users response

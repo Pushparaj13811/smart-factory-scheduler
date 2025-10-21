@@ -33,6 +33,9 @@ class UserService {
     if (filters?.industryId) {
       params.append('industryId', filters.industryId);
     }
+    if (filters?.supervisorId) {
+      params.append('supervisorId', filters.supervisorId);
+    }
 
     const response = await apiClient.get<UsersResponse>(`/users?${params.toString()}`);
     return response.data;

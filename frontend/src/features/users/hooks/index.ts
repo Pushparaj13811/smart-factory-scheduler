@@ -1,13 +1,15 @@
 // User management hooks
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMemo } from 'react';
 import { userService } from '../services/user.service';
+import { useAuth } from '@/hooks/useAuth';
+import { UserRole } from '@/constants/roles';
 import type {
   UserFilters,
   UserFormData,
   UserUpdateData,
 } from '../types';
-import type { UserRole } from '@/constants/roles';
 
 // Query keys
 export const userKeys = {
@@ -126,4 +128,57 @@ export function useActivateUser() {
       queryClient.invalidateQueries({ queryKey: userKeys.stats() });
     },
   });
+}
+
+/**
+ * Hook to get role-based filters for user list
+ * Automatically applies filters based on the current user's role:
+ * - SYSTEM_ADMIN: No automatic filters (sees all users)
+ * - INDUSTRY_OWNER: Filters by industryId (sees only their industry's users)
+ * - ADMINISTRATOR: Filters by industryId (sees only their industry's users)
+ * - SUPERVISOR: Filters by supervisorId (sees only their team members)
+ * - WORKER: Should not have access to user management (but if they do, shows only themselves)
+ */
+export function useRoleBasedUserFilters(): UserFilters | undefined {
+  const { user, isSystemAdmin, isIndustryOwner, isAdministrator, isSupervisor, isWorker } = useAuth();
+
+  return useMemo(() => {
+    if (!user) return undefined;
+
+    const filters: UserFilters = {};
+
+    // System admin sees all users across all industries
+    if (isSystemAdmin()) {
+      return undefined; // No filters
+    }
+
+    // Industry owner and admin see only users in their industry
+    if (isIndustryOwner() || isAdministrator()) {
+      if (user.industryId) {
+        filters.industryId = user.industryId;
+      }
+      return filters;
+    }
+
+    // Supervisor sees only their team members (users with supervisorId = current user's id)
+    if (isSupervisor()) {
+      filters.supervisorId = user.id;
+      if (user.industryId) {
+        filters.industryId = user.industryId;
+      }
+      return filters;
+    }
+
+    // Workers should not have access to user management
+    // But if they somehow do, they can only see themselves
+    if (isWorker()) {
+      filters.search = user.email; // Filter to only show themselves
+      if (user.industryId) {
+        filters.industryId = user.industryId;
+      }
+      return filters;
+    }
+
+    return undefined;
+  }, [user, isSystemAdmin, isIndustryOwner, isAdministrator, isSupervisor, isWorker]);
 }
