@@ -1,0 +1,96 @@
+{
+  "title": "उपयोगकर्ता प्रबंधन",
+  "subtitle": "उपयोगकर्ता खाते, भूमिकाएं और पहुंच नियंत्रण प्रबंधित करें",
+  "addUser": "उपयोगकर्ता जोड़ें",
+  "editUser": "उपयोगकर्ता संपादित करें",
+  "userDetails": "उपयोगकर्ता विवरण",
+  "createUser": "नया उपयोगकर्ता बनाएं",
+  "updateUser": "उपयोगकर्ता अपडेट करें",
+  "deleteUser": "उपयोगकर्ता हटाएं",
+  "noUsers": "कोई उपयोगकर्ता नहीं मिला",
+  "searchPlaceholder": "नाम या ईमेल द्वारा उपयोगकर्ता खोजें...",
+
+  "form": {
+    "name": "पूरा नाम",
+    "namePlaceholder": "पूरा नाम दर्ज करें",
+    "email": "ईमेल पता",
+    "emailPlaceholder": "ईमेल पता दर्ज करें",
+    "role": "भूमिका",
+    "rolePlaceholder": "भूमिका चुनें",
+    "avatar": "अवतार URL",
+    "avatarPlaceholder": "अवतार URL दर्ज करें (वैकल्पिक)",
+    "industry": "उद्योग",
+    "industryPlaceholder": "उद्योग चुनें",
+    "status": "स्थिति",
+    "statusPlaceholder": "स्थिति चुनें",
+    "password": "पासवर्ड",
+    "passwordPlaceholder": "पासवर्ड दर्ज करें",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "confirmPasswordPlaceholder": "पासवर्ड पुनः दर्ज करें"
+  },
+
+  "status": {
+    "active": "सक्रिय",
+    "inactive": "निष्क्रिय",
+    "suspended": "निलंबित"
+  },
+
+  "details": {
+    "overview": "अवलोकन",
+    "accountInfo": "खाता जानकारी",
+    "permissions": "अनुमतियां",
+    "activityLog": "गतिविधि लॉग",
+    "statistics": "सांख्यिकी"
+  },
+
+  "filters": {
+    "all": "सभी उपयोगकर्ता",
+    "byRole": "भूमिका से फ़िल्टर करें",
+    "byStatus": "स्थिति से फ़िल्टर करें",
+    "byIndustry": "उद्योग से फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छुपाएं"
+  },
+
+  "actions": {
+    "changeRole": "भूमिका बदलें",
+    "activate": "उपयोगकर्ता सक्रिय करें",
+    "deactivate": "उपयोगकर्ता निष्क्रिय करें",
+    "suspend": "उपयोगकर्ता निलंबित करें",
+    "resetPassword": "पासवर्ड रीसेट करें",
+    "viewDetails": "विवरण देखें",
+    "exportData": "डेटा निर्यात करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "उपयोगकर्ता हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस उपयोगकर्ता को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteSuccess": "उपयोगकर्ता सफलतापूर्वक हटाया गया",
+    "deactivateTitle": "उपयोगकर्ता निष्क्रिय करें?",
+    "deactivateMessage": "क्या आप वाकई इस उपयोगकर्ता को निष्क्रिय करना चाहते हैं?",
+    "suspendTitle": "उपयोगकर्ता निलंबित करें?",
+    "suspendMessage": "क्या आप वाकई इस उपयोगकर्ता को निलंबित करना चाहते हैं?"
+  },
+
+  "messages": {
+    "createSuccess": "उपयोगकर्ता सफलतापूर्वक बनाया गया",
+    "updateSuccess": "उपयोगकर्ता सफलतापूर्वक अपडेट किया गया",
+    "deleteSuccess": "उपयोगकर्ता सफलतापूर्वक हटाया गया",
+    "roleUpdated": "उपयोगकर्ता भूमिका सफलतापूर्वक अपडेट की गई",
+    "statusUpdated": "उपयोगकर्ता स्थिति सफलतापूर्वक अपडेट की गई",
+    "passwordReset": "पासवर्ड रीसेट ईमेल सफलतापूर्वक भेजा गया",
+    "createError": "उपयोगकर्ता बनाने में विफल",
+    "updateError": "उपयोगकर्ता अपडेट करने में विफल",
+    "deleteError": "उपयोगकर्ता हटाने में विफल",
+    "loadError": "उपयोगकर्ता लोड करने में विफल"
+  },
+
+  "stats": {
+    "totalUsers": "कुल उपयोगकर्ता",
+    "activeUsers": "सक्रिय उपयोगकर्ता",
+    "inactiveUsers": "निष्क्रिय उपयोगकर्ता",
+    "suspendedUsers": "निलंबित उपयोगकर्ता",
+    "recentlyAdded": "हाल ही में जोड़ा गया"
+  }
+}

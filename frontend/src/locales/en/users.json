@@ -1,0 +1,96 @@
+{
+  "title": "User Management",
+  "subtitle": "Manage user accounts, roles, and access control",
+  "addUser": "Add User",
+  "editUser": "Edit User",
+  "userDetails": "User Details",
+  "createUser": "Create New User",
+  "updateUser": "Update User",
+  "deleteUser": "Delete User",
+  "noUsers": "No users found",
+  "searchPlaceholder": "Search users by name or email...",
+
+  "form": {
+    "name": "Full Name",
+    "namePlaceholder": "Enter full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter email address",
+    "role": "Role",
+    "rolePlaceholder": "Select role",
+    "avatar": "Avatar URL",
+    "avatarPlaceholder": "Enter avatar URL (optional)",
+    "industry": "Industry",
+    "industryPlaceholder": "Select industry",
+    "status": "Status",
+    "statusPlaceholder": "Select status",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter password"
+  },
+
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended"
+  },
+
+  "details": {
+    "overview": "Overview",
+    "accountInfo": "Account Information",
+    "permissions": "Permissions",
+    "activityLog": "Activity Log",
+    "statistics": "Statistics"
+  },
+
+  "filters": {
+    "all": "All Users",
+    "byRole": "Filter by Role",
+    "byStatus": "Filter by Status",
+    "byIndustry": "Filter by Industry",
+    "clearFilters": "Clear Filters",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters"
+  },
+
+  "actions": {
+    "changeRole": "Change Role",
+    "activate": "Activate User",
+    "deactivate": "Deactivate User",
+    "suspend": "Suspend User",
+    "resetPassword": "Reset Password",
+    "viewDetails": "View Details",
+    "exportData": "Export Data"
+  },
+
+  "confirmations": {
+    "deleteTitle": "Delete User?",
+    "deleteMessage": "Are you sure you want to delete this user? This action cannot be undone.",
+    "deleteSuccess": "User deleted successfully",
+    "deactivateTitle": "Deactivate User?",
+    "deactivateMessage": "Are you sure you want to deactivate this user?",
+    "suspendTitle": "Suspend User?",
+    "suspendMessage": "Are you sure you want to suspend this user?"
+  },
+
+  "messages": {
+    "createSuccess": "User created successfully",
+    "updateSuccess": "User updated successfully",
+    "deleteSuccess": "User deleted successfully",
+    "roleUpdated": "User role updated successfully",
+    "statusUpdated": "User status updated successfully",
+    "passwordReset": "Password reset email sent successfully",
+    "createError": "Failed to create user",
+    "updateError": "Failed to update user",
+    "deleteError": "Failed to delete user",
+    "loadError": "Failed to load users"
+  },
+
+  "stats": {
+    "totalUsers": "Total Users",
+    "activeUsers": "Active Users",
+    "inactiveUsers": "Inactive Users",
+    "suspendedUsers": "Suspended Users",
+    "recentlyAdded": "Recently Added"
+  }
+}
