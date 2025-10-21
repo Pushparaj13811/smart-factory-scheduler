@@ -1,0 +1,54 @@
+{
+  "welcome": {
+    "title": "वापस स्वागत है, {{name}}!",
+    "description": "यहाँ आपके स्मार्ट फैक्ट्री संचालन का अवलोकन है"
+  },
+  "stats": {
+    "totalMachines": "कुल मशीनें",
+    "totalMachinesDesc": "सक्रिय उत्पादन मशीनें",
+    "components": "घटक",
+    "componentsDesc": "उपलब्ध घटक",
+    "activeOrders": "सक्रिय आदेश",
+    "activeOrdersDesc": "प्रगति में आदेश",
+    "efficiency": "दक्षता",
+    "efficiencyDesc": "समग्र उत्पादन दक्षता",
+    "fromLastMonth": "पिछले महीने से",
+    "fromLastWeek": "पिछले सप्ताह से"
+  },
+  "userInfo": {
+    "title": "उपयोगकर्ता जानकारी",
+    "description": "आपके खाते का विवरण",
+    "name": "नाम",
+    "email": "ईमेल",
+    "role": "भूमिका",
+    "industryId": "उद्योग आईडी"
+  },
+  "progress": {
+    "title": "कार्यान्वयन प्रगति",
+    "description": "सिस्टम विकास स्थिति",
+    "phase0": "चरण 0: सेटअप",
+    "phase1": "चरण 1: बुनियादी ढांचा",
+    "phase2": "चरण 2: प्रमाणीकरण",
+    "phase3": "चरण 3: घटक"
+  },
+  "quickActions": {
+    "title": "त्वरित कार्य",
+    "description": "सामान्य संचालन",
+    "comingSoon": "आगामी चरणों में फीचर मॉड्यूल लागू किए जाएंगे:",
+    "phase4": "चरण 4: डैशबोर्ड मॉड्यूल",
+    "phase5": "चरण 5-8: CRUD मॉड्यूल",
+    "phase9": "चरण 9: शेड्यूलिंग",
+    "phase10": "चरण 10: रिपोर्ट"
+  },
+  "devInfo": {
+    "title": "विकास जानकारी",
+    "mockAuth": "आप मॉक प्रमाणीकरण के साथ लॉग इन हैं।",
+    "testUsers": "उपलब्ध टेस्ट उपयोगकर्ता:",
+    "systemAdmin": "सिस्टम प्रशासक",
+    "industryOwner": "उद्योग स्वामी",
+    "administrator": "प्रशासक",
+    "supervisor": "पर्यवेक्षक",
+    "worker": "कार्यकर्ता",
+    "allPasswords": "सभी पासवर्ड: password123"
+  }
+}

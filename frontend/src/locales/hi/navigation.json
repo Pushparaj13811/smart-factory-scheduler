@@ -1,0 +1,35 @@
+{
+  "menu": {
+    "dashboard": "डैशबोर्ड",
+    "system": "सिस्टम",
+    "industries": "उद्योग",
+    "subscriptions": "सदस्यताएं",
+    "platformAnalytics": "प्लेटफ़ॉर्म विश्लेषण",
+    "machines": "मशीनें",
+    "components": "घटक",
+    "rawMaterials": "कच्चा माल",
+    "orders": "आदेश",
+    "schedule": "अनुसूची",
+    "maintenance": "रखरखाव",
+    "users": "उपयोगकर्ता प्रबंधन",
+    "reports": "रिपोर्ट और विश्लेषण",
+    "settings": "सेटिंग्स",
+    "profile": "प्रोफ़ाइल"
+  },
+  "header": {
+    "notifications": "सूचनाएं",
+    "noNotifications": "कोई सूचना नहीं",
+    "newNotifications": "{{count}} नई",
+    "viewAllNotifications": "सभी सूचनाएं देखें",
+    "language": "भाषा",
+    "userMenu": "उपयोगकर्ता मेनू",
+    "logout": "लॉग आउट"
+  },
+  "footer": {
+    "copyright": "© {{year}} स्मार्ट फैक्ट्री शेड्यूलर। सर्वाधिकार सुरक्षित।",
+    "about": "के बारे में",
+    "privacy": "गोपनीयता",
+    "terms": "शर्तें",
+    "support": "समर्थन"
+  }
+}

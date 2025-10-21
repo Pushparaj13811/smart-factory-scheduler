@@ -1,0 +1,35 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "system": "System",
+    "industries": "Industries",
+    "subscriptions": "Subscriptions",
+    "platformAnalytics": "Platform Analytics",
+    "machines": "Machines",
+    "components": "Components",
+    "rawMaterials": "Raw Materials",
+    "orders": "Orders",
+    "schedule": "Schedule",
+    "maintenance": "Maintenance",
+    "users": "User Management",
+    "reports": "Reports & Analytics",
+    "settings": "Settings",
+    "profile": "Profile"
+  },
+  "header": {
+    "notifications": "Notifications",
+    "noNotifications": "No notifications",
+    "newNotifications": "{{count}} new",
+    "viewAllNotifications": "View all notifications",
+    "language": "Language",
+    "userMenu": "User Menu",
+    "logout": "Log out"
+  },
+  "footer": {
+    "copyright": "© {{year}} Smart Factory Scheduler. All rights reserved.",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "support": "Support"
+  }
+}

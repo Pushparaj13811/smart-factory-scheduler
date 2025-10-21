@@ -1,0 +1,46 @@
+{
+  "emptyState": {
+    "noData": "कोई डेटा नहीं मिला",
+    "noResults": "कोई परिणाम नहीं मिला",
+    "tryAgain": "अपने खोज या फ़िल्टर मानदंड को समायोजित करने का प्रयास करें"
+  },
+  "loadingState": {
+    "loading": "लोड हो रहा है...",
+    "pleaseWait": "कृपया प्रतीक्षा करें"
+  },
+  "errorState": {
+    "error": "त्रुटि",
+    "somethingWrong": "कुछ गलत हो गया",
+    "tryAgain": "पुनः प्रयास करें"
+  },
+  "confirmDialog": {
+    "confirm": "पुष्टि करें",
+    "cancel": "रद्द करें",
+    "areYouSure": "क्या आप सुनिश्चित हैं?"
+  },
+  "dataTable": {
+    "search": "खोजें...",
+    "noResults": "कोई परिणाम नहीं मिला।",
+    "page": "पृष्ठ",
+    "of": "का",
+    "rows": "पंक्तियाँ",
+    "showing": "दिखा रहे हैं",
+    "items": "आइटम",
+    "item": "आइटम"
+  },
+  "formBuilder": {
+    "required": "आवश्यक",
+    "optional": "वैकल्पिक"
+  },
+  "notifications": {
+    "scheduleUpdated": "अनुसूची अपडेट की गई",
+    "scheduleUpdatedMsg": "उत्पादन अनुसूची को अनुकूलित किया गया है",
+    "maintenanceAlert": "रखरखाव चेतावनी",
+    "maintenanceAlertMsg": "मशीन #3 को रखरखाव की आवश्यकता है",
+    "orderCompleted": "आदेश पूर्ण",
+    "orderCompletedMsg": "आदेश #1234 पूर्ण हो गया है",
+    "minAgo": "{{count}} मिनट पहले",
+    "hourAgo": "{{count}} घंटे पहले",
+    "hoursAgo": "{{count}} घंटे पहले"
+  }
+}

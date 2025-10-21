@@ -1,0 +1,46 @@
+{
+  "emptyState": {
+    "noData": "No data found",
+    "noResults": "No results found",
+    "tryAgain": "Try adjusting your search or filter criteria"
+  },
+  "loadingState": {
+    "loading": "Loading...",
+    "pleaseWait": "Please wait"
+  },
+  "errorState": {
+    "error": "Error",
+    "somethingWrong": "Something went wrong",
+    "tryAgain": "Try Again"
+  },
+  "confirmDialog": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "areYouSure": "Are you sure?"
+  },
+  "dataTable": {
+    "search": "Search...",
+    "noResults": "No results found.",
+    "page": "Page",
+    "of": "of",
+    "rows": "rows",
+    "showing": "Showing",
+    "items": "items",
+    "item": "item"
+  },
+  "formBuilder": {
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "notifications": {
+    "scheduleUpdated": "Schedule Updated",
+    "scheduleUpdatedMsg": "Production schedule has been optimized",
+    "maintenanceAlert": "Maintenance Alert",
+    "maintenanceAlertMsg": "Machine #3 requires maintenance",
+    "orderCompleted": "Order Completed",
+    "orderCompletedMsg": "Order #1234 has been completed",
+    "minAgo": "{{count}} min ago",
+    "hourAgo": "{{count}} hour ago",
+    "hoursAgo": "{{count}} hours ago"
+  }
+}

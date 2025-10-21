@@ -1,0 +1,54 @@
+{
+  "welcome": {
+    "title": "Welcome back, {{name}}!",
+    "description": "Here's an overview of your Smart Factory operations"
+  },
+  "stats": {
+    "totalMachines": "Total Machines",
+    "totalMachinesDesc": "Active production machines",
+    "components": "Components",
+    "componentsDesc": "Available components",
+    "activeOrders": "Active Orders",
+    "activeOrdersDesc": "Orders in progress",
+    "efficiency": "Efficiency",
+    "efficiencyDesc": "Overall production efficiency",
+    "fromLastMonth": "from last month",
+    "fromLastWeek": "from last week"
+  },
+  "userInfo": {
+    "title": "User Information",
+    "description": "Your account details",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "industryId": "Industry ID"
+  },
+  "progress": {
+    "title": "Implementation Progress",
+    "description": "System development status",
+    "phase0": "Phase 0: Setup",
+    "phase1": "Phase 1: Infrastructure",
+    "phase2": "Phase 2: Authentication",
+    "phase3": "Phase 3: Components"
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "description": "Common operations",
+    "comingSoon": "Feature modules will be implemented in upcoming phases:",
+    "phase4": "Phase 4: Dashboard Module",
+    "phase5": "Phase 5-8: CRUD Modules",
+    "phase9": "Phase 9: Scheduling",
+    "phase10": "Phase 10: Reports"
+  },
+  "devInfo": {
+    "title": "Development Information",
+    "mockAuth": "You are logged in with mock authentication.",
+    "testUsers": "Available test users:",
+    "systemAdmin": "System Administrator",
+    "industryOwner": "Industry Owner",
+    "administrator": "Administrator",
+    "supervisor": "Supervisor",
+    "worker": "Worker",
+    "allPasswords": "All passwords: password123"
+  }
+}
