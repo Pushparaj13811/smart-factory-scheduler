@@ -1,7 +1,12 @@
 {
   "welcome": {
     "title": "Welcome back, {{name}}!",
-    "description": "Here's an overview of your Smart Factory operations"
+    "description": "Here's an overview of your Smart Factory operations",
+    "systemAdmin": "Welcome to System Administration Dashboard",
+    "industryOwner": "Welcome to Industry Owner Dashboard",
+    "administrator": "Welcome to Administrator Dashboard",
+    "supervisor": "Welcome to Supervisor Dashboard",
+    "worker": "Welcome to Worker Dashboard"
   },
   "stats": {
     "totalMachines": "Total Machines",
@@ -13,7 +18,21 @@
     "efficiency": "Efficiency",
     "efficiencyDesc": "Overall production efficiency",
     "fromLastMonth": "from last month",
-    "fromLastWeek": "from last week"
+    "fromLastWeek": "from last week",
+    "totalIndustries": "Total Industries",
+    "totalIndustriesDesc": "Registered industries on platform",
+    "totalUsers": "Total Users",
+    "totalUsersDesc": "Active users across all industries",
+    "systemUptime": "System Uptime",
+    "systemUptimeDesc": "Platform availability",
+    "completedTasks": "Completed Tasks",
+    "completedTasksDesc": "Tasks finished today",
+    "pendingMaintenance": "Pending Maintenance",
+    "pendingMaintenanceDesc": "Machines requiring maintenance",
+    "workloadUtilization": "Workload Utilization",
+    "workloadUtilizationDesc": "Current capacity usage",
+    "assignedTasks": "Assigned Tasks",
+    "assignedTasksDesc": "Your active assignments"
   },
   "userInfo": {
     "title": "User Information",
@@ -29,16 +48,66 @@
     "phase0": "Phase 0: Setup",
     "phase1": "Phase 1: Infrastructure",
     "phase2": "Phase 2: Authentication",
-    "phase3": "Phase 3: Components"
+    "phase3": "Phase 3: Components",
+    "phase4": "Phase 4: Dashboard Module"
   },
   "quickActions": {
     "title": "Quick Actions",
     "description": "Common operations",
+    "createOrder": "Create Order",
+    "addMachine": "Add Machine",
+    "scheduleMaintenance": "Schedule Maintenance",
+    "viewReports": "View Reports",
+    "manageUsers": "Manage Users",
+    "addIndustry": "Add Industry",
+    "viewAnalytics": "View Analytics",
+    "optimizeSchedule": "Optimize Schedule",
+    "checkInventory": "Check Inventory",
+    "startTask": "Start Task",
+    "reportIssue": "Report Issue",
     "comingSoon": "Feature modules will be implemented in upcoming phases:",
     "phase4": "Phase 4: Dashboard Module",
     "phase5": "Phase 5-8: CRUD Modules",
     "phase9": "Phase 9: Scheduling",
     "phase10": "Phase 10: Reports"
+  },
+  "activityFeed": {
+    "title": "Recent Activity",
+    "description": "Latest system activities",
+    "noActivity": "No recent activity",
+    "viewAll": "View All",
+    "justNow": "Just now",
+    "minutesAgo": "{{count}} minutes ago",
+    "hoursAgo": "{{count}} hours ago",
+    "daysAgo": "{{count}} days ago"
+  },
+  "scheduleSummary": {
+    "title": "Schedule Summary",
+    "description": "Production schedule overview",
+    "todayTasks": "Today's Tasks",
+    "upcomingTasks": "Upcoming Tasks",
+    "overdueTasks": "Overdue Tasks",
+    "noTasks": "No tasks scheduled",
+    "viewSchedule": "View Full Schedule"
+  },
+  "machineStatus": {
+    "title": "Machine Status",
+    "description": "Current status of all machines",
+    "running": "Running",
+    "idle": "Idle",
+    "maintenance": "In Maintenance",
+    "offline": "Offline",
+    "noMachines": "No machines available"
+  },
+  "charts": {
+    "productionTrend": "Production Trend",
+    "efficiencyRate": "Efficiency Rate",
+    "orderCompletion": "Order Completion",
+    "machineUtilization": "Machine Utilization",
+    "last7Days": "Last 7 Days",
+    "last30Days": "Last 30 Days",
+    "thisMonth": "This Month",
+    "thisWeek": "This Week"
   },
   "devInfo": {
     "title": "Development Information",

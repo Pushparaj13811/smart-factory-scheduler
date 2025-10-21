@@ -1,7 +1,12 @@
 {
   "welcome": {
     "title": "वापस स्वागत है, {{name}}!",
-    "description": "यहाँ आपके स्मार्ट फैक्ट्री संचालन का अवलोकन है"
+    "description": "यहाँ आपके स्मार्ट फैक्ट्री संचालन का अवलोकन है",
+    "systemAdmin": "सिस्टम प्रशासन डैशबोर्ड में आपका स्वागत है",
+    "industryOwner": "उद्योग स्वामी डैशबोर्ड में आपका स्वागत है",
+    "administrator": "प्रशासक डैशबोर्ड में आपका स्वागत है",
+    "supervisor": "पर्यवेक्षक डैशबोर्ड में आपका स्वागत है",
+    "worker": "कार्यकर्ता डैशबोर्ड में आपका स्वागत है"
   },
   "stats": {
     "totalMachines": "कुल मशीनें",
@@ -13,7 +18,21 @@
     "efficiency": "दक्षता",
     "efficiencyDesc": "समग्र उत्पादन दक्षता",
     "fromLastMonth": "पिछले महीने से",
-    "fromLastWeek": "पिछले सप्ताह से"
+    "fromLastWeek": "पिछले सप्ताह से",
+    "totalIndustries": "कुल उद्योग",
+    "totalIndustriesDesc": "प्लेटफॉर्म पर पंजीकृत उद्योग",
+    "totalUsers": "कुल उपयोगकर्ता",
+    "totalUsersDesc": "सभी उद्योगों में सक्रिय उपयोगकर्ता",
+    "systemUptime": "सिस्टम अपटाइम",
+    "systemUptimeDesc": "प्लेटफॉर्म उपलब्धता",
+    "completedTasks": "पूर्ण कार्य",
+    "completedTasksDesc": "आज समाप्त हुए कार्य",
+    "pendingMaintenance": "लंबित रखरखाव",
+    "pendingMaintenanceDesc": "रखरखाव की आवश्यकता वाली मशीनें",
+    "workloadUtilization": "कार्यभार उपयोग",
+    "workloadUtilizationDesc": "वर्तमान क्षमता उपयोग",
+    "assignedTasks": "सौंपे गए कार्य",
+    "assignedTasksDesc": "आपके सक्रिय असाइनमेंट"
   },
   "userInfo": {
     "title": "उपयोगकर्ता जानकारी",
@@ -29,16 +48,66 @@
     "phase0": "चरण 0: सेटअप",
     "phase1": "चरण 1: बुनियादी ढांचा",
     "phase2": "चरण 2: प्रमाणीकरण",
-    "phase3": "चरण 3: घटक"
+    "phase3": "चरण 3: घटक",
+    "phase4": "चरण 4: डैशबोर्ड मॉड्यूल"
   },
   "quickActions": {
     "title": "त्वरित कार्य",
     "description": "सामान्य संचालन",
+    "createOrder": "आदेश बनाएं",
+    "addMachine": "मशीन जोड़ें",
+    "scheduleMaintenance": "रखरखाव शेड्यूल करें",
+    "viewReports": "रिपोर्ट देखें",
+    "manageUsers": "उपयोगकर्ता प्रबंधित करें",
+    "addIndustry": "उद्योग जोड़ें",
+    "viewAnalytics": "विश्लेषण देखें",
+    "optimizeSchedule": "शेड्यूल अनुकूलित करें",
+    "checkInventory": "इन्वेंटरी जांचें",
+    "startTask": "कार्य शुरू करें",
+    "reportIssue": "समस्या रिपोर्ट करें",
     "comingSoon": "आगामी चरणों में फीचर मॉड्यूल लागू किए जाएंगे:",
     "phase4": "चरण 4: डैशबोर्ड मॉड्यूल",
     "phase5": "चरण 5-8: CRUD मॉड्यूल",
     "phase9": "चरण 9: शेड्यूलिंग",
     "phase10": "चरण 10: रिपोर्ट"
+  },
+  "activityFeed": {
+    "title": "हाल की गतिविधि",
+    "description": "नवीनतम सिस्टम गतिविधियां",
+    "noActivity": "कोई हालिया गतिविधि नहीं",
+    "viewAll": "सभी देखें",
+    "justNow": "अभी",
+    "minutesAgo": "{{count}} मिनट पहले",
+    "hoursAgo": "{{count}} घंटे पहले",
+    "daysAgo": "{{count}} दिन पहले"
+  },
+  "scheduleSummary": {
+    "title": "शेड्यूल सारांश",
+    "description": "उत्पादन शेड्यूल अवलोकन",
+    "todayTasks": "आज के कार्य",
+    "upcomingTasks": "आगामी कार्य",
+    "overdueTasks": "विलंबित कार्य",
+    "noTasks": "कोई कार्य शेड्यूल नहीं",
+    "viewSchedule": "पूर्ण शेड्यूल देखें"
+  },
+  "machineStatus": {
+    "title": "मशीन स्थिति",
+    "description": "सभी मशीनों की वर्तमान स्थिति",
+    "running": "चल रहा है",
+    "idle": "निष्क्रिय",
+    "maintenance": "रखरखाव में",
+    "offline": "ऑफलाइन",
+    "noMachines": "कोई मशीन उपलब्ध नहीं"
+  },
+  "charts": {
+    "productionTrend": "उत्पादन प्रवृत्ति",
+    "efficiencyRate": "दक्षता दर",
+    "orderCompletion": "आदेश पूर्णता",
+    "machineUtilization": "मशीन उपयोग",
+    "last7Days": "पिछले 7 दिन",
+    "last30Days": "पिछले 30 दिन",
+    "thisMonth": "इस महीने",
+    "thisWeek": "इस सप्ताह"
   },
   "devInfo": {
     "title": "विकास जानकारी",
