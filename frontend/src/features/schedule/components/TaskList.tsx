@@ -158,8 +158,8 @@ export function TaskList() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">{t('filters.all')}</SelectItem>
-                  <SelectItem value={TaskPriority.URGENT}>
-                    {t('priority.urgent')}
+                  <SelectItem value={TaskPriority.CRITICAL}>
+                    {t('priority.critical')}
                   </SelectItem>
                   <SelectItem value={TaskPriority.HIGH}>
                     {t('priority.high')}

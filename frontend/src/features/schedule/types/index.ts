@@ -44,10 +44,10 @@ export interface ScheduleTask {
 
 export interface TaskFilters {
   search?: string;
-  status?: TaskStatus;
-  priority?: TaskPriority;
-  machineId?: string;
-  assignedTo?: string;
+  status?: TaskStatus[];
+  priority?: TaskPriority[];
+  machineId?: string[];
+  assignedTo?: string[];
   startDate?: string;
   endDate?: string;
 }
@@ -88,6 +88,7 @@ export interface UpdateTaskInput {
 }
 
 export interface ReassignTaskInput {
+  taskId: string;
   machineId?: string;
   assignedTo?: string;
   startTime?: string;

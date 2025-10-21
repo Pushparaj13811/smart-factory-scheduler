@@ -13,7 +13,7 @@ import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 export default function OrdersPage() {
   const { t } = useTranslation(['orders', 'common']);
   const navigate = useNavigate();
-  const [page, setPage] = useState(1);
+  const [page, _setPage] = useState(1);
   const { data, isLoading } = useOrders(page, 10);
 
   return (

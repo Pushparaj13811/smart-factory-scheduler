@@ -636,7 +636,6 @@ export const MOCK_SCHEDULE_TASKS: ScheduleTask[] = [
     assignedTo: '10',
     assignedToName: 'Maria Garcia',
     estimatedDuration: 240,
-    dependencies: ['task-1'],
     notes: 'Depends on completion of gear production',
     createdAt: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
     updatedAt: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(),

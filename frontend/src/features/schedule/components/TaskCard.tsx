@@ -57,7 +57,7 @@ export function TaskCard({ task }: TaskCardProps) {
 
   const getPriorityVariant = (priority: typeof TaskPriority[keyof typeof TaskPriority]): 'default' | 'secondary' | 'destructive' => {
     switch (priority) {
-      case TaskPriority.URGENT:
+      case TaskPriority.CRITICAL:
         return 'destructive';
       case TaskPriority.HIGH:
         return 'destructive';
