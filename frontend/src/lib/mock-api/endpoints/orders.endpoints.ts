@@ -90,8 +90,7 @@ export const ordersEndpoints: MockEndpoint[] = [
     method: 'GET',
     path: '/orders/:id',
     handler: (req) => {
-      const url = new URL(req.url);
-      const id = url.pathname.split('/').pop();
+      const id = req.params?.id as string;
       const order = orders.find((m) => m.id === id);
 
       if (!order) {
@@ -106,8 +105,8 @@ export const ordersEndpoints: MockEndpoint[] = [
   {
     method: 'POST',
     path: '/orders',
-    handler: async (req) => {
-      const data = await req.json();
+    handler: (req) => {
+      const data = req.data;
 
       // Calculate totals
       let totalQuantity = 0;
@@ -147,10 +146,9 @@ export const ordersEndpoints: MockEndpoint[] = [
   {
     method: 'PUT',
     path: '/orders/:id',
-    handler: async (req) => {
-      const url = new URL(req.url);
-      const id = url.pathname.split('/').pop();
-      const updates = await req.json();
+    handler: (req) => {
+      const id = req.params?.id as string;
+      const updates = req.data;
 
       const index = orders.findIndex((m) => m.id === id);
       if (index === -1) {
@@ -194,8 +192,7 @@ export const ordersEndpoints: MockEndpoint[] = [
     method: 'DELETE',
     path: '/orders/:id',
     handler: (req) => {
-      const url = new URL(req.url);
-      const id = url.pathname.split('/').pop();
+      const id = req.params?.id as string;
 
       const index = orders.findIndex((m) => m.id === id);
       if (index === -1) {
