@@ -17,7 +17,7 @@ export default function MachinesPage() {
         title={t('title')}
         description={t('subtitle')}
         actions={
-          <Button onClick={() => navigate('/machines/create')}>
+          <Button type="button" onClick={() => navigate('/machines/create')}>
             <Plus className="mr-2 h-4 w-4" />
             {t('addMachine')}
           </Button>

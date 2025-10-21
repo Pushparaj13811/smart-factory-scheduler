@@ -17,7 +17,7 @@ export default function SchedulePage() {
         title={t('title')}
         description={t('subtitle')}
         actions={
-          <Button onClick={() => navigate('/schedule/tasks/create')}>
+          <Button type="button" onClick={() => navigate('/schedule/tasks/create')}>
             <Plus className="mr-2 h-4 w-4" />
             {t('addTask')}
           </Button>

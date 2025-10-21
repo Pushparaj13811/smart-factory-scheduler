@@ -91,7 +91,7 @@ export default function MaintenancePage() {
         title={t('title')}
         description={t('subtitle')}
         actions={
-          <Button onClick={() => navigate('/maintenance/create')}>
+          <Button type="button" onClick={() => navigate('/maintenance/create')}>
             <Plus className="mr-2 h-4 w-4" />
             {t('addMaintenance')}
           </Button>

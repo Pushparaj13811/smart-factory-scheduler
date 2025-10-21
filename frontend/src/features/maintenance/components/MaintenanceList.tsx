@@ -1,6 +1,6 @@
 // Maintenance List component
 
-import { MaintenanceCard } from './MaintenanceCard';
+import { MaintenanceTable } from './MaintenanceTable';
 import type { MaintenanceRecord } from '../types';
 
 interface MaintenanceListProps {
@@ -8,11 +8,5 @@ interface MaintenanceListProps {
 }
 
 export function MaintenanceList({ records }: MaintenanceListProps) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {records.map((record) => (
-        <MaintenanceCard key={record.id} record={record} />
-      ))}
-    </div>
-  );
+  return <MaintenanceTable records={records} />;
 }

@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Search, Filter, X } from 'lucide-react';
-import { TaskCard } from './TaskCard';
+import { TaskTable } from './TaskTable';
 import { useTasks } from '../hooks';
 import { TaskStatus, TaskPriority } from '../types';
 import type { TaskFilters } from '../types';
@@ -227,17 +227,13 @@ export function TaskList() {
         </p>
       </div>
 
-      {/* Task Grid */}
+      {/* Task Table */}
       {tasks.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-muted-foreground">{t('noTasks')}</p>
         </div>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {tasks.map((task) => (
-            <TaskCard key={task.id} task={task} />
-          ))}
-        </div>
+        <TaskTable tasks={tasks} />
       )}
 
       {/* Pagination */}

@@ -17,7 +17,7 @@ export default function UsersPage() {
         title={t('title')}
         description={t('subtitle')}
         actions={
-          <Button onClick={() => navigate('/users/create')}>
+          <Button type="button" onClick={() => navigate('/users/create')}>
             <Plus className="mr-2 h-4 w-4" />
             {t('addUser')}
           </Button>

@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Search, Filter, X } from 'lucide-react';
-import { ComponentCard } from './ComponentCard';
+import { ComponentTable } from './ComponentTable';
 import { useComponents } from '../hooks';
 import { ComponentStatus, ComponentCategory } from '../types';
 import type { ComponentFilters } from '../types';
@@ -224,17 +224,13 @@ export function ComponentList() {
         </p>
       </div>
 
-      {/* Component Grid */}
+      {/* Component Table */}
       {components.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-muted-foreground">{t('noComponents')}</p>
         </div>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {components.map((component) => (
-            <ComponentCard key={component.id} component={component} />
-          ))}
-        </div>
+        <ComponentTable components={components} />
       )}
 
       {/* Pagination */}

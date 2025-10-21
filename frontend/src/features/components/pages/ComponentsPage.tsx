@@ -17,7 +17,7 @@ export default function ComponentsPage() {
         title={t('title')}
         description={t('subtitle')}
         actions={
-          <Button onClick={() => navigate('/components/create')}>
+          <Button type="button" onClick={() => navigate('/components/create')}>
             <Plus className="mr-2 h-4 w-4" />
             {t('addComponent')}
           </Button>

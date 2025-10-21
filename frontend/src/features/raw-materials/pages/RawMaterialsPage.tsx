@@ -45,7 +45,7 @@ export default function RawMaterialsPage() {
           <h1 className="text-3xl font-bold tracking-tight">{t('title')}</h1>
           <p className="text-muted-foreground">{t('subtitle')}</p>
         </div>
-        <Button onClick={() => navigate('/raw-materials/create')}>
+        <Button type="button" onClick={() => navigate('/raw-materials/create')}>
           <Plus className="mr-2 h-4 w-4" />
           {t('addMaterial')}
         </Button>

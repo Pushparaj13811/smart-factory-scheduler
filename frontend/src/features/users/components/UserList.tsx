@@ -1,7 +1,7 @@
 // User List component with filters and search
 
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,8 +13,8 @@ import {
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Search, Filter, X } from 'lucide-react';
-import { UserCard } from './UserCard';
-import { useUsers } from '../hooks';
+import { UserTable } from './UserTable';
+import { useUsers, useRoleBasedUserFilters } from '../hooks';
 import { UserRole, ROLE_LABELS } from '@/constants/roles';
 import type { UserFilters } from '../types';
 
@@ -24,7 +24,20 @@ export function UserList() {
   const [roleFilter, setRoleFilter] = useState<UserRole | 'all'>('all');
   const [showFilters, setShowFilters] = useState(false);
   const [page, setPage] = useState(1);
-  const [filters, setFilters] = useState<UserFilters | undefined>();
+  const [userFilters, setUserFilters] = useState<UserFilters | undefined>();
+
+  // Get automatic role-based filters
+  const roleBasedFilters = useRoleBasedUserFilters();
+
+  // Merge role-based filters with user's manual filters
+  const filters = useMemo(() => {
+    if (!roleBasedFilters && !userFilters) return undefined;
+
+    return {
+      ...roleBasedFilters,
+      ...userFilters,
+    };
+  }, [roleBasedFilters, userFilters]);
 
   const pageSize = 12;
   const { data, isLoading, error } = useUsers(filters, page, pageSize);
@@ -41,14 +54,14 @@ export function UserList() {
       newFilters.role = [roleFilter];
     }
 
-    setFilters(Object.keys(newFilters).length > 0 ? newFilters : undefined);
+    setUserFilters(Object.keys(newFilters).length > 0 ? newFilters : undefined);
     setPage(1);
   };
 
   const handleClearFilters = () => {
     setSearchQuery('');
     setRoleFilter('all');
-    setFilters(undefined);
+    setUserFilters(undefined);
     setPage(1);
   };
 
@@ -174,17 +187,13 @@ export function UserList() {
         </p>
       </div>
 
-      {/* User Grid */}
+      {/* User Table */}
       {users.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-muted-foreground">{t('noUsers')}</p>
         </div>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {users.map((user) => (
-            <UserCard key={user.id} user={user} />
-          ))}
-        </div>
+        <UserTable users={users} />
       )}
 
       {/* Pagination */}

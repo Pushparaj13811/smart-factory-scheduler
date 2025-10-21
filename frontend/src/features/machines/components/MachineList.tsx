@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Search, Filter, X } from 'lucide-react';
-import { MachineCard } from './MachineCard';
+import { MachineTable } from './MachineTable';
 import { useMachinesPagination } from '../hooks';
 import { MachineStatus, MachineType } from '../types';
 import type { MachineFilters } from '../types';
@@ -231,17 +231,13 @@ export function MachineList() {
         </p>
       </div>
 
-      {/* Machine Grid */}
+      {/* Machine Table */}
       {machines.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-muted-foreground">{t('noMachines')}</p>
         </div>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {machines.map((machine) => (
-            <MachineCard key={machine.id} machine={machine} />
-          ))}
-        </div>
+        <MachineTable machines={machines} />
       )}
 
       {/* Pagination */}

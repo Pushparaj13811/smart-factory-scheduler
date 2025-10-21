@@ -22,7 +22,7 @@ export default function OrdersPage() {
         title={t('title')}
         description={t('subtitle')}
         actions={
-          <Button onClick={() => navigate('/orders/create')}>
+          <Button type="button" onClick={() => navigate('/orders/create')}>
             <Plus className="mr-2 h-4 w-4" />
             {t('addOrder')}
           </Button>
