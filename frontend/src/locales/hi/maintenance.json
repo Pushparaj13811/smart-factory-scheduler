@@ -3,39 +3,44 @@
   "subtitle": "मशीन रखरखाव और सेवा रिकॉर्ड अनुसूची और ट्रैक करें",
   "addMaintenance": "रखरखाव जोड़ें",
   "editMaintenance": "रखरखाव संपादित करें",
+  "createMaintenance": "रखरखाव शेड्यूल करें",
+  "createMaintenanceDescription": "नया रखरखाव रिकॉर्ड शेड्यूल करें",
+  "editMaintenanceDescription": "रखरखाव रिकॉर्ड विवरण अपडेट करें",
   "maintenanceDetails": "रखरखाव विवरण",
-  "createMaintenance": "नया रखरखाव बनाएं",
   "updateMaintenance": "रखरखाव अपडेट करें",
   "deleteMaintenance": "रखरखाव हटाएं",
   "noMaintenance": "कोई रखरखाव रिकॉर्ड नहीं मिला",
+  "defaultDescription": "कोई विवरण प्रदान नहीं किया गया",
   "searchPlaceholder": "मशीन, तकनीशियन द्वारा रखरखाव रिकॉर्ड खोजें...",
 
   "form": {
     "machine": "मशीन",
+    "selectMachine": "मशीन चुनें",
     "machinePlaceholder": "मशीन चुनें",
-    "type": "प्रकार",
+    "type": "रखरखाव प्रकार",
     "typePlaceholder": "रखरखाव प्रकार चुनें",
     "status": "स्थिति",
     "statusPlaceholder": "स्थिति चुनें",
-    "scheduledDate": "अनुसूचित तिथि",
-    "scheduledDatePlaceholder": "अनुसूचित तिथि चुनें",
+    "scheduledDate": "शेड्यूल तिथि",
+    "scheduledDatePlaceholder": "शेड्यूल तिथि चुनें",
     "completedDate": "पूर्ण तिथि",
     "completedDatePlaceholder": "पूर्ण तिथि चुनें",
     "technician": "तकनीशियन",
-    "technicianPlaceholder": "तकनीशियन का नाम दर्ज करें या चुनें",
-    "cost": "लागत",
-    "costPlaceholder": "रखरखाव लागत दर्ज करें",
-    "notes": "टिप्पणियाँ",
-    "notesPlaceholder": "रखरखाव टिप्पणियाँ या विवरण दर्ज करें",
+    "technicianPlaceholder": "तकनीशियन का नाम दर्ज करें",
+    "cost": "लागत (₹)",
+    "costPlaceholder": "0.00",
+    "notes": "नोट्स",
+    "notesPlaceholder": "कोई अतिरिक्त नोट्स या अवलोकन दर्ज करें",
     "description": "विवरण",
-    "descriptionPlaceholder": "विवरण दर्ज करें"
+    "descriptionPlaceholder": "किए जाने वाले रखरखाव कार्य का वर्णन करें"
   },
 
   "type": {
     "routine": "नियमित",
     "preventive": "निवारक",
     "corrective": "सुधारात्मक",
-    "emergency": "आपातकालीन"
+    "emergency": "आपातकालीन",
+    "scheduled" : "अनुसूचित"
   },
 
   "status": {
@@ -43,12 +48,14 @@
     "in_progress": "प्रगति में",
     "completed": "पूर्ण",
     "cancelled": "रद्द",
-    "overdue": "विलंबित"
+    "overdue": "विलंबित",
+    "pending" : "लंबित"
   },
 
   "details": {
+    "title": "रखरखाव रिकॉर्ड विवरण",
     "overview": "अवलोकन",
-    "schedule": "अनुसूची जानकारी",
+    "schedule": "शेड्यूल जानकारी",
     "cost": "लागत जानकारी",
     "history": "रखरखाव इतिहास",
     "timeline": "समयरेखा"
@@ -95,16 +102,19 @@
   },
 
   "messages": {
+    "maintenanceCreated": "रखरखाव सफलतापूर्वक शेड्यूल किया गया",
     "createSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक बनाया गया",
+    "maintenanceUpdated": "रखरखाव सफलतापूर्वक अपडेट किया गया",
     "updateSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक अपडेट किया गया",
     "deleteSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक हटाया गया",
+    "maintenanceDeleted": "रखरखाव रिकॉर्ड सफलतापूर्वक हटाया गया",
     "statusUpdated": "रखरखाव स्थिति सफलतापूर्वक अपडेट की गई",
-    "technicianAssigned": "तकनीशियन सफलतापूर्वक सौंपा गया",
-    "maintenanceCompleted": "रखरखाव सफलतापूर्वक पूर्ण",
-    "createError": "रखरखाव रिकॉर्ड बनाने में विफल",
+    "technicianAssigned": "तकनीशियन सफलतापूर्वक नियुक्त किया गया",
+    "maintenanceCompleted": "रखरखाव सफलतापूर्वक पूर्ण हुआ",
+    "createError": "रखरखाव शेड्यूल करने में विफल",
     "updateError": "रखरखाव रिकॉर्ड अपडेट करने में विफल",
     "deleteError": "रखरखाव रिकॉर्ड हटाने में विफल",
-    "loadError": "रखरखाव रिकॉर्ड लोड करने में विफल"
+    "loadError": "रखरखाव जानकारी लोड करने में विफल"
   },
 
   "stats": {

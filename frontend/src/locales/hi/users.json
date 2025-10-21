@@ -16,17 +16,28 @@
     "email": "ईमेल पता",
     "emailPlaceholder": "ईमेल पता दर्ज करें",
     "role": "भूमिका",
+    "selectRole": "भूमिका चुनें",
     "rolePlaceholder": "भूमिका चुनें",
     "avatar": "अवतार URL",
+    "avatarUrl": "अवतार URL",
     "avatarPlaceholder": "अवतार URL दर्ज करें (वैकल्पिक)",
+    "avatarHint": "वैकल्पिक। प्रोफ़ाइल चित्र का URL प्रदान करें।",
     "industry": "उद्योग",
+    "industryId": "उद्योग ID",
+    "industryIdPlaceholder": "उद्योग ID दर्ज करें",
+    "industryIdDescription": "वैकल्पिक। सिस्टम एडमिन उपयोगकर्ताओं के लिए खाली छोड़ें।",
     "industryPlaceholder": "उद्योग चुनें",
+    "industryHint": "सिस्टम व्यवस्थापक के लिए खाली छोड़ें",
     "status": "स्थिति",
     "statusPlaceholder": "स्थिति चुनें",
     "password": "पासवर्ड",
-    "passwordPlaceholder": "पासवर्ड दर्ज करें",
+    "passwordPlaceholder": "पासवर्ड दर्ज करें (न्यूनतम 8 अक्षर)",
+    "passwordHint": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
+    "passwordDescription": "न्यूनतम 8 अक्षर आवश्यक",
     "confirmPassword": "पासवर्ड की पुष्टि करें",
-    "confirmPasswordPlaceholder": "पासवर्ड पुनः दर्ज करें"
+    "confirmPasswordPlaceholder": "पासवर्ड पुनः दर्ज करें",
+    "userDetails": "उपयोगकर्ता विवरण",
+    "fillUserDetails": "नया उपयोगकर्ता बनाने के लिए नीचे विवरण भरें"
   },
 
   "status": {
@@ -38,9 +49,49 @@
   "details": {
     "overview": "अवलोकन",
     "accountInfo": "खाता जानकारी",
+    "profile": "उपयोगकर्ता प्रोफ़ाइल",
+    "basicInfo": "मूल जानकारी",
+    "roleInformation": "भूमिका जानकारी",
     "permissions": "अनुमतियां",
     "activityLog": "गतिविधि लॉग",
-    "statistics": "सांख्यिकी"
+    "statistics": "सांख्यिकी",
+    "joinedOn": "शामिल हुए",
+    "lastUpdated": "अंतिम अपडेट",
+    "userId": "उपयोगकर्ता ID"
+  },
+
+  "pages": {
+    "createUser": "नया उपयोगकर्ता बनाएं",
+    "createUserDescription": "सिस्टम में नया उपयोगकर्ता जोड़ें",
+    "editUser": "उपयोगकर्ता संपादित करें",
+    "editUserDescription": "उपयोगकर्ता जानकारी अपडेट करें"
+  },
+
+  "dialogs": {
+    "changeRole": "उपयोगकर्ता भूमिका बदलें",
+    "changeRoleDescription": "इस उपयोगकर्ता के लिए नई भूमिका चुनें",
+    "suspendUser": "उपयोगकर्ता निलंबित करें",
+    "suspendUserDescription": "यह उपयोगकर्ता पुनः सक्रिय होने तक सिस्टम तक पहुंच नहीं पाएगा।",
+    "activateUser": "उपयोगकर्ता सक्रिय करें",
+    "activateUserDescription": "यह उपयोगकर्ता सिस्टम तक पहुंच वापस पाएगा।"
+  },
+
+  "permissions": {
+    "manageAllIndustries": "सभी उद्योगों और उनके डेटा को प्रबंधित करें",
+    "manageSubscriptions": "सदस्यता और बिलिंग प्रबंधित करें",
+    "viewAnalytics": "प्लेटफ़ॉर्म-व्यापी विश्लेषण देखें",
+    "systemConfiguration": "सिस्टम सेटिंग्स कॉन्फ़िगर करें",
+    "manageIndustry": "उद्योग सेटिंग्स और उपयोगकर्ताओं को प्रबंधित करें",
+    "manageUsers": "उपयोगकर्ताओं को बनाएं, संपादित करें और हटाएं",
+    "manageMachines": "मशीनों और उपकरणों को प्रबंधित करें",
+    "viewReports": "रिपोर्ट और विश्लेषण देखें",
+    "manageOrders": "ऑर्डर बनाएं और प्रबंधित करें",
+    "viewMachines": "मशीन जानकारी देखें",
+    "manageSchedule": "उत्पादन शेड्यूल प्रबंधित करें",
+    "assignTasks": "कार्यकर्ताओं को कार्य सौंपें",
+    "viewTasks": "सौंपे गए कार्य देखें",
+    "updateTaskStatus": "कार्य प्रगति अपडेट करें",
+    "viewSchedule": "उत्पादन शेड्यूल देखें"
   },
 
   "filters": {
@@ -74,16 +125,31 @@
   },
 
   "messages": {
+    "userCreated": "उपयोगकर्ता सफलतापूर्वक बनाया गया",
     "createSuccess": "उपयोगकर्ता सफलतापूर्वक बनाया गया",
     "updateSuccess": "उपयोगकर्ता सफलतापूर्वक अपडेट किया गया",
     "deleteSuccess": "उपयोगकर्ता सफलतापूर्वक हटाया गया",
+    "userDeleted": "उपयोगकर्ता सफलतापूर्वक हटाया गया",
     "roleUpdated": "उपयोगकर्ता भूमिका सफलतापूर्वक अपडेट की गई",
+    "roleUpdateError": "उपयोगकर्ता भूमिका अपडेट करने में विफल",
     "statusUpdated": "उपयोगकर्ता स्थिति सफलतापूर्वक अपडेट की गई",
+    "userSuspended": "उपयोगकर्ता सफलतापूर्वक निलंबित किया गया",
+    "suspendError": "उपयोगकर्ता निलंबित करने में विफल",
+    "userActivated": "उपयोगकर्ता सफलतापूर्वक सक्रिय किया गया",
+    "activateError": "उपयोगकर्ता सक्रिय करने में विफल",
     "passwordReset": "पासवर्ड रीसेट ईमेल सफलतापूर्वक भेजा गया",
     "createError": "उपयोगकर्ता बनाने में विफल",
     "updateError": "उपयोगकर्ता अपडेट करने में विफल",
     "deleteError": "उपयोगकर्ता हटाने में विफल",
-    "loadError": "उपयोगकर्ता लोड करने में विफल"
+    "loadError": "उपयोगकर्ता जानकारी लोड करने में विफल"
+  },
+
+  "role": {
+    "system_admin": "सिस्टम एडमिन",
+    "industry_owner": "इंडस्ट्री ओनर",
+    "administrator": "एडमिनिस्ट्रेटर",
+    "supervisor": "सुपरवाइज़र",
+    "worker": "वर्कर"
   },
 
   "stats": {

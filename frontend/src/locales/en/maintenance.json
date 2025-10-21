@@ -3,17 +3,21 @@
   "subtitle": "Schedule and track machine maintenance and service records",
   "addMaintenance": "Add Maintenance",
   "editMaintenance": "Edit Maintenance",
+  "createMaintenance": "Schedule Maintenance",
+  "createMaintenanceDescription": "Schedule a new maintenance record",
+  "editMaintenanceDescription": "Update maintenance record details",
   "maintenanceDetails": "Maintenance Details",
-  "createMaintenance": "Create New Maintenance",
   "updateMaintenance": "Update Maintenance",
   "deleteMaintenance": "Delete Maintenance",
   "noMaintenance": "No maintenance records found",
+  "defaultDescription": "No description provided",
   "searchPlaceholder": "Search maintenance records by machine, technician...",
 
   "form": {
     "machine": "Machine",
+    "selectMachine": "Select a machine",
     "machinePlaceholder": "Select machine",
-    "type": "Type",
+    "type": "Maintenance Type",
     "typePlaceholder": "Select maintenance type",
     "status": "Status",
     "statusPlaceholder": "Select status",
@@ -22,20 +26,21 @@
     "completedDate": "Completed Date",
     "completedDatePlaceholder": "Select completed date",
     "technician": "Technician",
-    "technicianPlaceholder": "Enter technician name or select",
-    "cost": "Cost",
-    "costPlaceholder": "Enter maintenance cost",
+    "technicianPlaceholder": "Enter technician name",
+    "cost": "Cost ($)",
+    "costPlaceholder": "0.00",
     "notes": "Notes",
-    "notesPlaceholder": "Enter maintenance notes or details",
+    "notesPlaceholder": "Enter any additional notes or observations",
     "description": "Description",
-    "descriptionPlaceholder": "Enter description"
+    "descriptionPlaceholder": "Describe the maintenance work to be performed"
   },
 
   "type": {
     "routine": "Routine",
     "preventive": "Preventive",
     "corrective": "Corrective",
-    "emergency": "Emergency"
+    "emergency": "Emergency",
+    "scheduled" : "Scheduled"
   },
 
   "status": {
@@ -43,10 +48,12 @@
     "in_progress": "In Progress",
     "completed": "Completed",
     "cancelled": "Cancelled",
-    "overdue": "Overdue"
+    "overdue": "Overdue",
+    "pending" : "pending"
   },
 
   "details": {
+    "title": "Maintenance Record Details",
     "overview": "Overview",
     "schedule": "Schedule Information",
     "cost": "Cost Information",
@@ -95,16 +102,19 @@
   },
 
   "messages": {
+    "maintenanceCreated": "Maintenance scheduled successfully",
     "createSuccess": "Maintenance record created successfully",
+    "maintenanceUpdated": "Maintenance updated successfully",
     "updateSuccess": "Maintenance record updated successfully",
     "deleteSuccess": "Maintenance record deleted successfully",
+    "maintenanceDeleted": "Maintenance record deleted successfully",
     "statusUpdated": "Maintenance status updated successfully",
     "technicianAssigned": "Technician assigned successfully",
     "maintenanceCompleted": "Maintenance completed successfully",
-    "createError": "Failed to create maintenance record",
+    "createError": "Failed to schedule maintenance",
     "updateError": "Failed to update maintenance record",
     "deleteError": "Failed to delete maintenance record",
-    "loadError": "Failed to load maintenance records"
+    "loadError": "Failed to load maintenance information"
   },
 
   "stats": {

@@ -16,17 +16,28 @@
     "email": "Email Address",
     "emailPlaceholder": "Enter email address",
     "role": "Role",
+    "selectRole": "Select a role",
     "rolePlaceholder": "Select role",
     "avatar": "Avatar URL",
+    "avatarUrl": "Avatar URL",
     "avatarPlaceholder": "Enter avatar URL (optional)",
+    "avatarHint": "Optional. Provide a URL to a profile picture.",
     "industry": "Industry",
+    "industryId": "Industry ID",
+    "industryIdPlaceholder": "Enter industry ID",
+    "industryIdDescription": "Optional. Leave empty for system admin users.",
     "industryPlaceholder": "Select industry",
+    "industryHint": "Leave empty for system administrator",
     "status": "Status",
     "statusPlaceholder": "Select status",
     "password": "Password",
-    "passwordPlaceholder": "Enter password",
+    "passwordPlaceholder": "Enter password (min 8 characters)",
+    "passwordHint": "Password must be at least 8 characters long",
+    "passwordDescription": "Minimum 8 characters required",
     "confirmPassword": "Confirm Password",
-    "confirmPasswordPlaceholder": "Re-enter password"
+    "confirmPasswordPlaceholder": "Re-enter password",
+    "userDetails": "User Details",
+    "fillUserDetails": "Fill in the details below to create a new user"
   },
 
   "status": {
@@ -38,9 +49,49 @@
   "details": {
     "overview": "Overview",
     "accountInfo": "Account Information",
+    "profile": "User Profile",
+    "basicInfo": "Basic Information",
+    "roleInformation": "Role Information",
     "permissions": "Permissions",
     "activityLog": "Activity Log",
-    "statistics": "Statistics"
+    "statistics": "Statistics",
+    "joinedOn": "Joined On",
+    "lastUpdated": "Last Updated",
+    "userId": "User ID"
+  },
+
+  "pages": {
+    "createUser": "Create New User",
+    "createUserDescription": "Add a new user to the system",
+    "editUser": "Edit User",
+    "editUserDescription": "Update user information"
+  },
+
+  "dialogs": {
+    "changeRole": "Change User Role",
+    "changeRoleDescription": "Select a new role for this user",
+    "suspendUser": "Suspend User",
+    "suspendUserDescription": "This user will no longer be able to access the system until reactivated.",
+    "activateUser": "Activate User",
+    "activateUserDescription": "This user will regain access to the system."
+  },
+
+  "permissions": {
+    "manageAllIndustries": "Manage all industries and their data",
+    "manageSubscriptions": "Manage subscriptions and billing",
+    "viewAnalytics": "View platform-wide analytics",
+    "systemConfiguration": "Configure system settings",
+    "manageIndustry": "Manage industry settings and users",
+    "manageUsers": "Create, edit, and delete users",
+    "manageMachines": "Manage machines and equipment",
+    "viewReports": "View reports and analytics",
+    "manageOrders": "Create and manage orders",
+    "viewMachines": "View machine information",
+    "manageSchedule": "Manage production schedules",
+    "assignTasks": "Assign tasks to workers",
+    "viewTasks": "View assigned tasks",
+    "updateTaskStatus": "Update task progress",
+    "viewSchedule": "View production schedule"
   },
 
   "filters": {
@@ -74,16 +125,31 @@
   },
 
   "messages": {
+    "userCreated": "User created successfully",
     "createSuccess": "User created successfully",
     "updateSuccess": "User updated successfully",
     "deleteSuccess": "User deleted successfully",
+    "userDeleted": "User deleted successfully",
     "roleUpdated": "User role updated successfully",
+    "roleUpdateError": "Failed to update user role",
     "statusUpdated": "User status updated successfully",
+    "userSuspended": "User suspended successfully",
+    "suspendError": "Failed to suspend user",
+    "userActivated": "User activated successfully",
+    "activateError": "Failed to activate user",
     "passwordReset": "Password reset email sent successfully",
     "createError": "Failed to create user",
     "updateError": "Failed to update user",
     "deleteError": "Failed to delete user",
-    "loadError": "Failed to load users"
+    "loadError": "Failed to load user information"
+  },
+
+  "role": {
+    "system_admin": "System Admin",
+    "industry_owner": "Industry Owner",
+    "administrator": "Administrator",
+    "supervisor": "Supervisor",
+    "worker": "Worker"
   },
 
   "stats": {
