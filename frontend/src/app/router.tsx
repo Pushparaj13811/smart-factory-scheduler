@@ -3,14 +3,16 @@
 import { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { ProtectedRoute } from '@/components/guards/ProtectedRoute';
+import { PublicRoute } from '@/components/guards/PublicRoute';
 import { AuthLayout } from '@/components/layouts/AuthLayout';
 import { AppLayout } from '@/components/layouts/AppLayout';
 import { RouteError } from '@/components/common/RouteError';
 import { SuspenseWrapper } from '@/components/common/SuspenseWrapper/SuspenseWrapper';
 
 // Lazy load all page components
+const LandingPage = lazy(() => import('@/pages/LandingPage'));
+const IndustryRegistrationPage = lazy(() => import('@/pages/IndustryRegistrationPage'));
 const LoginPage = lazy(() => import('@/features/auth/pages/LoginPage'));
-const SignupPage = lazy(() => import('@/features/auth/pages/SignupPage'));
 const ForgotPasswordPage = lazy(() => import('@/features/auth/pages/ForgotPasswordPage'));
 
 const UnauthorizedPage = lazy(() => import('@/pages/UnauthorizedPage'));
@@ -64,6 +66,30 @@ const AnalyticsPage = lazy(() => import('@/features/system/pages/AnalyticsPage')
 const ProfilePage = lazy(() => import('@/features/profile/pages/ProfilePage'));
 
 export const router = createBrowserRouter([
+  // Public routes (landing page and registration)
+  {
+    path: '/',
+    element: (
+      <PublicRoute>
+        <SuspenseWrapper>
+          <LandingPage />
+        </SuspenseWrapper>
+      </PublicRoute>
+    ),
+    errorElement: <RouteError />,
+  },
+  {
+    path: '/register-industry',
+    element: (
+      <PublicRoute>
+        <SuspenseWrapper>
+          <IndustryRegistrationPage />
+        </SuspenseWrapper>
+      </PublicRoute>
+    ),
+    errorElement: <RouteError />,
+  },
+
   // Auth routes (with AuthLayout)
   {
     element: <AuthLayout />,
@@ -74,14 +100,6 @@ export const router = createBrowserRouter([
         element: (
           <SuspenseWrapper>
             <LoginPage />
-          </SuspenseWrapper>
-        ),
-      },
-      {
-        path: '/signup',
-        element: (
-          <SuspenseWrapper>
-            <SignupPage />
           </SuspenseWrapper>
         ),
       },
@@ -105,10 +123,6 @@ export const router = createBrowserRouter([
     ),
     errorElement: <RouteError />,
     children: [
-      {
-        path: '/',
-        element: <Navigate to="/dashboard" replace />,
-      },
       {
         path: '/dashboard',
         element: (
