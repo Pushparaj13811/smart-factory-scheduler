@@ -1,7 +1,14 @@
 // API client with Axios
 
-import axios, { type AxiosError, type InternalAxiosRequestConfig } from 'axios';
+import axios, { type AxiosError, type InternalAxiosRequestConfig, type AxiosResponse } from 'axios';
 import { appConfig } from '@/config/app.config';
+import { getMockHandler } from './mock-api';
+
+// Type for mock response error
+interface MockResponseError extends Error {
+  mockResponse: AxiosResponse;
+  config: InternalAxiosRequestConfig;
+}
 
 // Create axios instance
 export const apiClient = axios.create({
@@ -12,7 +19,49 @@ export const apiClient = axios.create({
   },
 });
 
-// Request interceptor
+// Mock API interceptor (runs first)
+apiClient.interceptors.request.use(
+  async (config: InternalAxiosRequestConfig) => {
+    const mockHandler = getMockHandler();
+
+    // Check if we should use mock API
+    if (mockHandler.shouldMock(config)) {
+      try {
+        const mockResponse = await mockHandler.handleRequest(config);
+
+        // Create a fulfilled promise that mimics Axios response
+        const axiosResponse: AxiosResponse = {
+          data: mockResponse.data,
+          status: mockResponse.status,
+          statusText: mockResponse.statusText,
+          headers: mockResponse.headers || {},
+          config,
+        };
+
+        // Throw a special error that will be caught by the adapter
+        // This prevents the actual HTTP request from being made
+        const mockError = new Error('MockResponse') as MockResponseError;
+        mockError.mockResponse = axiosResponse;
+        mockError.config = config;
+        throw mockError;
+      } catch (error) {
+        // If it's our mock response error, re-throw it
+        if (error && typeof error === 'object' && 'mockResponse' in error) {
+          throw error;
+        }
+        // For other errors during mocking, let them propagate
+        throw error;
+      }
+    }
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// Auth & tenant interceptor
 apiClient.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     // Get auth token from localStorage (auth store will set this)
@@ -33,6 +82,11 @@ apiClient.interceptors.request.use(
         if (user?.industryId) {
           config.headers['X-Tenant-ID'] = user.industryId;
         }
+
+        // Attach user role for mock API routing
+        if (user?.role) {
+          config.headers['X-User-Role'] = user.role;
+        }
       } catch (error) {
         console.error('Error parsing auth data:', error);
       }
@@ -51,11 +105,17 @@ apiClient.interceptors.response.use(
     // Return response data directly
     return response;
   },
-  async (error: AxiosError) => {
-    const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
+  async (error: unknown) => {
+    // Handle mock responses
+    if (error && typeof error === 'object' && 'mockResponse' in error) {
+      return Promise.resolve((error as MockResponseError).mockResponse);
+    }
+
+    const axiosError = error as AxiosError;
+    const originalRequest = axiosError.config as InternalAxiosRequestConfig & { _retry?: boolean };
 
     // Handle 401 Unauthorized - attempt token refresh
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    if (axiosError.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
 
       try {
@@ -98,17 +158,17 @@ apiClient.interceptors.response.use(
     }
 
     // Handle 403 Forbidden
-    if (error.response?.status === 403) {
+    if (axiosError.response?.status === 403) {
       // Redirect to unauthorized page
       window.location.href = '/unauthorized';
     }
 
     // Handle network errors
-    if (!error.response) {
-      console.error('Network error:', error.message);
+    if (!axiosError.response) {
+      console.error('Network error:', axiosError.message);
     }
 
-    return Promise.reject(error);
+    return Promise.reject(axiosError);
   }
 );
 

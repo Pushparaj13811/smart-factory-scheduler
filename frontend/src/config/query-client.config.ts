@@ -2,6 +2,11 @@
 
 import { QueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
+import type { AxiosError } from 'axios';
+
+interface ErrorResponse {
+  message?: string;
+}
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,10 +18,13 @@ export const queryClient = new QueryClient({
       gcTime: 10 * 60 * 1000,
 
       // Retry configuration
-      retry: (failureCount, error: any) => {
+      retry: (failureCount, error: Error) => {
         // Don't retry on 4xx errors
-        if (error?.response?.status >= 400 && error?.response?.status < 500) {
-          return false;
+        const axiosError = error as AxiosError;
+        if (axiosError?.response?.status) {
+          if (axiosError?.response?.status >= 400 && axiosError?.response?.status < 500) {
+            return false;
+          }
         }
         // Retry up to 2 times for other errors
         return failureCount < 2;
@@ -33,8 +41,9 @@ export const queryClient = new QueryClient({
     },
     mutations: {
       // Global mutation error handler
-      onError: (error: any) => {
-        const message = error?.response?.data?.message || 'An error occurred';
+      onError: (error: Error) => {
+        const axiosError = error as AxiosError<ErrorResponse>;
+        const message = axiosError?.response?.data?.message || 'An error occurred';
         toast.error(message);
       },
 
