@@ -1,0 +1,110 @@
+{
+  "title": "सिस्टम प्रशासन",
+  "subtitle": "उद्योगों, सदस्यता और प्लेटफ़ॉर्म विश्लेषण का प्रबंधन करें",
+
+  "industries": {
+    "title": "उद्योग",
+    "subtitle": "पंजीकृत उद्योगों और उनकी सदस्यताओं का प्रबंधन करें",
+    "totalIndustries": "कुल उद्योग",
+    "activeIndustries": "सक्रिय उद्योग",
+    "suspendedIndustries": "निलंबित उद्योग",
+    "name": "उद्योग का नाम",
+    "description": "विवरण",
+    "status": "स्थिति",
+    "plan": "सदस्यता योजना",
+    "adminName": "व्यवस्थापक नाम",
+    "adminEmail": "व्यवस्थापक ईमेल",
+    "phoneNumber": "फोन नंबर",
+    "address": "पता",
+    "city": "शहर",
+    "state": "राज्य",
+    "country": "देश",
+    "postalCode": "पिन कोड",
+    "employeeCount": "कर्मचारी",
+    "machineCount": "मशीनें",
+    "createdAt": "निर्माण तिथि",
+    "expiryDate": "समाप्ति तिथि",
+    "actions": {
+      "suspend": "निलंबित करें",
+      "activate": "सक्रिय करें",
+      "viewDetails": "विवरण देखें"
+    },
+    "status": {
+      "active": "सक्रिय",
+      "inactive": "निष्क्रिय",
+      "suspended": "निलंबित"
+    },
+    "noIndustries": "कोई उद्योग नहीं मिला"
+  },
+
+  "subscriptions": {
+    "title": "सदस्यता",
+    "subtitle": "सदस्यता योजनाओं और बिलिंग का प्रबंधन करें",
+    "totalSubscriptions": "कुल सदस्यता",
+    "activeSubscriptions": "सक्रिय सदस्यता",
+    "revenue": "कुल राजस्व",
+    "industryName": "उद्योग",
+    "plan": "योजना",
+    "status": "स्थिति",
+    "startDate": "आरंभ तिथि",
+    "endDate": "समाप्ति तिथि",
+    "maxUsers": "अधिकतम उपयोगकर्ता",
+    "currentUsers": "वर्तमान उपयोगकर्ता",
+    "maxMachines": "अधिकतम मशीनें",
+    "currentMachines": "वर्तमान मशीनें",
+    "maxStorage": "अधिकतम स्टोरेज (GB)",
+    "currentStorage": "वर्तमान स्टोरेज (GB)",
+    "price": "मूल्य",
+    "billingCycle": "बिलिंग चक्र",
+    "autoRenew": "स्वतः नवीनीकरण",
+    "features": "सुविधाएँ",
+    "plans": {
+      "free": "मुफ्त",
+      "basic": "बुनियादी",
+      "professional": "पेशेवर",
+      "enterprise": "एंटरप्राइज"
+    },
+    "status": {
+      "active": "सक्रिय",
+      "expired": "समाप्त",
+      "cancelled": "रद्द",
+      "trial": "परीक्षण",
+      "payment_pending": "भुगतान लंबित"
+    },
+    "billingCycles": {
+      "monthly": "मासिक",
+      "yearly": "वार्षिक"
+    },
+    "actions": {
+      "renew": "नवीनीकृत करें",
+      "cancel": "रद्द करें",
+      "viewDetails": "विवरण देखें"
+    },
+    "noSubscriptions": "कोई सदस्यता नहीं मिली"
+  },
+
+  "analytics": {
+    "title": "प्लेटफॉर्म विश्लेषण",
+    "subtitle": "प्लेटफॉर्म प्रदर्शन और विकास मेट्रिक्स की निगरानी करें",
+    "overview": "सारांश",
+    "totalIndustries": "कुल उद्योग",
+    "activeIndustries": "सक्रिय उद्योग",
+    "totalUsers": "कुल उपयोगकर्ता",
+    "totalMachines": "कुल मशीनें",
+    "totalRevenue": "कुल राजस्व",
+    "monthlyRevenue": "मासिक राजस्व",
+    "totalStorage": "कुल स्टोरेज (GB)",
+    "totalOrders": "कुल ऑर्डर",
+    "subscriptionDistribution": "सदस्यता वितरण",
+    "revenueChart": "राजस्व रुझान",
+    "industryGrowth": "उद्योग विकास",
+    "topIndustries": "राजस्व के अनुसार शीर्ष उद्योग",
+    "month": "महीना",
+    "revenue": "राजस्व",
+    "subscriptions": "सदस्यता",
+    "newIndustries": "नया",
+    "churnedIndustries": "छोड़ दिया",
+    "users": "उपयोगकर्ता",
+    "machines": "मशीनें"
+  }
+}

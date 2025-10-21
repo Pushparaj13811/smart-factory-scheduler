@@ -1,0 +1,110 @@
+{
+  "title": "System Administration",
+  "subtitle": "Manage industries, subscriptions, and platform analytics",
+
+  "industries": {
+    "title": "Industries",
+    "subtitle": "Manage registered industries and their subscriptions",
+    "totalIndustries": "Total Industries",
+    "activeIndustries": "Active Industries",
+    "suspendedIndustries": "Suspended Industries",
+    "name": "Industry Name",
+    "description": "Description",
+    "status": "Status",
+    "plan": "Subscription Plan",
+    "adminName": "Admin Name",
+    "adminEmail": "Admin Email",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "city": "City",
+    "state": "State",
+    "country": "Country",
+    "postalCode": "Postal Code",
+    "employeeCount": "Employees",
+    "machineCount": "Machines",
+    "createdAt": "Created Date",
+    "expiryDate": "Expiry Date",
+    "actions": {
+      "suspend": "Suspend",
+      "activate": "Activate",
+      "viewDetails": "View Details"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "suspended": "Suspended"
+    },
+    "noIndustries": "No industries found"
+  },
+
+  "subscriptions": {
+    "title": "Subscriptions",
+    "subtitle": "Manage subscription plans and billing",
+    "totalSubscriptions": "Total Subscriptions",
+    "activeSubscriptions": "Active Subscriptions",
+    "revenue": "Total Revenue",
+    "industryName": "Industry",
+    "plan": "Plan",
+    "status": "Status",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "maxUsers": "Max Users",
+    "currentUsers": "Current Users",
+    "maxMachines": "Max Machines",
+    "currentMachines": "Current Machines",
+    "maxStorage": "Max Storage (GB)",
+    "currentStorage": "Current Storage (GB)",
+    "price": "Price",
+    "billingCycle": "Billing Cycle",
+    "autoRenew": "Auto Renew",
+    "features": "Features",
+    "plans": {
+      "free": "Free",
+      "basic": "Basic",
+      "professional": "Professional",
+      "enterprise": "Enterprise"
+    },
+    "status": {
+      "active": "Active",
+      "expired": "Expired",
+      "cancelled": "Cancelled",
+      "trial": "Trial",
+      "payment_pending": "Payment Pending"
+    },
+    "billingCycles": {
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "actions": {
+      "renew": "Renew",
+      "cancel": "Cancel",
+      "viewDetails": "View Details"
+    },
+    "noSubscriptions": "No subscriptions found"
+  },
+
+  "analytics": {
+    "title": "Platform Analytics",
+    "subtitle": "Monitor platform performance and growth metrics",
+    "overview": "Overview",
+    "totalIndustries": "Total Industries",
+    "activeIndustries": "Active Industries",
+    "totalUsers": "Total Users",
+    "totalMachines": "Total Machines",
+    "totalRevenue": "Total Revenue",
+    "monthlyRevenue": "Monthly Revenue",
+    "totalStorage": "Total Storage (GB)",
+    "totalOrders": "Total Orders",
+    "subscriptionDistribution": "Subscription Distribution",
+    "revenueChart": "Revenue Trend",
+    "industryGrowth": "Industry Growth",
+    "topIndustries": "Top Industries by Revenue",
+    "month": "Month",
+    "revenue": "Revenue",
+    "subscriptions": "Subscriptions",
+    "newIndustries": "New",
+    "churnedIndustries": "Churned",
+    "users": "Users",
+    "machines": "Machines"
+  }
+}
