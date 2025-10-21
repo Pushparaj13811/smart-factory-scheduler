@@ -21,6 +21,7 @@ import enUsers from '@/locales/en/users.json';
 import enReports from '@/locales/en/reports.json';
 import enSettings from '@/locales/en/settings.json';
 import enSystem from '@/locales/en/system.json';
+import enProfile from '@/locales/en/profile.json';
 
 // Hindi translations
 import hiCommon from '@/locales/hi/common.json';
@@ -38,6 +39,7 @@ import hiUsers from '@/locales/hi/users.json';
 import hiReports from '@/locales/hi/reports.json';
 import hiSettings from '@/locales/hi/settings.json';
 import hiSystem from '@/locales/hi/system.json';
+import hiProfile from '@/locales/hi/profile.json';
 
 i18n
   .use(LanguageDetector)
@@ -47,7 +49,7 @@ i18n
     supportedLngs: ['en', 'hi'],
 
     // Namespace configuration
-    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'componentsFeature', 'machines', 'rawMaterials', 'orders', 'schedule', 'maintenance', 'users', 'reports', 'settings', 'system'],
+    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'componentsFeature', 'machines', 'rawMaterials', 'orders', 'schedule', 'maintenance', 'users', 'reports', 'settings', 'system', 'profile'],
     defaultNS: 'common',
 
     interpolation: {
@@ -77,6 +79,7 @@ i18n
         reports: enReports,
         settings: enSettings,
         system: enSystem,
+        profile: enProfile,
       },
       hi: {
         common: hiCommon,
@@ -94,6 +97,7 @@ i18n
         reports: hiReports,
         settings: hiSettings,
         system: hiSystem,
+        profile: hiProfile,
       },
     },
   });

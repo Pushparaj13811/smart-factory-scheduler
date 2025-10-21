@@ -77,7 +77,10 @@
     "status": "Status",
     "priority": "Priority",
     "assigned": "Assigned",
-    "duration": "Duration"
+    "duration": "Duration",
+    "phoneNumber": "Phone Number",
+    "location": "Location",
+    "bio": "Bio"
   },
   "time": {
     "today": "Today",
@@ -119,5 +122,26 @@
     "minLength": "Must be at least {{min}} characters",
     "maxLength": "Must be at most {{max}} characters",
     "mustMatch": "Fields must match"
+  },
+  "messages": {
+    "profileUpdated": "Profile updated successfully",
+    "passwordChanged": "Password changed successfully",
+    "passwordMismatch": "Passwords do not match",
+    "viewAndManageProfile": "View and manage your personal information and account settings",
+    "personalInformation": "Personal Information",
+    "updateYourPersonalDetails": "Update your personal details and preferences",
+    "accountSecurity": "Account Security",
+    "managePasswordAndSecurity": "Manage your password and security settings",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "enterCurrentPassword": "Enter your current password",
+    "emailVerificationNote": "Your email address is verified and secure",
+    "bioDescription": "Brief description for your profile (max 500 characters)",
+    "profilePictureUpdated": "Profile picture updated successfully",
+    "preferencesUpdated": "Preferences updated successfully"
+  },
+  "placeholders": {
+    "bioPlaceholder": "Tell us a bit about yourself..."
   }
 }

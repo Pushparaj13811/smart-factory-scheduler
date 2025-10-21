@@ -77,7 +77,10 @@
     "status": "स्थिति",
     "priority": "प्राथमिकता",
     "assigned": "सौंपा गया",
-    "duration": "अवधि"
+    "duration": "अवधि",
+    "phoneNumber": "फ़ोन नंबर",
+    "location": "स्थान",
+    "bio": "परिचय"
   },
   "time": {
     "today": "आज",
@@ -119,5 +122,26 @@
     "minLength": "कम से कम {{min}} अक्षर होने चाहिए",
     "maxLength": "अधिकतम {{max}} अक्षर होने चाहिए",
     "mustMatch": "फ़ील्ड मेल खाने चाहिए"
+  },
+  "messages": {
+    "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई",
+    "passwordChanged": "पासवर्ड सफलतापूर्वक बदल गया",
+    "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+    "viewAndManageProfile": "अपनी व्यक्तिगत जानकारी और खाता सेटिंग्स देखें और प्रबंधित करें",
+    "personalInformation": "व्यक्तिगत जानकारी",
+    "updateYourPersonalDetails": "अपने व्यक्तिगत विवरण और प्राथमिकताएं अपडेट करें",
+    "accountSecurity": "खाता सुरक्षा",
+    "managePasswordAndSecurity": "अपना पासवर्ड और सुरक्षा सेटिंग्स प्रबंधित करें",
+    "changePassword": "पासवर्ड बदलें",
+    "currentPassword": "वर्तमान पासवर्ड",
+    "newPassword": "नया पासवर्ड",
+    "enterCurrentPassword": "अपना वर्तमान पासवर्ड दर्ज करें",
+    "emailVerificationNote": "आपका ईमेल पता सत्यापित और सुरक्षित है",
+    "bioDescription": "अपने प्रोफाइल के लिए संक्षिप्त विवरण (अधिकतम 500 अक्षर)",
+    "profilePictureUpdated": "प्रोफ़ाइल चित्र सफलतापूर्वक अपडेट किया गया",
+    "preferencesUpdated": "प्राथमिकताएं सफलतापूर्वक अपडेट की गईं"
+  },
+  "placeholders": {
+    "bioPlaceholder": "अपने बारे में कुछ बताएं..."
   }
 }
