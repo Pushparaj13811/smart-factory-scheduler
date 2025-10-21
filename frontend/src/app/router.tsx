@@ -1,76 +1,72 @@
-// Router configuration
+// Router configuration with lazy loading
 
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { ProtectedRoute } from '@/components/guards/ProtectedRoute';
 import { AuthLayout } from '@/components/layouts/AuthLayout';
 import { AppLayout } from '@/components/layouts/AppLayout';
 import { RouteError } from '@/components/common/RouteError';
+import { PageLoader } from '@/components/common/PageLoader/PageLoader';
 
-// Auth pages
-import LoginPage from '@/features/auth/pages/LoginPage';
-import SignupPage from '@/features/auth/pages/SignupPage';
-import ForgotPasswordPage from '@/features/auth/pages/ForgotPasswordPage';
+// Lazy load all page components
+const LoginPage = lazy(() => import('@/features/auth/pages/LoginPage'));
+const SignupPage = lazy(() => import('@/features/auth/pages/SignupPage'));
+const ForgotPasswordPage = lazy(() => import('@/features/auth/pages/ForgotPasswordPage'));
 
-// Other pages
-import UnauthorizedPage from '@/pages/UnauthorizedPage';
-import HomePage from '@/pages/HomePage';
-import SchedulePage from '@/pages/SchedulePage';
-import MaintenancePage from '@/pages/MaintenancePage';
-import UsersPage from '@/pages/UsersPage';
-import ReportsPage from '@/pages/ReportsPage';
-import SettingsPage from '@/pages/SettingsPage';
+const UnauthorizedPage = lazy(() => import('@/pages/UnauthorizedPage'));
+const HomePage = lazy(() => import('@/pages/HomePage'));
+const SchedulePage = lazy(() => import('@/pages/SchedulePage'));
+const MaintenancePage = lazy(() => import('@/pages/MaintenancePage'));
+const UsersPage = lazy(() => import('@/pages/UsersPage'));
+const ReportsPage = lazy(() => import('@/pages/ReportsPage'));
+const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 
 // Machine pages
-import {
-  MachinesPage,
-  MachineCreatePage,
-  MachineEditPage,
-  MachineDetailsPage,
-} from '@/features/machines/pages';
+const MachinesPage = lazy(() => import('@/features/machines/pages/MachinesPage'));
+const MachineCreatePage = lazy(() => import('@/features/machines/pages/MachineCreatePage'));
+const MachineEditPage = lazy(() => import('@/features/machines/pages/MachineEditPage'));
+const MachineDetailsPage = lazy(() => import('@/features/machines/pages/MachineDetailsPage'));
 
 // Component pages
-import {
-  ComponentsPage,
-  ComponentCreatePage,
-  ComponentEditPage,
-  ComponentDetailsPage,
-} from '@/features/components/pages';
+const ComponentsPage = lazy(() => import('@/features/components/pages/ComponentsPage'));
+const ComponentCreatePage = lazy(() => import('@/features/components/pages/ComponentCreatePage'));
+const ComponentEditPage = lazy(() => import('@/features/components/pages/ComponentEditPage'));
+const ComponentDetailsPage = lazy(() => import('@/features/components/pages/ComponentDetailsPage'));
 
 // Raw Material pages
-import {
-  RawMaterialsPage,
-  RawMaterialCreatePage,
-  RawMaterialEditPage,
-  RawMaterialDetailsPage,
-} from '@/features/raw-materials/pages';
+const RawMaterialsPage = lazy(() => import('@/features/raw-materials/pages/RawMaterialsPage'));
+const RawMaterialCreatePage = lazy(() => import('@/features/raw-materials/pages/RawMaterialCreatePage'));
+const RawMaterialEditPage = lazy(() => import('@/features/raw-materials/pages/RawMaterialEditPage'));
+const RawMaterialDetailsPage = lazy(() => import('@/features/raw-materials/pages/RawMaterialDetailsPage'));
 
 // Order pages
-import {
-  OrdersPage,
-  OrderCreatePage,
-  OrderEditPage,
-  OrderDetailsPage,
-} from '@/features/orders/pages';
+const OrdersPage = lazy(() => import('@/features/orders/pages/OrdersPage'));
+const OrderCreatePage = lazy(() => import('@/features/orders/pages/OrderCreatePage'));
+const OrderEditPage = lazy(() => import('@/features/orders/pages/OrderEditPage'));
+const OrderDetailsPage = lazy(() => import('@/features/orders/pages/OrderDetailsPage'));
 
 // User pages
-import UserCreatePage from '@/features/users/pages/UserCreatePage';
-import UserEditPage from '@/features/users/pages/UserEditPage';
-import UserDetailsPage from '@/features/users/pages/UserDetailsPage';
+const UserCreatePage = lazy(() => import('@/features/users/pages/UserCreatePage'));
+const UserEditPage = lazy(() => import('@/features/users/pages/UserEditPage'));
+const UserDetailsPage = lazy(() => import('@/features/users/pages/UserDetailsPage'));
 
 // Maintenance pages
-import MaintenanceCreatePage from '@/features/maintenance/pages/MaintenanceCreatePage';
-import MaintenanceEditPage from '@/features/maintenance/pages/MaintenanceEditPage';
-import MaintenanceDetailsPage from '@/features/maintenance/pages/MaintenanceDetailsPage';
+const MaintenanceCreatePage = lazy(() => import('@/features/maintenance/pages/MaintenanceCreatePage'));
+const MaintenanceEditPage = lazy(() => import('@/features/maintenance/pages/MaintenanceEditPage'));
+const MaintenanceDetailsPage = lazy(() => import('@/features/maintenance/pages/MaintenanceDetailsPage'));
 
 // System admin pages
-import {
-  IndustriesPage,
-  SubscriptionsPage,
-  AnalyticsPage,
-} from '@/features/system/pages';
+const IndustriesPage = lazy(() => import('@/features/system/pages/IndustriesPage'));
+const SubscriptionsPage = lazy(() => import('@/features/system/pages/SubscriptionsPage'));
+const AnalyticsPage = lazy(() => import('@/features/system/pages/AnalyticsPage'));
 
 // Profile page
-import { ProfilePage } from '@/features/profile/pages';
+const ProfilePage = lazy(() => import('@/features/profile/pages/ProfilePage'));
+
+// Wrapper component with Suspense
+function SuspenseWrapper({ children }: { children: React.ReactNode }) {
+  return <Suspense fallback={<PageLoader />}>{children}</Suspense>;
+}
 
 export const router = createBrowserRouter([
   // Auth routes (with AuthLayout)
@@ -80,27 +76,32 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/login',
-        element: <LoginPage />,
+        element: (
+          <SuspenseWrapper>
+            <LoginPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/signup',
-        element: <SignupPage />,
+        element: (
+          <SuspenseWrapper>
+            <SignupPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/forgot-password',
-        element: <ForgotPasswordPage />,
+        element: (
+          <SuspenseWrapper>
+            <ForgotPasswordPage />
+          </SuspenseWrapper>
+        ),
       },
     ],
   },
 
-  // Unauthorized page (no layout)
-  {
-    path: '/unauthorized',
-    element: <UnauthorizedPage />,
-    errorElement: <RouteError />,
-  },
-
-  // Protected routes (with AppLayout)
+  // App routes (with AppLayout and ProtectedRoute)
   {
     element: (
       <ProtectedRoute>
@@ -111,146 +112,303 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <HomePage />,
+        element: <Navigate to="/dashboard" replace />,
       },
+      {
+        path: '/dashboard',
+        element: (
+          <SuspenseWrapper>
+            <HomePage />
+          </SuspenseWrapper>
+        ),
+      },
+
       // Machine Management routes
       {
         path: '/machines',
-        element: <MachinesPage />,
+        element: (
+          <SuspenseWrapper>
+            <MachinesPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/machines/create',
-        element: <MachineCreatePage />,
-      },
-      {
-        path: '/machines/:id',
-        element: <MachineDetailsPage />,
+        element: (
+          <SuspenseWrapper>
+            <MachineCreatePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/machines/:id/edit',
-        element: <MachineEditPage />,
+        element: (
+          <SuspenseWrapper>
+            <MachineEditPage />
+          </SuspenseWrapper>
+        ),
       },
+      {
+        path: '/machines/:id',
+        element: (
+          <SuspenseWrapper>
+            <MachineDetailsPage />
+          </SuspenseWrapper>
+        ),
+      },
+
       // Component Management routes
       {
         path: '/components',
-        element: <ComponentsPage />,
+        element: (
+          <SuspenseWrapper>
+            <ComponentsPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/components/create',
-        element: <ComponentCreatePage />,
-      },
-      {
-        path: '/components/:id',
-        element: <ComponentDetailsPage />,
+        element: (
+          <SuspenseWrapper>
+            <ComponentCreatePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/components/:id/edit',
-        element: <ComponentEditPage />,
+        element: (
+          <SuspenseWrapper>
+            <ComponentEditPage />
+          </SuspenseWrapper>
+        ),
       },
-      // Raw Material Management routes
+      {
+        path: '/components/:id',
+        element: (
+          <SuspenseWrapper>
+            <ComponentDetailsPage />
+          </SuspenseWrapper>
+        ),
+      },
+
+      // Raw Materials Management routes
       {
         path: '/raw-materials',
-        element: <RawMaterialsPage />,
+        element: (
+          <SuspenseWrapper>
+            <RawMaterialsPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/raw-materials/create',
-        element: <RawMaterialCreatePage />,
-      },
-      {
-        path: '/raw-materials/:id',
-        element: <RawMaterialDetailsPage />,
+        element: (
+          <SuspenseWrapper>
+            <RawMaterialCreatePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/raw-materials/:id/edit',
-        element: <RawMaterialEditPage />,
+        element: (
+          <SuspenseWrapper>
+            <RawMaterialEditPage />
+          </SuspenseWrapper>
+        ),
       },
+      {
+        path: '/raw-materials/:id',
+        element: (
+          <SuspenseWrapper>
+            <RawMaterialDetailsPage />
+          </SuspenseWrapper>
+        ),
+      },
+
       // Order Management routes
       {
         path: '/orders',
-        element: <OrdersPage />,
+        element: (
+          <SuspenseWrapper>
+            <OrdersPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/orders/create',
-        element: <OrderCreatePage />,
-      },
-      {
-        path: '/orders/:id',
-        element: <OrderDetailsPage />,
+        element: (
+          <SuspenseWrapper>
+            <OrderCreatePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/orders/:id/edit',
-        element: <OrderEditPage />,
+        element: (
+          <SuspenseWrapper>
+            <OrderEditPage />
+          </SuspenseWrapper>
+        ),
       },
-      // Other feature routes (placeholders)
+      {
+        path: '/orders/:id',
+        element: (
+          <SuspenseWrapper>
+            <OrderDetailsPage />
+          </SuspenseWrapper>
+        ),
+      },
+
+      // Schedule Management routes
       {
         path: '/schedule',
-        element: <SchedulePage />,
+        element: (
+          <SuspenseWrapper>
+            <SchedulePage />
+          </SuspenseWrapper>
+        ),
       },
+
       // Maintenance Management routes
       {
         path: '/maintenance',
-        element: <MaintenancePage />,
+        element: (
+          <SuspenseWrapper>
+            <MaintenancePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/maintenance/create',
-        element: <MaintenanceCreatePage />,
-      },
-      {
-        path: '/maintenance/:id',
-        element: <MaintenanceDetailsPage />,
+        element: (
+          <SuspenseWrapper>
+            <MaintenanceCreatePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/maintenance/:id/edit',
-        element: <MaintenanceEditPage />,
+        element: (
+          <SuspenseWrapper>
+            <MaintenanceEditPage />
+          </SuspenseWrapper>
+        ),
       },
+      {
+        path: '/maintenance/:id',
+        element: (
+          <SuspenseWrapper>
+            <MaintenanceDetailsPage />
+          </SuspenseWrapper>
+        ),
+      },
+
       // User Management routes
       {
         path: '/users',
-        element: <UsersPage />,
+        element: (
+          <SuspenseWrapper>
+            <UsersPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/users/create',
-        element: <UserCreatePage />,
-      },
-      {
-        path: '/users/:id',
-        element: <UserDetailsPage />,
+        element: (
+          <SuspenseWrapper>
+            <UserCreatePage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/users/:id/edit',
-        element: <UserEditPage />,
+        element: (
+          <SuspenseWrapper>
+            <UserEditPage />
+          </SuspenseWrapper>
+        ),
       },
+      {
+        path: '/users/:id',
+        element: (
+          <SuspenseWrapper>
+            <UserDetailsPage />
+          </SuspenseWrapper>
+        ),
+      },
+
+      // Reports routes
       {
         path: '/reports',
-        element: <ReportsPage />,
+        element: (
+          <SuspenseWrapper>
+            <ReportsPage />
+          </SuspenseWrapper>
+        ),
       },
+
+      // Settings routes
       {
         path: '/settings',
-        element: <SettingsPage />,
+        element: (
+          <SuspenseWrapper>
+            <SettingsPage />
+          </SuspenseWrapper>
+        ),
       },
+
+      // Profile routes
       {
         path: '/profile',
-        element: <ProfilePage />,
+        element: (
+          <SuspenseWrapper>
+            <ProfilePage />
+          </SuspenseWrapper>
+        ),
       },
+
       // System Admin routes
       {
         path: '/system/industries',
-        element: <IndustriesPage />,
+        element: (
+          <SuspenseWrapper>
+            <IndustriesPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/system/subscriptions',
-        element: <SubscriptionsPage />,
+        element: (
+          <SuspenseWrapper>
+            <SubscriptionsPage />
+          </SuspenseWrapper>
+        ),
       },
       {
         path: '/system/analytics',
-        element: <AnalyticsPage />,
+        element: (
+          <SuspenseWrapper>
+            <AnalyticsPage />
+          </SuspenseWrapper>
+        ),
       },
     ],
   },
 
-  // Catch-all redirect
+  // Unauthorized route
+  {
+    path: '/unauthorized',
+    element: (
+      <SuspenseWrapper>
+        <UnauthorizedPage />
+      </SuspenseWrapper>
+    ),
+    errorElement: <RouteError />,
+  },
+
+  // 404 fallback
   {
     path: '*',
-    element: <Navigate to="/" replace />,
+    element: <Navigate to="/dashboard" replace />,
   },
 ]);
