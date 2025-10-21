@@ -34,7 +34,22 @@
     "success": "Success",
     "noData": "No data available",
     "noResults": "No results found",
-    "processing": "Processing..."
+    "processing": "Processing...",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "errors": {
+    "pageTitle": "Oops! Something went wrong",
+    "pageMessage": "We encountered an unexpected error. Please try refreshing the page or contact support if the problem persists.",
+    "routeTitle": "Page Error",
+    "routeMessage": "Sorry, we couldn't load this page. Please try again or navigate back to the homepage.",
+    "goHome": "Go to Homepage",
+    "reload": "Reload Page",
+    "showDetails": "Show Error Details",
+    "hideDetails": "Hide Error Details"
+  },
+  "placeholder": {
+    "underDevelopment": "This feature is currently under development and will be available soon.",
+    "backToDashboard": "Back to Dashboard"
   },
   "status": {
     "active": "Active",
@@ -46,7 +61,23 @@
     "paused": "Paused",
     "scheduled": "Scheduled",
     "cancelled": "Cancelled",
-    "in_progress": "In Progress"
+    "inProgress": "In Progress",
+    "in_progress": "In Progress",
+    "idle": "Idle",
+    "maintenance": "Under Maintenance",
+    "offline": "Offline",
+    "error": "Error",
+    "setup": "Setup",
+    "unknown": "Unknown"
+  },
+  "labels": {
+    "details": "Details",
+    "description": "Description",
+    "name": "Name",
+    "status": "Status",
+    "priority": "Priority",
+    "assigned": "Assigned",
+    "duration": "Duration"
   },
   "time": {
     "today": "Today",
@@ -77,6 +108,9 @@
     "rows": "rows",
     "showing": "Showing",
     "to": "to",
+    "total": "total",
+    "item": "item",
+    "items": "items",
     "totalItems": "total items"
   },
   "validation": {

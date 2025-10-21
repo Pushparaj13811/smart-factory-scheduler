@@ -11,6 +11,8 @@ import enAuth from '@/locales/en/auth.json';
 import enNavigation from '@/locales/en/navigation.json';
 import enDashboard from '@/locales/en/dashboard.json';
 import enComponents from '@/locales/en/components.json';
+import enMachines from '@/locales/en/machines.json';
+import enSystem from '@/locales/en/system.json';
 
 // Hindi translations
 import hiCommon from '@/locales/hi/common.json';
@@ -18,6 +20,8 @@ import hiAuth from '@/locales/hi/auth.json';
 import hiNavigation from '@/locales/hi/navigation.json';
 import hiDashboard from '@/locales/hi/dashboard.json';
 import hiComponents from '@/locales/hi/components.json';
+import hiMachines from '@/locales/hi/machines.json';
+import hiSystem from '@/locales/hi/system.json';
 
 i18n
   .use(LanguageDetector)
@@ -27,7 +31,7 @@ i18n
     supportedLngs: ['en', 'hi'],
 
     // Namespace configuration
-    ns: ['common', 'auth', 'navigation', 'dashboard', 'components'],
+    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'machines', 'system'],
     defaultNS: 'common',
 
     interpolation: {
@@ -47,6 +51,8 @@ i18n
         navigation: enNavigation,
         dashboard: enDashboard,
         components: enComponents,
+        machines: enMachines,
+        system: enSystem,
       },
       hi: {
         common: hiCommon,
@@ -54,6 +60,8 @@ i18n
         navigation: hiNavigation,
         dashboard: hiDashboard,
         components: hiComponents,
+        machines: hiMachines,
+        system: hiSystem,
       },
     },
   });
