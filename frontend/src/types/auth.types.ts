@@ -6,6 +6,7 @@ export interface User {
   name: string;
   role: string;
   industryId?: string; // null for SYSTEM_ADMIN
+  supervisorId?: string; // For workers/operators who report to a supervisor
   avatar?: string;
   createdAt: Date;
   updatedAt: Date;
