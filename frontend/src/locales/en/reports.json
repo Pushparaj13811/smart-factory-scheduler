@@ -1,0 +1,62 @@
+{
+  "title": "Reports & Analytics",
+  "subtitle": "Generate reports, view analytics, and export data",
+
+  "tabs": {
+    "overview": "Overview",
+    "production": "Production",
+    "maintenance": "Maintenance",
+    "inventory": "Inventory"
+  },
+
+  "actions": {
+    "exportAll": "Export All Reports",
+    "generateReport": "Generate Report",
+    "scheduleReport": "Schedule Report",
+    "viewHistory": "View History"
+  },
+
+  "metrics": {
+    "totalProduction": "Total Production",
+    "activeOrders": "Active Orders",
+    "maintenanceDue": "Maintenance Due",
+    "inventoryStatus": "Inventory Status",
+    "urgent": "urgent",
+    "overdue": "overdue",
+    "inStock": "in stock"
+  },
+
+  "charts": {
+    "productionTrends": "Production Trends",
+    "orderCompletion": "Order Completion Rate",
+    "last30Days": "Last 30 days",
+    "chartPlaceholder": "Chart visualization coming soon"
+  },
+
+  "production": {
+    "title": "Production Reports",
+    "description": "View and export production metrics and performance data",
+    "completedTasks": "Completed Tasks",
+    "delayedTasks": "Delayed Tasks",
+    "thisWeek": "This week",
+    "currentlyActive": "Currently active"
+  },
+
+  "maintenance": {
+    "title": "Maintenance Reports",
+    "description": "Track maintenance schedules and costs",
+    "scheduled": "Scheduled Maintenance",
+    "completed": "Completed Maintenance",
+    "nextMonth": "Next month",
+    "lastMonth": "Last month"
+  },
+
+  "inventory": {
+    "title": "Inventory Reports",
+    "description": "Monitor stock levels and material consumption",
+    "totalItems": "Total Items",
+    "lowStock": "Low Stock Items",
+    "acrossAllCategories": "Across all categories",
+    "needsReorder": "Needs reorder"
+  }
+}

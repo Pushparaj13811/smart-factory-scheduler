@@ -1,0 +1,62 @@
+{
+  "title": "रिपोर्ट और विश्लेषण",
+  "subtitle": "रिपोर्ट बनाएं, विश्लेषण देखें और डेटा निर्यात करें",
+
+  "tabs": {
+    "overview": "अवलोकन",
+    "production": "उत्पादन",
+    "maintenance": "रखरखाव",
+    "inventory": "सूची"
+  },
+
+  "actions": {
+    "exportAll": "सभी रिपोर्ट निर्यात करें",
+    "generateReport": "रिपोर्ट बनाएं",
+    "scheduleReport": "रिपोर्ट अनुसूची",
+    "viewHistory": "इतिहास देखें"
+  },
+
+  "metrics": {
+    "totalProduction": "कुल उत्पादन",
+    "activeOrders": "सक्रिय ऑर्डर",
+    "maintenanceDue": "रखरखाव देय",
+    "inventoryStatus": "सूची स्थिति",
+    "urgent": "अत्यावश्यक",
+    "overdue": "विलंबित",
+    "inStock": "स्टॉक में"
+  },
+
+  "charts": {
+    "productionTrends": "उत्पादन रुझान",
+    "orderCompletion": "ऑर्डर पूर्णता दर",
+    "last30Days": "पिछले 30 दिन",
+    "chartPlaceholder": "चार्ट दृश्य जल्द आ रहा है"
+  },
+
+  "production": {
+    "title": "उत्पादन रिपोर्ट",
+    "description": "उत्पादन मेट्रिक्स और प्रदर्शन डेटा देखें और निर्यात करें",
+    "completedTasks": "पूर्ण कार्य",
+    "delayedTasks": "विलंबित कार्य",
+    "thisWeek": "इस सप्ताह",
+    "currentlyActive": "वर्तमान में सक्रिय"
+  },
+
+  "maintenance": {
+    "title": "रखरखाव रिपोर्ट",
+    "description": "रखरखाव अनुसूची और लागत ट्रैक करें",
+    "scheduled": "अनुसूचित रखरखाव",
+    "completed": "पूर्ण रखरखाव",
+    "nextMonth": "अगले महीने",
+    "lastMonth": "पिछले महीने"
+  },
+
+  "inventory": {
+    "title": "सूची रिपोर्ट",
+    "description": "स्टॉक स्तर और सामग्री खपत की निगरानी करें",
+    "totalItems": "कुल आइटम",
+    "lowStock": "कम स्टॉक आइटम",
+    "acrossAllCategories": "सभी श्रेणियों में",
+    "needsReorder": "पुनः ऑर्डर की आवश्यकता है"
+  }
+}

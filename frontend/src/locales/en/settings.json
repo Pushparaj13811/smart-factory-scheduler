@@ -1,0 +1,63 @@
+{
+  "title": "Settings",
+  "subtitle": "Configure application settings and preferences",
+
+  "tabs": {
+    "general": "General",
+    "notifications": "Notifications",
+    "security": "Security",
+    "preferences": "Preferences"
+  },
+
+  "general": {
+    "title": "General Settings",
+    "description": "Configure basic application settings",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Enter your company name",
+    "industryType": "Industry Type",
+    "timezone": "Timezone",
+    "industries": {
+      "manufacturing": "Manufacturing",
+      "automotive": "Automotive",
+      "electronics": "Electronics",
+      "textiles": "Textiles"
+    }
+  },
+
+  "notifications": {
+    "title": "Notification Settings",
+    "description": "Manage notification preferences and alerts",
+    "email": "Email Notifications",
+    "emailDescription": "Receive updates and alerts via email",
+    "push": "Push Notifications",
+    "pushDescription": "Receive real-time push notifications",
+    "alerts": "Alert Categories",
+    "maintenanceAlerts": "Maintenance reminders and alerts",
+    "inventoryAlerts": "Low inventory and stock alerts",
+    "orderAlerts": "Order status and deadline alerts"
+  },
+
+  "security": {
+    "title": "Security Settings",
+    "description": "Configure security and privacy options",
+    "twoFactor": "Two-Factor Authentication",
+    "twoFactorDescription": "Add an extra layer of security to your account",
+    "autoBackup": "Automatic Backup",
+    "autoBackupDescription": "Automatically backup your data daily",
+    "sessionTimeout": "Session Timeout",
+    "changePassword": "Change Password"
+  },
+
+  "preferences": {
+    "title": "User Preferences",
+    "description": "Customize your application experience",
+    "language": "Language",
+    "theme": "Theme",
+    "dateFormat": "Date Format",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System Default"
+    }
+  }
+}

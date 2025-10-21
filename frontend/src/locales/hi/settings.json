@@ -1,0 +1,63 @@
+{
+  "title": "सेटिंग्स",
+  "subtitle": "एप्लिकेशन सेटिंग्स और प्राथमिकताएं कॉन्फ़िगर करें",
+
+  "tabs": {
+    "general": "सामान्य",
+    "notifications": "सूचनाएं",
+    "security": "सुरक्षा",
+    "preferences": "प्राथमिकताएं"
+  },
+
+  "general": {
+    "title": "सामान्य सेटिंग्स",
+    "description": "बुनियादी एप्लिकेशन सेटिंग्स कॉन्फ़िगर करें",
+    "companyName": "कंपनी का नाम",
+    "companyNamePlaceholder": "अपनी कंपनी का नाम दर्ज करें",
+    "industryType": "उद्योग प्रकार",
+    "timezone": "समय क्षेत्र",
+    "industries": {
+      "manufacturing": "विनिर्माण",
+      "automotive": "ऑटोमोटिव",
+      "electronics": "इलेक्ट्रॉनिक्स",
+      "textiles": "वस्त्र"
+    }
+  },
+
+  "notifications": {
+    "title": "सूचना सेटिंग्स",
+    "description": "सूचना प्राथमिकताएं और अलर्ट प्रबंधित करें",
+    "email": "ईमेल सूचनाएं",
+    "emailDescription": "ईमेल के माध्यम से अपडेट और अलर्ट प्राप्त करें",
+    "push": "पुश सूचनाएं",
+    "pushDescription": "वास्तविक समय पुश सूचनाएं प्राप्त करें",
+    "alerts": "अलर्ट श्रेणियां",
+    "maintenanceAlerts": "रखरखाव अनुस्मारक और अलर्ट",
+    "inventoryAlerts": "कम इन्वेंटरी और स्टॉक अलर्ट",
+    "orderAlerts": "ऑर्डर स्थिति और समय सीमा अलर्ट"
+  },
+
+  "security": {
+    "title": "सुरक्षा सेटिंग्स",
+    "description": "सुरक्षा और गोपनीयता विकल्प कॉन्फ़िगर करें",
+    "twoFactor": "दो-कारक प्रमाणीकरण",
+    "twoFactorDescription": "अपने खाते में सुरक्षा की एक अतिरिक्त परत जोड़ें",
+    "autoBackup": "स्वचालित बैकअप",
+    "autoBackupDescription": "अपने डेटा का दैनिक स्वचालित बैकअप लें",
+    "sessionTimeout": "सत्र समय समाप्ति",
+    "changePassword": "पासवर्ड बदलें"
+  },
+
+  "preferences": {
+    "title": "उपयोगकर्ता प्राथमिकताएं",
+    "description": "अपने एप्लिकेशन अनुभव को अनुकूलित करें",
+    "language": "भाषा",
+    "theme": "थीम",
+    "dateFormat": "तिथि प्रारूप",
+    "themes": {
+      "light": "हल्का",
+      "dark": "गहरा",
+      "system": "सिस्टम डिफ़ॉल्ट"
+    }
+  }
+}
