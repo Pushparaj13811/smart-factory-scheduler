@@ -1,0 +1,156 @@
+{
+  "title": "Machines",
+  "subtitle": "Manage your manufacturing machines and equipment",
+  "addMachine": "Add Machine",
+  "editMachine": "Edit Machine",
+  "machineDetails": "Machine Details",
+  "createMachine": "Create New Machine",
+  "updateMachine": "Update Machine",
+  "deleteMachine": "Delete Machine",
+  "noMachines": "No machines found",
+  "searchPlaceholder": "Search machines by name or model...",
+
+  "form": {
+    "name": "Machine Name",
+    "namePlaceholder": "Enter machine name",
+    "nameDescription": "Unique identifier for the machine",
+    "model": "Model Number",
+    "modelPlaceholder": "Enter model number",
+    "modelDescription": "Manufacturer's model identifier",
+    "manufacturer": "Manufacturer",
+    "manufacturerPlaceholder": "Enter manufacturer name",
+    "type": "Machine Type",
+    "typePlaceholder": "Select machine type",
+    "status": "Status",
+    "capacity": "Capacity",
+    "capacityPlaceholder": "Enter capacity",
+    "capacityDescription": "Maximum production capacity per hour",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "locationDescription": "Physical location in the facility",
+    "purchaseDate": "Purchase Date",
+    "installationDate": "Installation Date",
+    "warrantyExpiry": "Warranty Expiry",
+    "lastMaintenanceDate": "Last Maintenance",
+    "nextMaintenanceDate": "Next Maintenance",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter machine description",
+    "specifications": "Technical Specifications",
+    "specificationsPlaceholder": "Enter technical details"
+  },
+
+  "status": {
+    "running": "Running",
+    "idle": "Idle",
+    "maintenance": "Under Maintenance",
+    "offline": "Offline",
+    "error": "Error",
+    "setup": "Setup"
+  },
+
+  "types": {
+    "cnc": "CNC Machine",
+    "lathe": "Lathe",
+    "mill": "Milling Machine",
+    "drill": "Drilling Machine",
+    "grinder": "Grinding Machine",
+    "press": "Press Machine",
+    "welding": "Welding Machine",
+    "cutting": "Cutting Machine",
+    "assembly": "Assembly Line",
+    "packaging": "Packaging Machine",
+    "other": "Other"
+  },
+
+  "details": {
+    "overview": "Overview",
+    "specifications": "Specifications",
+    "maintenance": "Maintenance History",
+    "schedule": "Production Schedule",
+    "performance": "Performance Metrics",
+    "utilization": "Utilization Rate",
+    "efficiency": "Efficiency",
+    "totalRuntime": "Total Runtime",
+    "totalDowntime": "Total Downtime",
+    "averageUptime": "Average Uptime",
+    "mtbf": "Mean Time Between Failures",
+    "mttr": "Mean Time To Repair",
+    "productionCount": "Total Production Count",
+    "lastProductionDate": "Last Production Date"
+  },
+
+  "maintenance": {
+    "schedule": "Schedule Maintenance",
+    "scheduleMaintenance": "Schedule Maintenance",
+    "maintenanceHistory": "Maintenance History",
+    "type": "Maintenance Type",
+    "scheduled": "Scheduled",
+    "preventive": "Preventive",
+    "corrective": "Corrective",
+    "emergency": "Emergency",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "pending": "Pending",
+    "noHistory": "No maintenance history available",
+    "lastMaintenance": "Last Maintenance",
+    "nextMaintenance": "Next Maintenance",
+    "dueSoon": "Maintenance Due Soon",
+    "overdue": "Maintenance Overdue"
+  },
+
+  "filters": {
+    "all": "All Machines",
+    "byStatus": "Filter by Status",
+    "byType": "Filter by Type",
+    "byLocation": "Filter by Location",
+    "clearFilters": "Clear Filters",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters"
+  },
+
+  "actions": {
+    "start": "Start Machine",
+    "stop": "Stop Machine",
+    "pause": "Pause Machine",
+    "resume": "Resume Machine",
+    "putInMaintenance": "Put in Maintenance",
+    "markAsOffline": "Mark as Offline",
+    "markAsOnline": "Mark as Online",
+    "viewSchedule": "View Schedule",
+    "viewHistory": "View History",
+    "exportData": "Export Data"
+  },
+
+  "confirmations": {
+    "deleteTitle": "Delete Machine?",
+    "deleteMessage": "Are you sure you want to delete this machine? This action cannot be undone.",
+    "deleteSuccess": "Machine deleted successfully",
+    "startTitle": "Start Machine?",
+    "startMessage": "Are you sure you want to start this machine?",
+    "stopTitle": "Stop Machine?",
+    "stopMessage": "Are you sure you want to stop this machine?",
+    "maintenanceTitle": "Put in Maintenance?",
+    "maintenanceMessage": "This will mark the machine as unavailable for production. Continue?"
+  },
+
+  "messages": {
+    "createSuccess": "Machine created successfully",
+    "updateSuccess": "Machine updated successfully",
+    "deleteSuccess": "Machine deleted successfully",
+    "statusUpdateSuccess": "Machine status updated successfully",
+    "createError": "Failed to create machine",
+    "updateError": "Failed to update machine",
+    "deleteError": "Failed to delete machine",
+    "loadError": "Failed to load machines"
+  },
+
+  "stats": {
+    "totalMachines": "Total Machines",
+    "runningMachines": "Running",
+    "idleMachines": "Idle",
+    "maintenanceMachines": "In Maintenance",
+    "offlineMachines": "Offline",
+    "averageUtilization": "Average Utilization",
+    "averageEfficiency": "Average Efficiency"
+  }
+}

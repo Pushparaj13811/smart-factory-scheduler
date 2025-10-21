@@ -1,0 +1,156 @@
+{
+  "title": "मशीनें",
+  "subtitle": "अपनी विनिर्माण मशीनों और उपकरणों का प्रबंधन करें",
+  "addMachine": "मशीन जोड़ें",
+  "editMachine": "मशीन संपादित करें",
+  "machineDetails": "मशीन विवरण",
+  "createMachine": "नई मशीन बनाएं",
+  "updateMachine": "मशीन अपडेट करें",
+  "deleteMachine": "मशीन हटाएं",
+  "noMachines": "कोई मशीन नहीं मिली",
+  "searchPlaceholder": "नाम या मॉडल से मशीन खोजें...",
+
+  "form": {
+    "name": "मशीन का नाम",
+    "namePlaceholder": "मशीन का नाम दर्ज करें",
+    "nameDescription": "मशीन के लिए अद्वितीय पहचानकर्ता",
+    "model": "मॉडल संख्या",
+    "modelPlaceholder": "मॉडल संख्या दर्ज करें",
+    "modelDescription": "निर्माता का मॉडल पहचानकर्ता",
+    "manufacturer": "निर्माता",
+    "manufacturerPlaceholder": "निर्माता का नाम दर्ज करें",
+    "type": "मशीन का प्रकार",
+    "typePlaceholder": "मशीन का प्रकार चुनें",
+    "status": "स्थिति",
+    "capacity": "क्षमता",
+    "capacityPlaceholder": "क्षमता दर्ज करें",
+    "capacityDescription": "प्रति घंटे अधिकतम उत्पादन क्षमता",
+    "location": "स्थान",
+    "locationPlaceholder": "स्थान दर्ज करें",
+    "locationDescription": "सुविधा में भौतिक स्थान",
+    "purchaseDate": "खरीद तिथि",
+    "installationDate": "स्थापना तिथि",
+    "warrantyExpiry": "वारंटी समाप्ति",
+    "lastMaintenanceDate": "अंतिम रखरखाव",
+    "nextMaintenanceDate": "अगला रखरखाव",
+    "description": "विवरण",
+    "descriptionPlaceholder": "मशीन का विवरण दर्ज करें",
+    "specifications": "तकनीकी विशिष्टताएं",
+    "specificationsPlaceholder": "तकनीकी विवरण दर्ज करें"
+  },
+
+  "status": {
+    "running": "चल रहा है",
+    "idle": "निष्क्रिय",
+    "maintenance": "रखरखाव में",
+    "offline": "ऑफलाइन",
+    "error": "त्रुटि",
+    "setup": "सेटअप"
+  },
+
+  "types": {
+    "cnc": "सीएनसी मशीन",
+    "lathe": "लेथ",
+    "mill": "मिलिंग मशीन",
+    "drill": "ड्रिलिंग मशीन",
+    "grinder": "ग्राइंडिंग मशीन",
+    "press": "प्रेस मशीन",
+    "welding": "वेल्डिंग मशीन",
+    "cutting": "कटिंग मशीन",
+    "assembly": "असेंबली लाइन",
+    "packaging": "पैकेजिंग मशीन",
+    "other": "अन्य"
+  },
+
+  "details": {
+    "overview": "सारांश",
+    "specifications": "विशिष्टताएं",
+    "maintenance": "रखरखाव इतिहास",
+    "schedule": "उत्पादन अनुसूची",
+    "performance": "प्रदर्शन मेट्रिक्स",
+    "utilization": "उपयोग दर",
+    "efficiency": "दक्षता",
+    "totalRuntime": "कुल रनटाइम",
+    "totalDowntime": "कुल डाउनटाइम",
+    "averageUptime": "औसत अपटाइम",
+    "mtbf": "विफलताओं के बीच औसत समय",
+    "mttr": "मरम्मत का औसत समय",
+    "productionCount": "कुल उत्पादन गणना",
+    "lastProductionDate": "अंतिम उत्पादन तिथि"
+  },
+
+  "maintenance": {
+    "schedule": "रखरखाव अनुसूची",
+    "scheduleMaintenance": "रखरखाव की योजना बनाएं",
+    "maintenanceHistory": "रखरखाव इतिहास",
+    "type": "रखरखाव प्रकार",
+    "scheduled": "अनुसूचित",
+    "preventive": "निवारक",
+    "corrective": "सुधारात्मक",
+    "emergency": "आपातकालीन",
+    "completed": "पूर्ण",
+    "inProgress": "प्रगति में",
+    "pending": "लंबित",
+    "noHistory": "कोई रखरखाव इतिहास उपलब्ध नहीं",
+    "lastMaintenance": "अंतिम रखरखाव",
+    "nextMaintenance": "अगला रखरखाव",
+    "dueSoon": "रखरखाव जल्द होगा",
+    "overdue": "रखरखाव अतिदेय"
+  },
+
+  "filters": {
+    "all": "सभी मशीनें",
+    "byStatus": "स्थिति से फ़िल्टर करें",
+    "byType": "प्रकार से फ़िल्टर करें",
+    "byLocation": "स्थान से फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छुपाएं"
+  },
+
+  "actions": {
+    "start": "मशीन चालू करें",
+    "stop": "मशीन बंद करें",
+    "pause": "मशीन रोकें",
+    "resume": "मशीन फिर से शुरू करें",
+    "putInMaintenance": "रखरखाव में रखें",
+    "markAsOffline": "ऑफलाइन के रूप में चिह्नित करें",
+    "markAsOnline": "ऑनलाइन के रूप में चिह्नित करें",
+    "viewSchedule": "अनुसूची देखें",
+    "viewHistory": "इतिहास देखें",
+    "exportData": "डेटा निर्यात करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "मशीन हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस मशीन को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteSuccess": "मशीन सफलतापूर्वक हटाई गई",
+    "startTitle": "मशीन चालू करें?",
+    "startMessage": "क्या आप वाकई इस मशीन को चालू करना चाहते हैं?",
+    "stopTitle": "मशीन बंद करें?",
+    "stopMessage": "क्या आप वाकई इस मशीन को बंद करना चाहते हैं?",
+    "maintenanceTitle": "रखरखाव में रखें?",
+    "maintenanceMessage": "यह मशीन को उत्पादन के लिए अनुपलब्ध के रूप में चिह्नित करेगा। जारी रखें?"
+  },
+
+  "messages": {
+    "createSuccess": "मशीन सफलतापूर्वक बनाई गई",
+    "updateSuccess": "मशीन सफलतापूर्वक अपडेट की गई",
+    "deleteSuccess": "मशीन सफलतापूर्वक हटाई गई",
+    "statusUpdateSuccess": "मशीन स्थिति सफलतापूर्वक अपडेट की गई",
+    "createError": "मशीन बनाने में विफल",
+    "updateError": "मशीन अपडेट करने में विफल",
+    "deleteError": "मशीन हटाने में विफल",
+    "loadError": "मशीनें लोड करने में विफल"
+  },
+
+  "stats": {
+    "totalMachines": "कुल मशीनें",
+    "runningMachines": "चल रहा है",
+    "idleMachines": "निष्क्रिय",
+    "maintenanceMachines": "रखरखाव में",
+    "offlineMachines": "ऑफलाइन",
+    "averageUtilization": "औसत उपयोग",
+    "averageEfficiency": "औसत दक्षता"
+  }
+}
