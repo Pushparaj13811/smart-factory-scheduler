@@ -1,12 +1,12 @@
 // Router configuration with lazy loading
 
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { ProtectedRoute } from '@/components/guards/ProtectedRoute';
 import { AuthLayout } from '@/components/layouts/AuthLayout';
 import { AppLayout } from '@/components/layouts/AppLayout';
 import { RouteError } from '@/components/common/RouteError';
-import { PageLoader } from '@/components/common/PageLoader/PageLoader';
+import { SuspenseWrapper } from '@/components/common/SuspenseWrapper/SuspenseWrapper';
 
 // Lazy load all page components
 const LoginPage = lazy(() => import('@/features/auth/pages/LoginPage'));
@@ -62,11 +62,6 @@ const AnalyticsPage = lazy(() => import('@/features/system/pages/AnalyticsPage')
 
 // Profile page
 const ProfilePage = lazy(() => import('@/features/profile/pages/ProfilePage'));
-
-// Wrapper component with Suspense
-function SuspenseWrapper({ children }: { children: React.ReactNode }) {
-  return <Suspense fallback={<PageLoader />}>{children}</Suspense>;
-}
 
 export const router = createBrowserRouter([
   // Auth routes (with AuthLayout)
