@@ -108,6 +108,15 @@ export const ordersEndpoints: MockEndpoint[] = [
     handler: (req) => {
       const data = req.data;
 
+      // Validate required data
+      if (!data) {
+        throw new Error('Request data is required');
+      }
+
+      if (!data.items || !Array.isArray(data.items)) {
+        throw new Error('Order items are required and must be an array');
+      }
+
       // Calculate totals
       let totalQuantity = 0;
       let totalAmount = 0;
