@@ -1,0 +1,165 @@
+{
+  "title": "Raw Materials",
+  "subtitle": "Manage your raw materials and inventory",
+  "addMaterial": "Add Material",
+  "editMaterial": "Edit Material",
+  "materialDetails": "Material Details",
+  "createMaterial": "Create New Material",
+  "updateMaterial": "Update Material",
+  "deleteMaterial": "Delete Material",
+  "noMaterials": "No raw materials found",
+  "searchPlaceholder": "Search materials by name, code, or supplier...",
+
+  "form": {
+    "name": "Material Name",
+    "namePlaceholder": "Enter material name",
+    "nameDescription": "Unique identifier for the material",
+    "code": "Material Code",
+    "codePlaceholder": "Enter material code",
+    "codeDescription": "SKU or material number",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter material description",
+    "category": "Category",
+    "categoryPlaceholder": "Select category",
+    "unit": "Unit of Measure",
+    "unitPlaceholder": "e.g., kg, liter, meter, sheet",
+    "unitDescription": "Unit for quantity measurement",
+    "quantity": "Current Quantity",
+    "quantityPlaceholder": "Enter quantity",
+    "reorderLevel": "Reorder Level",
+    "reorderLevelPlaceholder": "Enter reorder level",
+    "reorderLevelDescription": "Minimum quantity before reorder",
+    "unitCost": "Unit Cost",
+    "unitCostPlaceholder": "Enter cost per unit",
+    "supplier": "Supplier",
+    "supplierPlaceholder": "Enter supplier name",
+    "supplierContact": "Supplier Contact",
+    "supplierContactPlaceholder": "Enter supplier contact",
+    "supplierContactDescription": "Email or phone number",
+    "leadTimeDays": "Lead Time (Days)",
+    "leadTimePlaceholder": "Enter lead time in days",
+    "leadTimeDescription": "Delivery time from supplier",
+    "storageLocation": "Storage Location",
+    "storageLocationPlaceholder": "Enter storage location",
+    "storageLocationDescription": "Warehouse and section",
+    "lastRestocked": "Last Restocked",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At"
+  },
+
+  "status": {
+    "in_stock": "In Stock",
+    "low_stock": "Low Stock",
+    "out_of_stock": "Out of Stock",
+    "ordered": "Ordered"
+  },
+
+  "categories": {
+    "metal": "Metal",
+    "plastic": "Plastic",
+    "chemical": "Chemical",
+    "wood": "Wood",
+    "rubber": "Rubber",
+    "textile": "Textile",
+    "composite": "Composite",
+    "other": "Other"
+  },
+
+  "details": {
+    "overview": "Overview",
+    "inventory": "Inventory Status",
+    "pricing": "Cost Information",
+    "supplier": "Supplier Information",
+    "specifications": "Technical Specifications",
+    "storage": "Storage Information",
+    "timestamps": "Record Information",
+    "totalValue": "Total Stock Value",
+    "consumption": "Consumption History"
+  },
+
+  "filters": {
+    "all": "All Materials",
+    "byStatus": "Filter by Status",
+    "byCategory": "Filter by Category",
+    "bySupplier": "Filter by Supplier",
+    "clearFilters": "Clear Filters",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters"
+  },
+
+  "actions": {
+    "adjustStock": "Adjust Stock",
+    "recordConsumption": "Record Consumption",
+    "viewHistory": "View History",
+    "reorder": "Place Reorder",
+    "exportData": "Export Data"
+  },
+
+  "stockAdjustment": {
+    "title": "Adjust Stock",
+    "quantity": "Adjustment Quantity",
+    "quantityPlaceholder": "Enter quantity (+ or -)",
+    "quantityDescription": "Use positive for addition, negative for subtraction",
+    "reason": "Reason",
+    "reasonPlaceholder": "Enter reason for adjustment",
+    "reasonDescription": "Explain why stock is being adjusted",
+    "adjustedBy": "Adjusted By",
+    "submit": "Adjust Stock",
+    "cancel": "Cancel"
+  },
+
+  "consumption": {
+    "title": "Record Consumption",
+    "quantity": "Consumed Quantity",
+    "quantityPlaceholder": "Enter consumed quantity",
+    "quantityDescription": "Amount of material consumed",
+    "purpose": "Purpose",
+    "purposePlaceholder": "Enter purpose of consumption",
+    "purposeDescription": "e.g., Production Order #123",
+    "consumedBy": "Consumed By",
+    "consumedByPlaceholder": "Enter worker or machine name",
+    "notes": "Additional Notes",
+    "notesPlaceholder": "Enter any additional notes",
+    "submit": "Record Consumption",
+    "cancel": "Cancel"
+  },
+
+  "confirmations": {
+    "deleteTitle": "Delete Material?",
+    "deleteMessage": "Are you sure you want to delete this raw material? This action cannot be undone.",
+    "deleteSuccess": "Material deleted successfully"
+  },
+
+  "messages": {
+    "createSuccess": "Material created successfully",
+    "updateSuccess": "Material updated successfully",
+    "deleteSuccess": "Material deleted successfully",
+    "stockAdjusted": "Stock quantity adjusted successfully",
+    "consumptionRecorded": "Consumption recorded successfully",
+    "createError": "Failed to create material",
+    "updateError": "Failed to update material",
+    "deleteError": "Failed to delete material",
+    "loadError": "Failed to load materials",
+    "lowStockWarning": "Stock level is below reorder point",
+    "outOfStockWarning": "Material is out of stock",
+    "insufficientStock": "Insufficient stock for this operation"
+  },
+
+  "stats": {
+    "totalMaterials": "Total Materials",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "totalValue": "Total Inventory Value",
+    "uniqueSuppliers": "Unique Suppliers"
+  },
+
+  "alerts": {
+    "lowStockTitle": "Low Stock Alert",
+    "lowStockMessage": "{{count}} material is below reorder level",
+    "lowStockMessage_other": "{{count}} materials are below reorder level",
+    "outOfStockTitle": "Out of Stock Alert",
+    "outOfStockMessage": "{{count}} material is out of stock",
+    "outOfStockMessage_other": "{{count}} materials are out of stock"
+  }
+}

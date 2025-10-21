@@ -1,0 +1,165 @@
+{
+  "title": "कच्चा माल",
+  "subtitle": "अपने कच्चे माल और इन्वेंटरी का प्रबंधन करें",
+  "addMaterial": "माल जोड़ें",
+  "editMaterial": "माल संपादित करें",
+  "materialDetails": "माल विवरण",
+  "createMaterial": "नया माल बनाएं",
+  "updateMaterial": "माल अपडेट करें",
+  "deleteMaterial": "माल हटाएं",
+  "noMaterials": "कोई कच्चा माल नहीं मिला",
+  "searchPlaceholder": "नाम, कोड या आपूर्तिकर्ता द्वारा माल खोजें...",
+
+  "form": {
+    "name": "माल का नाम",
+    "namePlaceholder": "माल का नाम दर्ज करें",
+    "nameDescription": "माल के लिए अद्वितीय पहचानकर्ता",
+    "code": "माल कोड",
+    "codePlaceholder": "माल कोड दर्ज करें",
+    "codeDescription": "SKU या माल संख्या",
+    "description": "विवरण",
+    "descriptionPlaceholder": "माल विवरण दर्ज करें",
+    "category": "श्रेणी",
+    "categoryPlaceholder": "श्रेणी चुनें",
+    "unit": "माप की इकाई",
+    "unitPlaceholder": "उदा., किलो, लीटर, मीटर, शीट",
+    "unitDescription": "मात्रा माप के लिए इकाई",
+    "quantity": "वर्तमान मात्रा",
+    "quantityPlaceholder": "मात्रा दर्ज करें",
+    "reorderLevel": "पुनः ऑर्डर स्तर",
+    "reorderLevelPlaceholder": "पुनः ऑर्डर स्तर दर्ज करें",
+    "reorderLevelDescription": "पुनः ऑर्डर से पहले न्यूनतम मात्रा",
+    "unitCost": "इकाई लागत",
+    "unitCostPlaceholder": "प्रति इकाई लागत दर्ज करें",
+    "supplier": "आपूर्तिकर्ता",
+    "supplierPlaceholder": "आपूर्तिकर्ता का नाम दर्ज करें",
+    "supplierContact": "आपूर्तिकर्ता संपर्क",
+    "supplierContactPlaceholder": "आपूर्तिकर्ता संपर्क दर्ज करें",
+    "supplierContactDescription": "ईमेल या फोन नंबर",
+    "leadTimeDays": "लीड समय (दिन)",
+    "leadTimePlaceholder": "दिनों में लीड समय दर्ज करें",
+    "leadTimeDescription": "आपूर्तिकर्ता से डिलीवरी का समय",
+    "storageLocation": "भंडारण स्थान",
+    "storageLocationPlaceholder": "भंडारण स्थान दर्ज करें",
+    "storageLocationDescription": "गोदाम और अनुभाग",
+    "lastRestocked": "अंतिम पुनर्स्थापित",
+    "createdAt": "बनाया गया",
+    "updatedAt": "अपडेट किया गया"
+  },
+
+  "status": {
+    "in_stock": "स्टॉक में",
+    "low_stock": "कम स्टॉक",
+    "out_of_stock": "स्टॉक में नहीं",
+    "ordered": "ऑर्डर किया गया"
+  },
+
+  "categories": {
+    "metal": "धातु",
+    "plastic": "प्लास्टिक",
+    "chemical": "रासायनिक",
+    "wood": "लकड़ी",
+    "rubber": "रबड़",
+    "textile": "कपड़ा",
+    "composite": "संयुक्त",
+    "other": "अन्य"
+  },
+
+  "details": {
+    "overview": "अवलोकन",
+    "inventory": "इन्वेंटरी स्थिति",
+    "pricing": "लागत जानकारी",
+    "supplier": "आपूर्तिकर्ता जानकारी",
+    "specifications": "तकनीकी विशिष्टताएं",
+    "storage": "भंडारण जानकारी",
+    "timestamps": "रिकॉर्ड जानकारी",
+    "totalValue": "कुल स्टॉक मूल्य",
+    "consumption": "उपभोग इतिहास"
+  },
+
+  "filters": {
+    "all": "सभी माल",
+    "byStatus": "स्थिति के अनुसार फ़िल्टर करें",
+    "byCategory": "श्रेणी के अनुसार फ़िल्टर करें",
+    "bySupplier": "आपूर्तिकर्ता के अनुसार फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छिपाएं"
+  },
+
+  "actions": {
+    "adjustStock": "स्टॉक समायोजित करें",
+    "recordConsumption": "उपभोग रिकॉर्ड करें",
+    "viewHistory": "इतिहास देखें",
+    "reorder": "पुनः ऑर्डर करें",
+    "exportData": "डेटा निर्यात करें"
+  },
+
+  "stockAdjustment": {
+    "title": "स्टॉक समायोजित करें",
+    "quantity": "समायोजन मात्रा",
+    "quantityPlaceholder": "मात्रा दर्ज करें (+ या -)",
+    "quantityDescription": "जोड़ने के लिए धनात्मक, घटाने के लिए ऋणात्मक का उपयोग करें",
+    "reason": "कारण",
+    "reasonPlaceholder": "समायोजन का कारण दर्ज करें",
+    "reasonDescription": "स्टॉक समायोजित करने का कारण बताएं",
+    "adjustedBy": "द्वारा समायोजित",
+    "submit": "स्टॉक समायोजित करें",
+    "cancel": "रद्द करें"
+  },
+
+  "consumption": {
+    "title": "उपभोग रिकॉर्ड करें",
+    "quantity": "उपभोग की गई मात्रा",
+    "quantityPlaceholder": "उपभोग की गई मात्रा दर्ज करें",
+    "quantityDescription": "उपभोग किए गए माल की मात्रा",
+    "purpose": "उद्देश्य",
+    "purposePlaceholder": "उपभोग का उद्देश्य दर्ज करें",
+    "purposeDescription": "उदा., उत्पादन आदेश #123",
+    "consumedBy": "द्वारा उपभोग किया गया",
+    "consumedByPlaceholder": "कार्यकर्ता या मशीन का नाम दर्ज करें",
+    "notes": "अतिरिक्त नोट्स",
+    "notesPlaceholder": "कोई अतिरिक्त नोट्स दर्ज करें",
+    "submit": "उपभोग रिकॉर्ड करें",
+    "cancel": "रद्द करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "माल हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस कच्चे माल को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteSuccess": "माल सफलतापूर्वक हटाया गया"
+  },
+
+  "messages": {
+    "createSuccess": "माल सफलतापूर्वक बनाया गया",
+    "updateSuccess": "माल सफलतापूर्वक अपडेट किया गया",
+    "deleteSuccess": "माल सफलतापूर्वक हटाया गया",
+    "stockAdjusted": "स्टॉक मात्रा सफलतापूर्वक समायोजित की गई",
+    "consumptionRecorded": "उपभोग सफलतापूर्वक रिकॉर्ड किया गया",
+    "createError": "माल बनाने में विफल",
+    "updateError": "माल अपडेट करने में विफल",
+    "deleteError": "माल हटाने में विफल",
+    "loadError": "माल लोड करने में विफल",
+    "lowStockWarning": "स्टॉक स्तर पुनः ऑर्डर बिंदु से नीचे है",
+    "outOfStockWarning": "माल स्टॉक में नहीं है",
+    "insufficientStock": "इस ऑपरेशन के लिए अपर्याप्त स्टॉक"
+  },
+
+  "stats": {
+    "totalMaterials": "कुल माल",
+    "inStock": "स्टॉक में",
+    "lowStock": "कम स्टॉक",
+    "outOfStock": "स्टॉक में नहीं",
+    "totalValue": "कुल इन्वेंटरी मूल्य",
+    "uniqueSuppliers": "अद्वितीय आपूर्तिकर्ता"
+  },
+
+  "alerts": {
+    "lowStockTitle": "कम स्टॉक अलर्ट",
+    "lowStockMessage": "{{count}} माल पुनः ऑर्डर स्तर से नीचे है",
+    "lowStockMessage_other": "{{count}} माल पुनः ऑर्डर स्तर से नीचे हैं",
+    "outOfStockTitle": "स्टॉक खत्म अलर्ट",
+    "outOfStockMessage": "{{count}} माल स्टॉक में नहीं है",
+    "outOfStockMessage_other": "{{count}} माल स्टॉक में नहीं हैं"
+  }
+}

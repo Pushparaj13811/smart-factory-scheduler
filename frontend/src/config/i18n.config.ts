@@ -11,7 +11,10 @@ import enAuth from '@/locales/en/auth.json';
 import enNavigation from '@/locales/en/navigation.json';
 import enDashboard from '@/locales/en/dashboard.json';
 import enComponents from '@/locales/en/components.json';
+import enComponentsFeature from '@/locales/en/componentsFeature.json';
 import enMachines from '@/locales/en/machines.json';
+import enRawMaterials from '@/locales/en/rawMaterials.json';
+import enOrders from '@/locales/en/orders.json';
 import enSystem from '@/locales/en/system.json';
 
 // Hindi translations
@@ -20,7 +23,10 @@ import hiAuth from '@/locales/hi/auth.json';
 import hiNavigation from '@/locales/hi/navigation.json';
 import hiDashboard from '@/locales/hi/dashboard.json';
 import hiComponents from '@/locales/hi/components.json';
+import hiComponentsFeature from '@/locales/hi/componentsFeature.json';
 import hiMachines from '@/locales/hi/machines.json';
+import hiRawMaterials from '@/locales/hi/rawMaterials.json';
+import hiOrders from '@/locales/hi/orders.json';
 import hiSystem from '@/locales/hi/system.json';
 
 i18n
@@ -31,7 +37,7 @@ i18n
     supportedLngs: ['en', 'hi'],
 
     // Namespace configuration
-    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'machines', 'system'],
+    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'componentsFeature', 'machines', 'rawMaterials', 'orders', 'system'],
     defaultNS: 'common',
 
     interpolation: {
@@ -51,7 +57,10 @@ i18n
         navigation: enNavigation,
         dashboard: enDashboard,
         components: enComponents,
+        componentsFeature: enComponentsFeature,
         machines: enMachines,
+        rawMaterials: enRawMaterials,
+        orders: enOrders,
         system: enSystem,
       },
       hi: {
@@ -60,7 +69,10 @@ i18n
         navigation: hiNavigation,
         dashboard: hiDashboard,
         components: hiComponents,
+        componentsFeature: hiComponentsFeature,
         machines: hiMachines,
+        rawMaterials: hiRawMaterials,
+        orders: hiOrders,
         system: hiSystem,
       },
     },

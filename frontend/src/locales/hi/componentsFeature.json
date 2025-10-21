@@ -1,0 +1,110 @@
+{
+  "title": "घटक",
+  "subtitle": "अपने विनिर्माण घटकों और सूची का प्रबंधन करें",
+  "addComponent": "घटक जोड़ें",
+  "editComponent": "घटक संपादित करें",
+  "componentDetails": "घटक विवरण",
+  "createComponent": "नया घटक बनाएं",
+  "updateComponent": "घटक अपडेट करें",
+  "deleteComponent": "घटक हटाएं",
+  "noComponents": "कोई घटक नहीं मिला",
+  "searchPlaceholder": "नाम या कोड से घटक खोजें...",
+
+  "form": {
+    "name": "घटक का नाम",
+    "namePlaceholder": "घटक का नाम दर्ज करें",
+    "nameDescription": "घटक के लिए अद्वितीय पहचानकर्ता",
+    "code": "घटक कोड",
+    "codePlaceholder": "घटक कोड दर्ज करें",
+    "codeDescription": "SKU या पार्ट नंबर",
+    "description": "विवरण",
+    "descriptionPlaceholder": "घटक विवरण दर्ज करें",
+    "category": "श्रेणी",
+    "categoryPlaceholder": "श्रेणी चुनें",
+    "status": "स्थिति",
+    "statusPlaceholder": "स्थिति चुनें",
+    "unit": "माप की इकाई",
+    "unitPlaceholder": "जैसे, पीस, किलो, मीटर",
+    "unitDescription": "मात्रा माप के लिए इकाई",
+    "quantityInStock": "स्टॉक में मात्रा",
+    "quantityPlaceholder": "मात्रा दर्ज करें",
+    "reorderLevel": "पुनर्व्यवस्था स्तर",
+    "reorderLevelPlaceholder": "पुनर्व्यवस्था स्तर दर्ज करें",
+    "reorderLevelDescription": "पुनर्व्यवस्था से पहले न्यूनतम मात्रा",
+    "unitPrice": "इकाई मूल्य",
+    "unitPricePlaceholder": "प्रति इकाई मूल्य दर्ज करें",
+    "supplier": "आपूर्तिकर्ता",
+    "supplierPlaceholder": "आपूर्तिकर्ता का नाम दर्ज करें",
+    "leadTimeDays": "लीड टाइम (दिन)",
+    "leadTimePlaceholder": "दिनों में लीड टाइम दर्ज करें",
+    "leadTimeDescription": "आपूर्तिकर्ता से डिलीवरी का समय",
+    "createdAt": "बनाया गया",
+    "updatedAt": "अपडेट किया गया"
+  },
+
+  "status": {
+    "in_stock": "स्टॉक में",
+    "low_stock": "कम स्टॉक",
+    "out_of_stock": "स्टॉक में नहीं",
+    "discontinued": "बंद"
+  },
+
+  "categories": {
+    "mechanical": "यांत्रिक",
+    "electronic": "इलेक्ट्रॉनिक",
+    "assembly": "असेंबली",
+    "custom": "कस्टम"
+  },
+
+  "details": {
+    "overview": "अवलोकन",
+    "inventory": "सूची स्थिति",
+    "pricing": "मूल्य निर्धारण जानकारी",
+    "supplier": "आपूर्तिकर्ता जानकारी",
+    "specifications": "तकनीकी विनिर्देश",
+    "timestamps": "रिकॉर्ड जानकारी",
+    "totalValue": "कुल स्टॉक मूल्य"
+  },
+
+  "filters": {
+    "all": "सभी घटक",
+    "byStatus": "स्थिति द्वारा फ़िल्टर करें",
+    "byCategory": "श्रेणी द्वारा फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छुपाएं"
+  },
+
+  "actions": {
+    "adjustStock": "स्टॉक समायोजित करें",
+    "viewHistory": "इतिहास देखें",
+    "reorder": "पुनः आदेश दें",
+    "exportData": "डेटा निर्यात करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "घटक हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस घटक को हटाना चाहते हैं? इस क्रिया को पूर्ववत नहीं किया जा सकता।",
+    "deleteSuccess": "घटक सफलतापूर्वक हटाया गया"
+  },
+
+  "messages": {
+    "createSuccess": "घटक सफलतापूर्वक बनाया गया",
+    "updateSuccess": "घटक सफलतापूर्वक अपडेट किया गया",
+    "deleteSuccess": "घटक सफलतापूर्वक हटाया गया",
+    "stockAdjusted": "स्टॉक मात्रा सफलतापूर्वक समायोजित की गई",
+    "createError": "घटक बनाने में विफल",
+    "updateError": "घटक अपडेट करने में विफल",
+    "deleteError": "घटक हटाने में विफल",
+    "loadError": "घटक लोड करने में विफल",
+    "lowStockWarning": "स्टॉक स्तर पुनर्व्यवस्था बिंदु से नीचे है"
+  },
+
+  "stats": {
+    "totalComponents": "कुल घटक",
+    "inStock": "स्टॉक में",
+    "lowStock": "कम स्टॉक",
+    "outOfStock": "स्टॉक में नहीं",
+    "totalValue": "कुल सूची मूल्य"
+  }
+}

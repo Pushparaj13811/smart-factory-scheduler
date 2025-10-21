@@ -1,0 +1,119 @@
+{
+  "title": "ऑर्डर",
+  "subtitle": "उत्पादन ऑर्डर प्रबंधित करें और पूर्णता को ट्रैक करें",
+  "addOrder": "ऑर्डर जोड़ें",
+  "editOrder": "ऑर्डर संपादित करें",
+  "orderDetails": "ऑर्डर विवरण",
+  "createOrder": "नया ऑर्डर बनाएं",
+  "updateOrder": "ऑर्डर अपडेट करें",
+  "deleteOrder": "ऑर्डर हटाएं",
+  "noOrders": "कोई ऑर्डर नहीं मिला",
+  "searchPlaceholder": "नंबर, ग्राहक द्वारा ऑर्डर खोजें...",
+
+  "form": {
+    "orderNumber": "ऑर्डर नंबर",
+    "orderNumberPlaceholder": "ऑर्डर नंबर दर्ज करें",
+    "customerName": "ग्राहक का नाम",
+    "customerNamePlaceholder": "ग्राहक का नाम दर्ज करें",
+    "customerCompany": "कंपनी का नाम",
+    "customerCompanyPlaceholder": "कंपनी का नाम दर्ज करें",
+    "customerEmail": "ईमेल",
+    "customerEmailPlaceholder": "ईमेल दर्ज करें",
+    "customerPhone": "फ़ोन",
+    "customerPhonePlaceholder": "फोन नंबर दर्ज करें",
+    "status": "स्थिति",
+    "statusPlaceholder": "स्थिति चुनें",
+    "priority": "प्राथमिकता",
+    "priorityPlaceholder": "प्राथमिकता चुनें",
+    "dueDate": "नियत तारीख",
+    "dueDatePlaceholder": "नियत तारीख चुनें",
+    "startDate": "प्रारंभ तिथि",
+    "completedDate": "पूर्ण तिथि",
+    "totalQuantity": "कुल मात्रा",
+    "totalAmount": "कुल राशि",
+    "assignedMachine": "आवंटित मशीन",
+    "notes": "टिप्पणियाँ",
+    "notesPlaceholder": "टिप्पणियाँ या विशेष निर्देश दर्ज करें",
+    "items": "ऑर्डर आइटम"
+  },
+
+  "status": {
+    "pending": "लंबित",
+    "in_progress": "प्रगति में",
+    "completed": "पूर्ण",
+    "cancelled": "रद्द",
+    "on_hold": "होल्ड पर"
+  },
+
+  "priority": {
+    "low": "निम्न",
+    "medium": "मध्यम",
+    "high": "उच्च",
+    "urgent": "अत्यावश्यक"
+  },
+
+  "details": {
+    "overview": "अवलोकन",
+    "customerInfo": "ग्राहक जानकारी",
+    "orderItems": "ऑर्डर आइटम",
+    "timeline": "समयरेखा",
+    "history": "ऑर्डर इतिहास"
+  },
+
+  "timeline": {
+    "orderCreated": "ऑर्डर बनाया गया",
+    "orderStarted": "उत्पादन शुरू",
+    "orderCompleted": "ऑर्डर पूर्ण",
+    "orderCancelled": "ऑर्डर रद्द",
+    "statusChanged": "स्थिति बदली",
+    "machineAssigned": "मशीन आवंटित"
+  },
+
+  "filters": {
+    "all": "सभी ऑर्डर",
+    "byStatus": "स्थिति से फ़िल्टर करें",
+    "byPriority": "प्राथमिकता से फ़िल्टर करें",
+    "byDateRange": "तिथि सीमा से फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छुपाएं"
+  },
+
+  "actions": {
+    "updateStatus": "स्थिति अपडेट करें",
+    "assignMachine": "मशीन आवंटित करें",
+    "viewDetails": "विवरण देखें",
+    "exportData": "डेटा निर्यात करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "ऑर्डर हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस ऑर्डर को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteSuccess": "ऑर्डर सफलतापूर्वक हटाया गया",
+    "cancelTitle": "ऑर्डर रद्द करें?",
+    "cancelMessage": "क्या आप वाकई इस ऑर्डर को रद्द करना चाहते हैं?"
+  },
+
+  "messages": {
+    "createSuccess": "ऑर्डर सफलतापूर्वक बनाया गया",
+    "updateSuccess": "ऑर्डर सफलतापूर्वक अपडेट किया गया",
+    "deleteSuccess": "ऑर्डर सफलतापूर्वक हटाया गया",
+    "statusUpdated": "ऑर्डर स्थिति सफलतापूर्वक अपडेट की गई",
+    "machineAssigned": "मशीन सफलतापूर्वक आवंटित",
+    "createError": "ऑर्डर बनाने में विफल",
+    "updateError": "ऑर्डर अपडेट करने में विफल",
+    "deleteError": "ऑर्डर हटाने में विफल",
+    "loadError": "ऑर्डर लोड करने में विफल"
+  },
+
+  "stats": {
+    "totalOrders": "कुल ऑर्डर",
+    "pending": "लंबित",
+    "inProgress": "प्रगति में",
+    "completed": "पूर्ण",
+    "cancelled": "रद्द",
+    "onHold": "होल्ड पर",
+    "totalRevenue": "कुल राजस्व",
+    "averageOrderValue": "औसत ऑर्डर मूल्य"
+  }
+}

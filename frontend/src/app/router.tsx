@@ -14,9 +14,6 @@ import ForgotPasswordPage from '@/features/auth/pages/ForgotPasswordPage';
 // Other pages
 import UnauthorizedPage from '@/pages/UnauthorizedPage';
 import HomePage from '@/pages/HomePage';
-import ComponentsPage from '@/pages/ComponentsPage';
-import RawMaterialsPage from '@/pages/RawMaterialsPage';
-import OrdersPage from '@/pages/OrdersPage';
 import SchedulePage from '@/pages/SchedulePage';
 import MaintenancePage from '@/pages/MaintenancePage';
 import UsersPage from '@/pages/UsersPage';
@@ -30,6 +27,30 @@ import {
   MachineEditPage,
   MachineDetailsPage,
 } from '@/features/machines/pages';
+
+// Component pages
+import {
+  ComponentsPage,
+  ComponentCreatePage,
+  ComponentEditPage,
+  ComponentDetailsPage,
+} from '@/features/components/pages';
+
+// Raw Material pages
+import {
+  RawMaterialsPage,
+  RawMaterialCreatePage,
+  RawMaterialEditPage,
+  RawMaterialDetailsPage,
+} from '@/features/raw-materials/pages';
+
+// Order pages
+import {
+  OrdersPage,
+  OrderCreatePage,
+  OrderEditPage,
+  OrderDetailsPage,
+} from '@/features/orders/pages';
 
 // System admin pages
 import {
@@ -96,19 +117,58 @@ export const router = createBrowserRouter([
         path: '/machines/:id/edit',
         element: <MachineEditPage />,
       },
-      // Other feature routes (placeholders)
+      // Component Management routes
       {
         path: '/components',
         element: <ComponentsPage />,
       },
       {
+        path: '/components/create',
+        element: <ComponentCreatePage />,
+      },
+      {
+        path: '/components/:id',
+        element: <ComponentDetailsPage />,
+      },
+      {
+        path: '/components/:id/edit',
+        element: <ComponentEditPage />,
+      },
+      // Raw Material Management routes
+      {
         path: '/raw-materials',
         element: <RawMaterialsPage />,
       },
       {
+        path: '/raw-materials/create',
+        element: <RawMaterialCreatePage />,
+      },
+      {
+        path: '/raw-materials/:id',
+        element: <RawMaterialDetailsPage />,
+      },
+      {
+        path: '/raw-materials/:id/edit',
+        element: <RawMaterialEditPage />,
+      },
+      // Order Management routes
+      {
         path: '/orders',
         element: <OrdersPage />,
       },
+      {
+        path: '/orders/create',
+        element: <OrderCreatePage />,
+      },
+      {
+        path: '/orders/:id',
+        element: <OrderDetailsPage />,
+      },
+      {
+        path: '/orders/:id/edit',
+        element: <OrderEditPage />,
+      },
+      // Other feature routes (placeholders)
       {
         path: '/schedule',
         element: <SchedulePage />,

@@ -1,0 +1,110 @@
+{
+  "title": "Components",
+  "subtitle": "Manage your manufacturing components and inventory",
+  "addComponent": "Add Component",
+  "editComponent": "Edit Component",
+  "componentDetails": "Component Details",
+  "createComponent": "Create New Component",
+  "updateComponent": "Update Component",
+  "deleteComponent": "Delete Component",
+  "noComponents": "No components found",
+  "searchPlaceholder": "Search components by name or code...",
+
+  "form": {
+    "name": "Component Name",
+    "namePlaceholder": "Enter component name",
+    "nameDescription": "Unique identifier for the component",
+    "code": "Component Code",
+    "codePlaceholder": "Enter component code",
+    "codeDescription": "SKU or part number",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter component description",
+    "category": "Category",
+    "categoryPlaceholder": "Select category",
+    "status": "Status",
+    "statusPlaceholder": "Select status",
+    "unit": "Unit of Measure",
+    "unitPlaceholder": "e.g., piece, kg, meter",
+    "unitDescription": "Unit for quantity measurement",
+    "quantityInStock": "Quantity in Stock",
+    "quantityPlaceholder": "Enter quantity",
+    "reorderLevel": "Reorder Level",
+    "reorderLevelPlaceholder": "Enter reorder level",
+    "reorderLevelDescription": "Minimum quantity before reorder",
+    "unitPrice": "Unit Price",
+    "unitPricePlaceholder": "Enter price per unit",
+    "supplier": "Supplier",
+    "supplierPlaceholder": "Enter supplier name",
+    "leadTimeDays": "Lead Time (Days)",
+    "leadTimePlaceholder": "Enter lead time in days",
+    "leadTimeDescription": "Delivery time from supplier",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At"
+  },
+
+  "status": {
+    "in_stock": "In Stock",
+    "low_stock": "Low Stock",
+    "out_of_stock": "Out of Stock",
+    "discontinued": "Discontinued"
+  },
+
+  "categories": {
+    "mechanical": "Mechanical",
+    "electronic": "Electronic",
+    "assembly": "Assembly",
+    "custom": "Custom"
+  },
+
+  "details": {
+    "overview": "Overview",
+    "inventory": "Inventory Status",
+    "pricing": "Pricing Information",
+    "supplier": "Supplier Information",
+    "specifications": "Technical Specifications",
+    "timestamps": "Record Information",
+    "totalValue": "Total Stock Value"
+  },
+
+  "filters": {
+    "all": "All Components",
+    "byStatus": "Filter by Status",
+    "byCategory": "Filter by Category",
+    "clearFilters": "Clear Filters",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters"
+  },
+
+  "actions": {
+    "adjustStock": "Adjust Stock",
+    "viewHistory": "View History",
+    "reorder": "Reorder",
+    "exportData": "Export Data"
+  },
+
+  "confirmations": {
+    "deleteTitle": "Delete Component?",
+    "deleteMessage": "Are you sure you want to delete this component? This action cannot be undone.",
+    "deleteSuccess": "Component deleted successfully"
+  },
+
+  "messages": {
+    "createSuccess": "Component created successfully",
+    "updateSuccess": "Component updated successfully",
+    "deleteSuccess": "Component deleted successfully",
+    "stockAdjusted": "Stock quantity adjusted successfully",
+    "createError": "Failed to create component",
+    "updateError": "Failed to update component",
+    "deleteError": "Failed to delete component",
+    "loadError": "Failed to load components",
+    "lowStockWarning": "Stock level is below reorder point"
+  },
+
+  "stats": {
+    "totalComponents": "Total Components",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "totalValue": "Total Inventory Value"
+  }
+}
