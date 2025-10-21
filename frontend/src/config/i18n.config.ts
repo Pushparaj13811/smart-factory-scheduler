@@ -15,6 +15,11 @@ import enComponentsFeature from '@/locales/en/componentsFeature.json';
 import enMachines from '@/locales/en/machines.json';
 import enRawMaterials from '@/locales/en/rawMaterials.json';
 import enOrders from '@/locales/en/orders.json';
+import enSchedule from '@/locales/en/schedule.json';
+import enMaintenance from '@/locales/en/maintenance.json';
+import enUsers from '@/locales/en/users.json';
+import enReports from '@/locales/en/reports.json';
+import enSettings from '@/locales/en/settings.json';
 import enSystem from '@/locales/en/system.json';
 
 // Hindi translations
@@ -27,6 +32,11 @@ import hiComponentsFeature from '@/locales/hi/componentsFeature.json';
 import hiMachines from '@/locales/hi/machines.json';
 import hiRawMaterials from '@/locales/hi/rawMaterials.json';
 import hiOrders from '@/locales/hi/orders.json';
+import hiSchedule from '@/locales/hi/schedule.json';
+import hiMaintenance from '@/locales/hi/maintenance.json';
+import hiUsers from '@/locales/hi/users.json';
+import hiReports from '@/locales/hi/reports.json';
+import hiSettings from '@/locales/hi/settings.json';
 import hiSystem from '@/locales/hi/system.json';
 
 i18n
@@ -37,7 +47,7 @@ i18n
     supportedLngs: ['en', 'hi'],
 
     // Namespace configuration
-    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'componentsFeature', 'machines', 'rawMaterials', 'orders', 'system'],
+    ns: ['common', 'auth', 'navigation', 'dashboard', 'components', 'componentsFeature', 'machines', 'rawMaterials', 'orders', 'schedule', 'maintenance', 'users', 'reports', 'settings', 'system'],
     defaultNS: 'common',
 
     interpolation: {
@@ -61,6 +71,11 @@ i18n
         machines: enMachines,
         rawMaterials: enRawMaterials,
         orders: enOrders,
+        schedule: enSchedule,
+        maintenance: enMaintenance,
+        users: enUsers,
+        reports: enReports,
+        settings: enSettings,
         system: enSystem,
       },
       hi: {
@@ -73,6 +88,11 @@ i18n
         machines: hiMachines,
         rawMaterials: hiRawMaterials,
         orders: hiOrders,
+        schedule: hiSchedule,
+        maintenance: hiMaintenance,
+        users: hiUsers,
+        reports: hiReports,
+        settings: hiSettings,
         system: hiSystem,
       },
     },

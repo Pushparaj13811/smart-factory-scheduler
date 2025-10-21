@@ -1,5 +1,6 @@
 // User service layer
 
+import { apiClient } from '@/lib/api-client';
 import type { User } from '@/types/auth.types';
 import type { UserRole } from '@/constants/roles';
 import type {
@@ -9,8 +10,6 @@ import type {
   UserUpdateData,
   UserStats,
 } from '../types';
-
-const API_BASE_URL = '/api/users';
 
 class UserService {
   async getUsers(
@@ -35,105 +34,48 @@ class UserService {
       params.append('industryId', filters.industryId);
     }
 
-    const response = await fetch(`${API_BASE_URL}?${params.toString()}`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch users');
-    }
-    return response.json();
+    const response = await apiClient.get<UsersResponse>(`/users?${params.toString()}`);
+    return response.data;
   }
 
   async getUser(id: string): Promise<User> {
-    const response = await fetch(`${API_BASE_URL}/${id}`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch user');
-    }
-    return response.json();
+    const response = await apiClient.get<User>(`/users/${id}`);
+    return response.data;
   }
 
   async createUser(data: UserFormData): Promise<User> {
-    const response = await fetch(API_BASE_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to create user');
-    }
-    return response.json();
+    const response = await apiClient.post<User>('/users', data);
+    return response.data;
   }
 
   async updateUser(data: UserUpdateData): Promise<User> {
     const { id, ...updateData } = data;
-    const response = await fetch(`${API_BASE_URL}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(updateData),
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to update user');
-    }
-    return response.json();
+    const response = await apiClient.put<User>(`/users/${id}`, updateData);
+    return response.data;
   }
 
   async deleteUser(id: string): Promise<void> {
-    const response = await fetch(`${API_BASE_URL}/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to delete user');
-    }
+    await apiClient.delete(`/users/${id}`);
   }
 
   async updateRole(id: string, role: UserRole): Promise<User> {
-    const response = await fetch(`${API_BASE_URL}/${id}/role`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ role }),
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to update user role');
-    }
-    return response.json();
+    const response = await apiClient.patch<User>(`/users/${id}/role`, { role });
+    return response.data;
   }
 
   async deactivateUser(id: string): Promise<User> {
-    const response = await fetch(`${API_BASE_URL}/${id}/deactivate`, {
-      method: 'POST',
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to deactivate user');
-    }
-    return response.json();
+    const response = await apiClient.post<User>(`/users/${id}/deactivate`);
+    return response.data;
   }
 
   async activateUser(id: string): Promise<User> {
-    const response = await fetch(`${API_BASE_URL}/${id}/activate`, {
-      method: 'POST',
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to activate user');
-    }
-    return response.json();
+    const response = await apiClient.post<User>(`/users/${id}/activate`);
+    return response.data;
   }
 
   async getUserStats(): Promise<UserStats> {
-    const response = await fetch(`${API_BASE_URL}/stats`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch user stats');
-    }
-    return response.json();
+    const response = await apiClient.get<UserStats>('/users/stats');
+    return response.data;
   }
 }
 
