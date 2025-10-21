@@ -25,7 +25,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { MoreVertical, Eye, Edit, Trash2, Mail, Building2 } from 'lucide-react';
 import type { User } from '@/types/auth.types';
-import { ROLE_LABELS } from '@/constants/roles';
+import { ROLE_LABELS, type UserRole } from '@/constants/roles';
 import { useState } from 'react';
 import { useDeleteUser } from '../hooks';
 
@@ -132,7 +132,7 @@ export function UserCard({ user }: UserCardProps) {
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">{t('form.role')}</span>
-              <Badge variant="outline">{ROLE_LABELS[user.role]}</Badge>
+              <Badge variant="outline">{ROLE_LABELS[user.role as UserRole]}</Badge>
             </div>
 
             {user.industryId && (

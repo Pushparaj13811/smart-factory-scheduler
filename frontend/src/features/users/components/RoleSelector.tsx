@@ -10,7 +10,6 @@ import {
 } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 import { UserRole, ROLE_LABELS, ROLE_DESCRIPTIONS } from '@/constants/roles';
-import { Badge } from '@/components/ui/badge';
 
 interface RoleSelectorProps {
   value: string;

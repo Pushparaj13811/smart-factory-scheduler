@@ -3,7 +3,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { maintenanceService } from '../services/maintenance.service';
 import type {
-  MaintenanceRecord,
   CreateMaintenanceInput,
   UpdateMaintenanceInput,
   MaintenanceFilters,

@@ -3,7 +3,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { orderService } from '../services/order.service';
 import type {
-  Order,
   CreateOrderInput,
   UpdateOrderInput,
   OrderFilters,

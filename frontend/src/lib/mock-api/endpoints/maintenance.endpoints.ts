@@ -1,6 +1,6 @@
 // Mock API endpoints for maintenance
 
-import type { MockEndpoint } from '../types';
+import type { MockEndpoint, MockRequest, MockResponse } from '../types';
 import { MOCK_MAINTENANCE_RECORDS, MOCK_MACHINES } from '@/lib/mock-data';
 import type {
   MaintenanceRecord,
@@ -28,16 +28,18 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'GET',
     path: '/maintenance',
-    handler: (req) => {
-      const url = new URL(req.url);
-      const page = parseInt(url.searchParams.get('page') || '1');
-      const pageSize = parseInt(url.searchParams.get('pageSize') || '10');
-      const statusFilter = url.searchParams.getAll('status') as MaintenanceStatus[];
-      const typeFilter = url.searchParams.getAll('type') as MaintenanceType[];
-      const machineId = url.searchParams.get('machineId');
-      const startDate = url.searchParams.get('startDate');
-      const endDate = url.searchParams.get('endDate');
-      const search = url.searchParams.get('search');
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const params = request.params || {};
+      const page = parseInt((params.page as string) || '1');
+      const pageSize = parseInt((params.pageSize as string) || '10');
+      const statusParam = params.status as string;
+      const typeParam = params.type as string;
+      const statusFilter = statusParam ? statusParam.split(',') as MaintenanceStatus[] : [];
+      const typeFilter = typeParam ? typeParam.split(',') as MaintenanceType[] : [];
+      const machineId = params.machineId as string;
+      const startDate = params.startDate as string;
+      const endDate = params.endDate as string;
+      const search = params.search as string;
 
       let filtered = maintenanceRecords.map(checkOverdue);
 
@@ -97,10 +99,14 @@ export const maintenanceEndpoints: MockEndpoint[] = [
       const paginatedRecords = enriched.slice(start, end);
 
       return {
-        records: paginatedRecords,
-        total: enriched.length,
-        page,
-        pageSize,
+        data: {
+          records: paginatedRecords,
+          total: enriched.length,
+          page,
+          pageSize,
+        },
+        status: 200,
+        statusText: 'OK',
       };
     },
   },
@@ -109,7 +115,7 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'GET',
     path: '/maintenance/stats',
-    handler: () => {
+    handler: async (): Promise<MockResponse> => {
       const records = maintenanceRecords.map(checkOverdue);
 
       const stats: MaintenanceStats = {
@@ -127,7 +133,11 @@ export const maintenanceEndpoints: MockEndpoint[] = [
           (records.filter((r) => r.cost).length || 1),
       };
 
-      return stats;
+      return {
+        data: stats,
+        status: 200,
+        statusText: 'OK',
+      };
     },
   },
 
@@ -135,10 +145,10 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'GET',
     path: '/maintenance/calendar',
-    handler: (req) => {
-      const url = new URL(req.url);
-      const startDate = url.searchParams.get('startDate');
-      const endDate = url.searchParams.get('endDate');
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const params = request.params || {};
+      const startDate = params.startDate as string;
+      const endDate = params.endDate as string;
 
       let filtered = maintenanceRecords.map(checkOverdue);
 
@@ -167,7 +177,11 @@ export const maintenanceEndpoints: MockEndpoint[] = [
         };
       });
 
-      return events;
+      return {
+        data: events,
+        status: 200,
+        statusText: 'OK',
+      };
     },
   },
 
@@ -175,10 +189,8 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'GET',
     path: '/maintenance/machine/:machineId',
-    handler: (req) => {
-      const url = new URL(req.url);
-      const pathParts = url.pathname.split('/');
-      const machineId = pathParts[pathParts.length - 1];
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const machineId = request.params?.machineId as string;
 
       const records = maintenanceRecords
         .filter((r) => r.machineId === machineId)
@@ -191,7 +203,11 @@ export const maintenanceEndpoints: MockEndpoint[] = [
           };
         });
 
-      return records;
+      return {
+        data: records,
+        status: 200,
+        statusText: 'OK',
+      };
     },
   },
 
@@ -199,21 +215,28 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'GET',
     path: '/maintenance/:id',
-    handler: (req) => {
-      const url = new URL(req.url);
-      const id = url.pathname.split('/').pop();
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const id = request.params?.id as string;
       let record = maintenanceRecords.find((r) => r.id === id);
 
       if (!record) {
-        throw new Error('Maintenance record not found');
+        return {
+          data: { message: 'Maintenance record not found' },
+          status: 404,
+          statusText: 'Not Found',
+        };
       }
 
       record = checkOverdue(record);
       const machine = MOCK_MACHINES.find((m) => m.id === record.machineId);
 
       return {
-        ...record,
-        machineName: machine?.name,
+        data: {
+          ...record,
+          machineName: machine?.name,
+        },
+        status: 200,
+        statusText: 'OK',
       };
     },
   },
@@ -222,8 +245,8 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'POST',
     path: '/maintenance',
-    handler: async (req) => {
-      const data = await req.json();
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const data = request.data as any;
 
       const newRecord: MaintenanceRecord = {
         id: `maint-${Date.now()}`,
@@ -243,8 +266,12 @@ export const maintenanceEndpoints: MockEndpoint[] = [
 
       const machine = MOCK_MACHINES.find((m) => m.id === newRecord.machineId);
       return {
-        ...newRecord,
-        machineName: machine?.name,
+        data: {
+          ...newRecord,
+          machineName: machine?.name,
+        },
+        status: 201,
+        statusText: 'Created',
       };
     },
   },
@@ -253,14 +280,17 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'PUT',
     path: '/maintenance/:id',
-    handler: async (req) => {
-      const url = new URL(req.url);
-      const id = url.pathname.split('/').pop();
-      const updates = await req.json();
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const id = request.params?.id as string;
+      const updates = request.data as any;
 
       const index = maintenanceRecords.findIndex((r) => r.id === id);
       if (index === -1) {
-        throw new Error('Maintenance record not found');
+        return {
+          data: { message: 'Maintenance record not found' },
+          status: 404,
+          statusText: 'Not Found',
+        };
       }
 
       const updatedRecord = {
@@ -273,8 +303,12 @@ export const maintenanceEndpoints: MockEndpoint[] = [
 
       const machine = MOCK_MACHINES.find((m) => m.id === updatedRecord.machineId);
       return {
-        ...checkOverdue(updatedRecord),
-        machineName: machine?.name,
+        data: {
+          ...checkOverdue(updatedRecord),
+          machineName: machine?.name,
+        },
+        status: 200,
+        statusText: 'OK',
       };
     },
   },
@@ -283,17 +317,24 @@ export const maintenanceEndpoints: MockEndpoint[] = [
   {
     method: 'DELETE',
     path: '/maintenance/:id',
-    handler: (req) => {
-      const url = new URL(req.url);
-      const id = url.pathname.split('/').pop();
+    handler: async (request: MockRequest): Promise<MockResponse> => {
+      const id = request.params?.id as string;
 
       const index = maintenanceRecords.findIndex((r) => r.id === id);
       if (index === -1) {
-        throw new Error('Maintenance record not found');
+        return {
+          data: { message: 'Maintenance record not found' },
+          status: 404,
+          statusText: 'Not Found',
+        };
       }
 
       maintenanceRecords.splice(index, 1);
-      return { success: true };
+      return {
+        data: { message: 'Maintenance record deleted successfully' },
+        status: 200,
+        statusText: 'OK',
+      };
     },
   },
 ];

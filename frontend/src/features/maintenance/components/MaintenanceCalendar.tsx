@@ -14,7 +14,7 @@ interface MaintenanceCalendarProps {
   onDateSelect?: (date: Date) => void;
 }
 
-export function MaintenanceCalendar({ events, selectedDate, onDateSelect }: MaintenanceCalendarProps) {
+export function MaintenanceCalendar({ events, selectedDate, onDateSelect: _onDateSelect }: MaintenanceCalendarProps) {
   const { t } = useTranslation(['maintenance', 'common']);
 
   const getStatusVariant = (status: MaintenanceStatus): 'default' | 'secondary' | 'destructive' | 'outline' => {

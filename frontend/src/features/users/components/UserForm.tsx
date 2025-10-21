@@ -17,6 +17,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { RoleSelector } from './RoleSelector';
 import type { User } from '@/types/auth.types';
 import type { UserFormData } from '../types';
+import type { UserRole } from '@/constants/roles';
 
 interface UserFormProps {
   user?: User;
@@ -33,7 +34,7 @@ export function UserForm({ user, onSubmit, onCancel, isSubmitting }: UserFormPro
       ? {
           email: user.email,
           name: user.name,
-          role: user.role,
+          role: user.role as UserRole,
           industryId: user.industryId,
         }
       : {

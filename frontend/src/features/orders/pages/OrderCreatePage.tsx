@@ -8,15 +8,15 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { OrderForm } from '../components';
 import { useCreateOrder } from '../hooks';
-import type { CreateOrderInput } from '../types';
+import type { CreateOrderInput, UpdateOrderInput } from '../types';
 
 export default function OrderCreatePage() {
   const { t } = useTranslation(['orders', 'common']);
   const navigate = useNavigate();
   const createOrder = useCreateOrder();
 
-  const handleSubmit = (data: CreateOrderInput) => {
-    createOrder.mutate(data, {
+  const handleSubmit = (data: CreateOrderInput | UpdateOrderInput) => {
+    createOrder.mutate(data as CreateOrderInput, {
       onSuccess: (order) => {
         navigate(`/orders/${order.id}`);
       },

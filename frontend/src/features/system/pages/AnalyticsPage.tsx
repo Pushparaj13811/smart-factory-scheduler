@@ -15,7 +15,7 @@ export default function AnalyticsPage() {
   const { data, isLoading, isError, refetch } = usePlatformAnalytics();
 
   if (isLoading) return <LoadingState />;
-  if (isError) return <ErrorState retry={refetch} />;
+  if (isError) return <ErrorState message={t('common:messages.loadError')} retry={refetch} />;
   if (!data) return null;
 
   const { metrics, subscriptionDistribution, revenueData, industryGrowth, topIndustries } = data;
@@ -94,7 +94,7 @@ export default function AnalyticsPage() {
                   outerRadius={100}
                   label={(entry) => `${entry.plan}: ${entry.count}`}
                 >
-                  {subscriptionDistribution.map((entry, index) => (
+                  {subscriptionDistribution.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

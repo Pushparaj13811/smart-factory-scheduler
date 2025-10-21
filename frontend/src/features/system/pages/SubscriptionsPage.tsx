@@ -11,7 +11,6 @@ import { ErrorState } from '@/components/common/ErrorState';
 import { Search, CreditCard, TrendingUp, CheckCircle, XCircle } from 'lucide-react';
 import { useSubscriptions, useRenewSubscription } from '../hooks';
 import { SubscriptionStatus } from '../types';
-import type { Subscription } from '../types';
 import { formatDate } from 'date-fns';
 
 export default function SubscriptionsPage() {
@@ -111,7 +110,7 @@ export default function SubscriptionsPage() {
         </CardHeader>
         <CardContent>
           {isLoading && <LoadingState />}
-          {isError && <ErrorState retry={refetch} />}
+          {isError && <ErrorState message={t('common:messages.loadError')} retry={refetch} />}
           {!isLoading && !isError && filteredSubscriptions && (
             <div className="space-y-4">
               {filteredSubscriptions.map((subscription) => (

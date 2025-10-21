@@ -116,7 +116,7 @@ export default function IndustriesPage() {
         </CardHeader>
         <CardContent>
           {isLoading && <LoadingState />}
-          {isError && <ErrorState retry={refetch} />}
+          {isError && <ErrorState message={t('common:messages.loadError')} retry={refetch} />}
           {!isLoading && !isError && filteredIndustries && (
             <div className="space-y-4">
               {filteredIndustries.map((industry) => (

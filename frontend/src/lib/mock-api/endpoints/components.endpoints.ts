@@ -188,7 +188,7 @@ export const componentsEndpoints: MockEndpoint[] = [
     path: /^\/components\/[^/]+\/adjust-stock$/,
     handler: async (request: MockRequest): Promise<MockResponse> => {
       const id = request.params?.id as string;
-      const { quantity, reason } = request.data as { quantity: number; reason: string };
+      const { quantity, reason: _reason } = request.data as { quantity: number; reason: string };
 
       const index = MOCK_COMPONENTS.findIndex((c) => c.id === id);
       if (index === -1) {

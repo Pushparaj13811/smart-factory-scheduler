@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { Mail, Calendar, Building2, Shield, User as UserIcon } from 'lucide-react';
 import type { User } from '@/types/auth.types';
-import { ROLE_LABELS, ROLE_DESCRIPTIONS } from '@/constants/roles';
+import { ROLE_LABELS, ROLE_DESCRIPTIONS, type UserRole } from '@/constants/roles';
 
 interface UserDetailsProps {
   user: User;
@@ -48,7 +48,7 @@ export function UserDetails({ user }: UserDetailsProps) {
               <div>
                 <Badge variant="outline" className="text-sm">
                   <Shield className="mr-1 h-3 w-3" />
-                  {ROLE_LABELS[user.role]}
+                  {ROLE_LABELS[user.role as UserRole]}
                 </Badge>
               </div>
             </div>
@@ -104,9 +104,9 @@ export function UserDetails({ user }: UserDetailsProps) {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">{t('form.role')}</span>
-              <Badge variant="outline">{ROLE_LABELS[user.role]}</Badge>
+              <Badge variant="outline">{ROLE_LABELS[user.role as UserRole]}</Badge>
             </div>
-            <p className="text-sm text-muted-foreground">{ROLE_DESCRIPTIONS[user.role]}</p>
+            <p className="text-sm text-muted-foreground">{ROLE_DESCRIPTIONS[user.role as UserRole]}</p>
           </div>
 
           <Separator />
