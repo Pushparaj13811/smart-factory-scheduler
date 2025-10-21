@@ -1,0 +1,120 @@
+{
+  "title": "रखरखाव प्रबंधन",
+  "subtitle": "मशीन रखरखाव और सेवा रिकॉर्ड अनुसूची और ट्रैक करें",
+  "addMaintenance": "रखरखाव जोड़ें",
+  "editMaintenance": "रखरखाव संपादित करें",
+  "maintenanceDetails": "रखरखाव विवरण",
+  "createMaintenance": "नया रखरखाव बनाएं",
+  "updateMaintenance": "रखरखाव अपडेट करें",
+  "deleteMaintenance": "रखरखाव हटाएं",
+  "noMaintenance": "कोई रखरखाव रिकॉर्ड नहीं मिला",
+  "searchPlaceholder": "मशीन, तकनीशियन द्वारा रखरखाव रिकॉर्ड खोजें...",
+
+  "form": {
+    "machine": "मशीन",
+    "machinePlaceholder": "मशीन चुनें",
+    "type": "प्रकार",
+    "typePlaceholder": "रखरखाव प्रकार चुनें",
+    "status": "स्थिति",
+    "statusPlaceholder": "स्थिति चुनें",
+    "scheduledDate": "अनुसूचित तिथि",
+    "scheduledDatePlaceholder": "अनुसूचित तिथि चुनें",
+    "completedDate": "पूर्ण तिथि",
+    "completedDatePlaceholder": "पूर्ण तिथि चुनें",
+    "technician": "तकनीशियन",
+    "technicianPlaceholder": "तकनीशियन का नाम दर्ज करें या चुनें",
+    "cost": "लागत",
+    "costPlaceholder": "रखरखाव लागत दर्ज करें",
+    "notes": "टिप्पणियाँ",
+    "notesPlaceholder": "रखरखाव टिप्पणियाँ या विवरण दर्ज करें",
+    "description": "विवरण",
+    "descriptionPlaceholder": "विवरण दर्ज करें"
+  },
+
+  "type": {
+    "routine": "नियमित",
+    "preventive": "निवारक",
+    "corrective": "सुधारात्मक",
+    "emergency": "आपातकालीन"
+  },
+
+  "status": {
+    "scheduled": "अनुसूचित",
+    "in_progress": "प्रगति में",
+    "completed": "पूर्ण",
+    "cancelled": "रद्द",
+    "overdue": "विलंबित"
+  },
+
+  "details": {
+    "overview": "अवलोकन",
+    "schedule": "अनुसूची जानकारी",
+    "cost": "लागत जानकारी",
+    "history": "रखरखाव इतिहास",
+    "timeline": "समयरेखा"
+  },
+
+  "timeline": {
+    "maintenanceScheduled": "रखरखाव अनुसूचित",
+    "maintenanceStarted": "रखरखाव शुरू",
+    "maintenanceCompleted": "रखरखाव पूर्ण",
+    "maintenanceCancelled": "रखरखाव रद्द",
+    "statusChanged": "स्थिति बदली",
+    "technicianAssigned": "तकनीशियन सौंपा गया"
+  },
+
+  "filters": {
+    "all": "सभी रिकॉर्ड",
+    "byStatus": "स्थिति से फ़िल्टर करें",
+    "byType": "प्रकार से फ़िल्टर करें",
+    "byMachine": "मशीन से फ़िल्टर करें",
+    "byTechnician": "तकनीशियन से फ़िल्टर करें",
+    "byDateRange": "तिथि सीमा से फ़िल्टर करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "showFilters": "फ़िल्टर दिखाएं",
+    "hideFilters": "फ़िल्टर छुपाएं"
+  },
+
+  "actions": {
+    "updateStatus": "स्थिति अपडेट करें",
+    "assignTechnician": "तकनीशियन सौंपें",
+    "completeMaintenance": "रखरखाव पूर्ण करें",
+    "viewDetails": "विवरण देखें",
+    "scheduleRoutine": "नियमित रखरखाव अनुसूची",
+    "exportData": "डेटा निर्यात करें"
+  },
+
+  "confirmations": {
+    "deleteTitle": "रखरखाव रिकॉर्ड हटाएं?",
+    "deleteMessage": "क्या आप वाकई इस रखरखाव रिकॉर्ड को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक हटाया गया",
+    "completeTitle": "रखरखाव पूर्ण करें?",
+    "completeMessage": "इस रखरखाव को पूर्ण के रूप में चिह्नित करें?",
+    "cancelTitle": "रखरखाव रद्द करें?",
+    "cancelMessage": "क्या आप वाकई इस रखरखाव को रद्द करना चाहते हैं?"
+  },
+
+  "messages": {
+    "createSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक बनाया गया",
+    "updateSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक अपडेट किया गया",
+    "deleteSuccess": "रखरखाव रिकॉर्ड सफलतापूर्वक हटाया गया",
+    "statusUpdated": "रखरखाव स्थिति सफलतापूर्वक अपडेट की गई",
+    "technicianAssigned": "तकनीशियन सफलतापूर्वक सौंपा गया",
+    "maintenanceCompleted": "रखरखाव सफलतापूर्वक पूर्ण",
+    "createError": "रखरखाव रिकॉर्ड बनाने में विफल",
+    "updateError": "रखरखाव रिकॉर्ड अपडेट करने में विफल",
+    "deleteError": "रखरखाव रिकॉर्ड हटाने में विफल",
+    "loadError": "रखरखाव रिकॉर्ड लोड करने में विफल"
+  },
+
+  "stats": {
+    "total": "कुल रिकॉर्ड",
+    "scheduled": "अनुसूचित",
+    "inProgress": "प्रगति में",
+    "completed": "पूर्ण",
+    "cancelled": "रद्द",
+    "overdue": "विलंबित",
+    "totalCost": "कुल लागत",
+    "averageCost": "औसत लागत"
+  }
+}
