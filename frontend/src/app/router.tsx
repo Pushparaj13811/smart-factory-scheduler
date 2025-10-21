@@ -52,12 +52,25 @@ import {
   OrderDetailsPage,
 } from '@/features/orders/pages';
 
+// User pages
+import UserCreatePage from '@/features/users/pages/UserCreatePage';
+import UserEditPage from '@/features/users/pages/UserEditPage';
+import UserDetailsPage from '@/features/users/pages/UserDetailsPage';
+
+// Maintenance pages
+import MaintenanceCreatePage from '@/features/maintenance/pages/MaintenanceCreatePage';
+import MaintenanceEditPage from '@/features/maintenance/pages/MaintenanceEditPage';
+import MaintenanceDetailsPage from '@/features/maintenance/pages/MaintenanceDetailsPage';
+
 // System admin pages
 import {
   IndustriesPage,
   SubscriptionsPage,
   AnalyticsPage,
 } from '@/features/system/pages';
+
+// Profile page
+import { ProfilePage } from '@/features/profile/pages';
 
 export const router = createBrowserRouter([
   // Auth routes (with AuthLayout)
@@ -173,13 +186,39 @@ export const router = createBrowserRouter([
         path: '/schedule',
         element: <SchedulePage />,
       },
+      // Maintenance Management routes
       {
         path: '/maintenance',
         element: <MaintenancePage />,
       },
       {
+        path: '/maintenance/create',
+        element: <MaintenanceCreatePage />,
+      },
+      {
+        path: '/maintenance/:id',
+        element: <MaintenanceDetailsPage />,
+      },
+      {
+        path: '/maintenance/:id/edit',
+        element: <MaintenanceEditPage />,
+      },
+      // User Management routes
+      {
         path: '/users',
         element: <UsersPage />,
+      },
+      {
+        path: '/users/create',
+        element: <UserCreatePage />,
+      },
+      {
+        path: '/users/:id',
+        element: <UserDetailsPage />,
+      },
+      {
+        path: '/users/:id/edit',
+        element: <UserEditPage />,
       },
       {
         path: '/reports',
@@ -188,6 +227,10 @@ export const router = createBrowserRouter([
       {
         path: '/settings',
         element: <SettingsPage />,
+      },
+      {
+        path: '/profile',
+        element: <ProfilePage />,
       },
       // System Admin routes
       {

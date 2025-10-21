@@ -6,6 +6,7 @@ import type { Permission } from '@/types/permissions.types';
 export interface RouteConfig {
   path: string;
   title: string;
+  translationKey?: string; // i18n key for translated title
   permissions?: Permission[];
   roles?: UserRole[];
   icon?: string;
@@ -25,6 +26,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/',
     title: 'Dashboard',
+    translationKey: 'navigation:menu.dashboard',
     permissions: ['DASHBOARD.view'],
     icon: 'LayoutDashboard',
     showInNav: true,
@@ -34,6 +36,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/system',
     title: 'System',
+    translationKey: 'navigation:menu.system',
     roles: [UserRole.SYSTEM_ADMIN],
     icon: 'Settings',
     showInNav: true,
@@ -42,6 +45,7 @@ export const ROUTES: RouteConfig[] = [
       {
         path: '/system/industries',
         title: 'Industries',
+        translationKey: 'navigation:menu.industries',
         permissions: ['INDUSTRIES.view'],
         icon: 'Building2',
         showInNav: true,
@@ -49,6 +53,7 @@ export const ROUTES: RouteConfig[] = [
       {
         path: '/system/subscriptions',
         title: 'Subscriptions',
+        translationKey: 'navigation:menu.subscriptions',
         permissions: ['SUBSCRIPTIONS.view'],
         icon: 'CreditCard',
         showInNav: true,
@@ -56,6 +61,7 @@ export const ROUTES: RouteConfig[] = [
       {
         path: '/system/analytics',
         title: 'Platform Analytics',
+        translationKey: 'navigation:menu.platformAnalytics',
         permissions: ['PLATFORM_ANALYTICS.view'],
         icon: 'BarChart3',
         showInNav: true,
@@ -67,6 +73,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/machines',
     title: 'Machines',
+    translationKey: 'navigation:menu.machines',
     permissions: ['MACHINES.view'],
     icon: 'Cog',
     showInNav: true,
@@ -74,6 +81,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/components',
     title: 'Components',
+    translationKey: 'navigation:menu.components',
     permissions: ['COMPONENTS.view'],
     icon: 'Package',
     showInNav: true,
@@ -81,6 +89,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/raw-materials',
     title: 'Raw Materials',
+    translationKey: 'navigation:menu.rawMaterials',
     permissions: ['RAW_MATERIALS.view'],
     icon: 'Container',
     showInNav: true,
@@ -88,6 +97,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/orders',
     title: 'Orders',
+    translationKey: 'navigation:menu.orders',
     permissions: ['ORDERS.view'],
     icon: 'ShoppingCart',
     showInNav: true,
@@ -95,6 +105,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/schedule',
     title: 'Schedule',
+    translationKey: 'navigation:menu.schedule',
     permissions: ['SCHEDULE.view'],
     icon: 'Calendar',
     showInNav: true,
@@ -102,6 +113,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/maintenance',
     title: 'Maintenance',
+    translationKey: 'navigation:menu.maintenance',
     permissions: ['MAINTENANCE.view'],
     icon: 'Wrench',
     showInNav: true,
@@ -109,6 +121,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/users',
     title: 'User Management',
+    translationKey: 'navigation:menu.users',
     permissions: ['USERS.view'],
     icon: 'Users',
     showInNav: true,
@@ -116,6 +129,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/reports',
     title: 'Reports & Analytics',
+    translationKey: 'navigation:menu.reports',
     permissions: ['REPORTS.view'],
     icon: 'FileText',
     showInNav: true,
@@ -123,6 +137,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/settings',
     title: 'Settings',
+    translationKey: 'navigation:menu.settings',
     permissions: ['SETTINGS.view'],
     icon: 'Settings',
     showInNav: true,
@@ -130,6 +145,7 @@ export const ROUTES: RouteConfig[] = [
   {
     path: '/profile',
     title: 'Profile',
+    translationKey: 'navigation:menu.profile',
     icon: 'User',
     showInNav: false,
   },
