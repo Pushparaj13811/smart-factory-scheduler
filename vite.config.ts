@@ -22,12 +22,19 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // React core libraries
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router')) {
-            return 'react-vendor';
+          // React core libraries - must be first to prevent duplication
+          if (id.includes('node_modules/react/') ||
+              id.includes('node_modules/react-dom/') ||
+              id.includes('node_modules/scheduler/')) {
+            return 'react-core';
           }
 
-          // Radix UI components
+          // React Router
+          if (id.includes('node_modules/react-router') || id.includes('node_modules/@remix-run/router')) {
+            return 'react-router';
+          }
+
+          // Radix UI components (depends on React)
           if (id.includes('node_modules/@radix-ui')) {
             return 'ui-vendor';
           }
@@ -42,8 +49,11 @@ export default defineConfig({
             return 'form-vendor';
           }
 
-          // Date and utility libraries (including lucide-react for tree-shaking)
-          if (id.includes('node_modules/date-fns') || id.includes('node_modules/clsx') || id.includes('node_modules/tailwind-merge') || id.includes('node_modules/class-variance-authority')) {
+          // Date and utility libraries
+          if (id.includes('node_modules/date-fns') ||
+              id.includes('node_modules/clsx') ||
+              id.includes('node_modules/tailwind-merge') ||
+              id.includes('node_modules/class-variance-authority')) {
             return 'utils-vendor';
           }
 
@@ -57,13 +67,17 @@ export default defineConfig({
             return 'chart-vendor';
           }
 
+          // Animation libraries
+          if (id.includes('node_modules/framer-motion')) {
+            return 'animation-vendor';
+          }
+
           // Notifications
           if (id.includes('node_modules/sonner')) {
             return 'notification-vendor';
           }
 
           // Lucide icons - create separate shared chunk for better caching
-          // Tree-shaking will still work, only used icons are included
           if (id.includes('node_modules/lucide-react')) {
             return 'icons-shared';
           }
@@ -84,23 +98,16 @@ export default defineConfig({
           if (id.includes('/features/profile/')) {
             return 'feature-profile';
           }
-
-          // Other node_modules
-          if (id.includes('node_modules')) {
-            return 'vendor-other';
-          }
         },
       },
     },
-    // Optimize chunk size (set to 900KB to account for tree-shaken icon library)
-    // Note: gzipped size (158KB for icons) is what matters for network transfer
-    // Icon library compresses very well due to repetitive SVG data
+    // Optimize chunk size
     chunkSizeWarningLimit: 900,
-    // Enable source maps for production debugging (optional, increases size slightly)
+    // Disable source maps for production to reduce bundle size
     sourcemap: false,
     // Minify with esbuild for faster builds
     minify: 'esbuild',
-    // Set target for modern browsers to reduce polyfills
+    // Set target for modern browsers
     target: 'es2020',
   },
   // Optimize dependencies
