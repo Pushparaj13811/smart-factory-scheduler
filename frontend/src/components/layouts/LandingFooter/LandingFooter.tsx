@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Factory, Mail, Linkedin, Twitter, Github, Youtube, Heart } from 'lucide-react';
+import { Factory, Linkedin, Twitter, Github, Youtube, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 

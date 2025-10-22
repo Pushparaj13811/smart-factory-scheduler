@@ -615,7 +615,7 @@ export default function LandingPage() {
                     <div className="border-t border-slate-200 pt-6">
                       <div className="mb-4 text-sm text-slate-500">What's included:</div>
                       <ul className="space-y-3">
-                        {t(`pricing.${plan}.features`, { returnObjects: true }).map((feature: string, i: number) => (
+                        {(t(`pricing.${plan}.features`, { returnObjects: true }) as string[]).map((feature: string, i: number) => (
                           <li key={i} className="flex items-start gap-3">
                             <div
                               className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
