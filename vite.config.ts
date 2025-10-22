@@ -22,62 +22,38 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // React core libraries - must be first to prevent duplication
+          // React core libraries - must be isolated and loaded first
           if (id.includes('node_modules/react/') ||
               id.includes('node_modules/react-dom/') ||
               id.includes('node_modules/scheduler/')) {
             return 'react-core';
           }
 
-          // React Router
+          // React Router - separate chunk
           if (id.includes('node_modules/react-router') || id.includes('node_modules/@remix-run/router')) {
             return 'react-router';
           }
 
-          // Radix UI components (depends on React)
+          // Radix UI components - separate chunk
           if (id.includes('node_modules/@radix-ui')) {
             return 'ui-vendor';
           }
 
-          // TanStack Query and data libraries
-          if (id.includes('node_modules/@tanstack') || id.includes('node_modules/axios') || id.includes('node_modules/zustand')) {
-            return 'data-vendor';
-          }
-
-          // Form libraries
-          if (id.includes('node_modules/react-hook-form') || id.includes('node_modules/zod') || id.includes('node_modules/@hookform')) {
-            return 'form-vendor';
-          }
-
-          // Date and utility libraries
+          // Pure utility libraries (no React dependencies)
           if (id.includes('node_modules/date-fns') ||
               id.includes('node_modules/clsx') ||
               id.includes('node_modules/tailwind-merge') ||
-              id.includes('node_modules/class-variance-authority')) {
+              id.includes('node_modules/class-variance-authority') ||
+              id.includes('node_modules/zod')) {
             return 'utils-vendor';
           }
 
-          // i18n libraries
-          if (id.includes('node_modules/i18next') || id.includes('node_modules/react-i18next')) {
-            return 'i18n-vendor';
-          }
-
-          // Animation libraries
-          if (id.includes('node_modules/framer-motion')) {
-            return 'animation-vendor';
-          }
-
-          // Notifications
-          if (id.includes('node_modules/sonner')) {
-            return 'notification-vendor';
-          }
-
-          // Lucide icons - create separate shared chunk for better caching
+          // Lucide icons - separate for better caching
           if (id.includes('node_modules/lucide-react')) {
             return 'icons-shared';
           }
 
-          // Split large feature modules
+          // Split large feature modules (app code)
           if (id.includes('/features/machines/')) {
             return 'feature-machines';
           }
@@ -94,8 +70,13 @@ export default defineConfig({
             return 'feature-profile';
           }
 
-          // Note: Recharts is intentionally NOT chunked separately due to circular
-          // dependencies that cause "Cannot access before initialization" errors
+          // All other React-dependent node_modules go into default vendor chunk
+          // This prevents load order issues with React.createContext
+          // Includes: TanStack Query, Zustand, axios, react-hook-form, i18next,
+          // react-i18next, framer-motion, sonner, recharts, etc.
+          if (id.includes('node_modules/')) {
+            return 'vendor';
+          }
         },
       },
     },
