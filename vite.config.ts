@@ -62,11 +62,6 @@ export default defineConfig({
             return 'i18n-vendor';
           }
 
-          // Charts library (only load when needed)
-          if (id.includes('node_modules/recharts')) {
-            return 'chart-vendor';
-          }
-
           // Animation libraries
           if (id.includes('node_modules/framer-motion')) {
             return 'animation-vendor';
@@ -98,6 +93,9 @@ export default defineConfig({
           if (id.includes('/features/profile/')) {
             return 'feature-profile';
           }
+
+          // Note: Recharts is intentionally NOT chunked separately due to circular
+          // dependencies that cause "Cannot access before initialization" errors
         },
       },
     },
