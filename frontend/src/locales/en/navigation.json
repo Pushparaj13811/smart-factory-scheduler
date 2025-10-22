@@ -28,8 +28,16 @@
   "footer": {
     "copyright": "© {{year}} Smart Factory Scheduler. All rights reserved.",
     "about": "About",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "support": "Support"
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "support": "Support",
+    "documentation": "Documentation",
+    "helpCenter": "Help Center",
+    "apiReference": "API Reference",
+    "contact": "Contact",
+    "madeWith": "Made with",
+    "in": "in",
+    "india": "India",
+    "version": "Version"
   }
 }
