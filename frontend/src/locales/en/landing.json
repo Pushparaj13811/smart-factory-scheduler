@@ -14,7 +14,8 @@
       "implementation": "Implementation",
       "implementationValue": "2-4 Weeks",
       "support": "Support",
-      "supportValue": "24/7"
+      "supportValue": "24/7",
+      "noCreditCard": "No credit card required"
     },
     "metrics": {
       "efficiency": "Efficiency",
@@ -22,8 +23,14 @@
       "efficiencyChange": "↑ vs last month",
       "planning": "Planning Time",
       "planningValue": "15min",
-      "planningChange": "Down from 6hrs"
+      "planningChange": "Down from 6hrs",
+      "efficiencyBoost": "Efficiency Boost",
+      "onTimeDelivery": "On-Time Delivery",
+      "liveProduction": "Live Production"
     }
+  },
+  "trust": {
+    "heading": "Trusted by leading manufacturers worldwide"
   },
   "industries": {
     "title": "Industries We Serve",
@@ -40,6 +47,9 @@
   "features": {
     "title": "Built for Manufacturing Excellence",
     "subtitle": "Everything you need to optimize production scheduling, from AI-powered optimization to real-time analytics.",
+    "heading": "Everything You Need to Optimize Production",
+    "coreTitle": "Core Features",
+    "coreSubtitle": "Powerful AI-driven capabilities designed specifically for MSME manufacturing environments",
     "ai": {
       "title": "Genetic Algorithm Optimization",
       "description": "Advanced AI that handles complex multi-machine constraints and generates optimal schedules in minutes. Our genetic algorithm considers hundreds of variables simultaneously to find the best solution.",
@@ -119,6 +129,61 @@
       "content": "Our machine utilization went from 68% to 91% in the first 90 days. The ROI was clear within the first month."
     }
   },
+  "pricing": {
+    "badge": "Simple, Transparent Pricing",
+    "title": "Choose the Perfect Plan",
+    "subtitle": "Choose the perfect plan for your manufacturing needs. All plans include a 14-day free trial.",
+    "starter": {
+      "name": "Starter",
+      "description": "Perfect for small manufacturing units",
+      "price": "$49",
+      "period": "/month",
+      "cta": "Start Free Trial",
+      "features": [
+        "Up to 5 machines",
+        "Basic scheduling optimization",
+        "Real-time monitoring",
+        "Email support",
+        "Basic analytics dashboard",
+        "Mobile app access"
+      ]
+    },
+    "professional": {
+      "name": "Professional",
+      "badge": "Most Popular",
+      "description": "Ideal for growing MSME manufacturers",
+      "price": "$149",
+      "period": "/month",
+      "cta": "Start Free Trial",
+      "features": [
+        "Up to 25 machines",
+        "Advanced AI optimization",
+        "Predictive analytics",
+        "Priority support",
+        "Advanced reporting",
+        "API access",
+        "Multi-user collaboration",
+        "Custom integrations"
+      ]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "description": "For large-scale operations",
+      "price": "Custom",
+      "period": "",
+      "cta": "Contact Sales",
+      "features": [
+        "Unlimited machines",
+        "Custom AI models",
+        "Dedicated support",
+        "Custom development",
+        "On-premise deployment",
+        "SLA guarantee",
+        "Advanced security",
+        "Training & onboarding"
+      ]
+    }
+  },
   "cta": {
     "title": "Ready to Transform Your Production?",
     "subtitle": "Join 50+ manufacturing industries using Smart Factory Scheduler. Start your free 30-day trial today.",
@@ -169,15 +234,38 @@
     "error": "Registration failed. Please try again."
   },
   "footer": {
-    "description": "AI-powered production scheduling platform for modern manufacturing industries.",
+    "description": "AI-powered production scheduling platform that helps MSME manufacturers optimize operations, reduce downtime, and boost efficiency.",
     "product": "Product",
     "features": "Features",
     "pricing": "Pricing",
     "getStarted": "Get Started",
+    "demo": "Request Demo",
+    "integrations": "Integrations",
     "company": "Company",
-    "about": "About",
+    "about": "About Us",
     "contact": "Contact",
     "support": "Support",
-    "rights": "All rights reserved."
+    "careers": "Careers",
+    "blog": "Blog",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "apiReference": "API Reference",
+    "helpCenter": "Help Center",
+    "community": "Community",
+    "tutorials": "Tutorials",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "security": "Security",
+    "compliance": "Compliance",
+    "social": "Follow Us",
+    "newsletter": "Stay Updated",
+    "newsletterDescription": "Get the latest updates on manufacturing optimization and industry insights.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "in": "in",
+    "india": "India"
   }
 }
